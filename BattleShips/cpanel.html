@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+    <TITLE>Welcome to the main page</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFF">
+<H1><TT><B>Welcome to the main page (original - eh?)</B></TT></H1>
+<P>
+This section is used for uploading new versions of the impulser - and viewing<br>
+the current running version.<br>
+Please ensure that any new versions being uploaded are named "impulser.txt"<br>
+Any other name will not be executed and only waste space.<br>
+<P>
+	<FORM ENCTYPE="multipart/form-data" ACTION="/old/cgi-bin/upload.cgi" METHOD="POST">
+	<TABLE BORDER=0 WIDTH="460">
+	<TR>
+	    <TD ALIGN=RIGHT>
+		New Impulser Version:
+	    </TD>
+	    <TD>
+		<INPUT TYPE="FILE" NAME="file" SIZE="35">
+	    </TD>
+	</TR>
+		<TR>
+			<TD COLSPAN=2>&nbsp;<BR></TD>
+		</TR>
+	<TR>
+	    <TD>
+		<INPUT TYPE="SUBMIT" VALUE="Upload File!">
+	    </TD>
+	    <TD ALIGN=RIGHT>
+		<INPUT TYPE="RESET" VALUE="Reset Form">
+	    </TD>
+	</TR>
+	</TABLE>
+	</FORM>
+View the current version of the <a href="http://www.bigorc.com:4080/old/game_design/impulser.txt">Impulser</a><br>
+<hr>
+Ship Status page is here <a href="/old/game_design/ship_status.html"><img src="/old/game_design/shipstatus.gif"></a><br>
+The Impulser is currently <img src="/old/game_design/status.gif"><br>
+Use this link to <a href="http://bigorc.com:4080/old/cgi-bin/game_design/stop_impulser.pl">STOP</a> the Impulser.<br>
+Use this link to <a href="http://bigorc.com:4080/old/cgi-bin/game_design/start_impulser.pl">START</a> the Impulser.<br>
+(NOTE - the start semaphore is only checked every 5 minutes - so there maybe a delay<br>
+in starting - but the stopping the impulser should take effect within seconds)<br>
+Use this link to <a href="http://bigorc.com:4080/old/cgi-bin/game_design/copy_impulser.pl">COPY</a> impulser.txt over the old one.<br>
+(The old one WILL be backed up just in case)
+You can view the <a href="console.txt">Console Log</a> - but you may want to stop/restart<br>
+the impulser first - especially if it has been running for some time - since this log file<br>
+can grow very large.<br>
+</BODY>
+</HTML>

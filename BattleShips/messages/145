@@ -1,0 +1,18 @@
+SUBJECT>Head 'em up and Move 'em out!
+POSTER>Mike
+EMAIL>
+DATE>Friday, 4 June 1999, at 4:19 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: mike_work; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>144
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> I need the formula for determining
+<BR>&gt; the X2 Y2 co-ordinates n distance
+<BR>&gt; from a point X1,Y1 at an angle r.
+<BR>&gt; I assume w/out much research it will
+<BR>&gt; be something like X2 = cos(r)* n + X1,
+<BR>&gt; and Y2 = sin(r) * n + Y1... Am I close?
+<P>That formula is exactly right. Obviously the angles for this formula need to be the trig friendly heading used for movement every impulse, not the ones you display for the players.

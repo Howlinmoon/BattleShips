@@ -1,0 +1,12 @@
+SUBJECT>New Test Ship Creation Page
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Sunday, 18 April 1999, at 9:51 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: biff; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>
+NEXT> 52 53
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Ok - going about it a bit backwards from GO - what is functional right at this moment is the ability to insert a new ship into the database. At the moment - nothing is done with it since I was still rusty from not programming this sort of functionality in quite a while.<br> In fact - as of right now there is no nice html page to even view the existing ships in the test database - but that will be next. <p> However - what you can do is examine the sql database directly via my <a href="http://battleship.dhs.org:4080/cgi-bin/myadmin/myadmin.cgi">"myadmin" interface for mySql</a> but PLEASE do not modify the database in any form from that interface. I am still working on locking it down via permissions but right now it is open<p> Just click on the login button - then click the down arrow to select "test" instead of "mysql" - then click on the "sql interface" button.<p> In the text area - type the following:<br> select * from master_ship_chart<br> and then click on the submit query button - that should list out the contents of the master ship chart. <p> Further html pages will be added soon - plus a rudimentary impulser that you can stop (pause) and restart at will for examining data at your leisure w/out it becoming immediately outdated by the next impulse. Stay Tuned...

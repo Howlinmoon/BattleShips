@@ -1,0 +1,22 @@
+SUBJECT>Initial Combat Simulator Looks Good!
+POSTER>Mike
+EMAIL>
+DATE>Tuesday, 15 June 1999, at 10:48 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>162
+NEXT> 167
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> #4 The combat odds simulator has been fixed once more - hopefully it
+<BR>&gt; is now totally accurate.
+<P>I ran a bunch of test shots, and the simulator looks very good! You feed in the specs for two ships, and the formula calculates the probability of hitting. So you can use the simulator without reading posts from below, please note these definitions:
+<P>"Optics" reflects the quality of the sighting and range finding gear aboard the ship (in WWI this will vary from a minimum of 0 to a maximum of about 10 . . . WWII will be better). Typical British ships will have a 3 and typical German ships will have a 6 or 8.
+<P>"Crew skill" is self explanatory. This has to do with the target practice of crews took. In WWI German crews took much more practice, so again I suggest skill levels of British = 3 and German = 6 or 8.
+<P>"Sighting" is a measure of visibility refelcting both daylight conditions and weather. A sunny day will have a sighting factor of +10, a stormy night will be -10. More details are given <A HREF = "http://204.210.200.85:4080/old/cgi-bin/config.pl?read=151">here</A>.
+<P>My two cents on how to decide the number of guns firing every impulse are posted <A HREF = "http://204.210.200.85:4080/old/cgi-bin/config.pl?read=160">here</A>.
+<P>It looks like shells will be flying by the end of the week, so the time has come to work on damage allocation in earnest. Right now I envision something like the Iron Clads damage allocation system . . . in which bigger shells do more damage (reflecting better penetration) but thicker armor absorbs more damage. This is much better than the Battlewagon system in which a shell either penetrates or it bounces off harmlessly.
+<P>However, in WWI and WWII it would be *very* unusual for a secton of armor to be blasted off of a ship. Thus the Ironclads model breaks down at this point.
+<P>Look for something soon . . .
+<P>And please, everyone post your comments!

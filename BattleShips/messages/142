@@ -1,0 +1,12 @@
+SUBJECT>TaskForce Status V
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Friday, 4 June 1999, at 2:33 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: biff; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>139
+NEXT> 143 149
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Whew! Alot of changes today in the impulser - waypoint following can now be paused from the waypoint display page - it's just a toggle - on or off. If waypoint following is OFF - the number of waypoints on the ship status page will blink. Right now - if you resume waypoint following - even if the ship is 1 pixel from it's NEXT waypoint - it will turn right around and resume following it's current one. Cest la vie.<br> Also - Progress was made in the Task Force department - task force course and speed changes are now possible. Task Force Waypoints are NOT yet possible. Running into a logistics problem - deciding what to do if the ship belonging to a task force has it's own waypoints. I will probably toss any personal waypoints out and swap in the task force's waypoints. Right now a task force waypoint is merely a way of giving ALOT of ships at one time personal waypoints. So this is probably how it will remain. TF Waypoints will be implemented next - but I want to see if the mods from today will break anything first - before pressing on. A Typo wiped out all of my Japanese ships (sigh) thus the boring named ones in my test taskforce.

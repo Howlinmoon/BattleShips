@@ -1,0 +1,15 @@
+SUBJECT>Re: Should be fixed now
+POSTER>Mike Substelny
+EMAIL>
+DATE>Thursday, 13 May 1999, at 9:57 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>81
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>I am glad it is fixed. Driving ships around is pretty cool, even without a map.
+<P>For anyone lurking on this thread (Dave? Eric? Ed? John? anybody?) the ship status page is <A HREF = "http://204.210.200.63:4080/game_design/ship_status.html">here</A>.
+<P>I just sent U.S.S. Monitor to intercept Tramp Steamer. Even without a map it is pretty easy to figure out which way you need to go. Remember, 0 = North (toward +Y), 90 = East (toward +X), 180 = South (toward -Y), 270 = West (toward -X).
+<P>Right now I am tossing around in my head a formula for converting X,Y coordinates to longitude,latitude. The formula will be kind of complicated, but it will add realism to the game. We should not actually make the conversion until we are using some sort of map because the formula needs to know where zero,zero is in our coordinate system.

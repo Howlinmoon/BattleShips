@@ -1,0 +1,16 @@
+SUBJECT>Re: Looks Good! Map Scaling Formulae . . .
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Monday, 15 March 1999, at 12:37 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: jimv.telxon.com; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>25
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> with no scaling factor needed, since the scale is 1:1. You calculate
+<BR>&gt; "view coordinates" for every entity in the galaxy and display
+<BR>&gt; them. Some languages are smart enough to ignore commands to display
+<BR>&gt; ponts that are off the screen. If this one isn't, then you will need
+<BR>&gt; to error trap. <p> I just modified the my scaling factor to a value 1000x larger than it was. This in effect zoomed the map in 1000x and resulted in about 1/2 dozen blips appearing on the map total. I think this was a conclusive test that java will happily discard plots that are out of bounds. <p> I have since put the map back to normal...

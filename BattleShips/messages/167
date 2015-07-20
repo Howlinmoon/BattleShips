@@ -1,0 +1,26 @@
+SUBJECT>Outline of Damage Allocation
+POSTER>Mike
+EMAIL>
+DATE>Wednesday, 16 June 1999, at 9:57 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>166
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Feel free to read/respond to this post if you like. I am writing it to get a feel for the additional variables we will need to keep track of damage on each ship. It is the Internet equivalent of me thinking out loud. :-)
+<P>To do damage allocation, we need the following steps:
+<P>1) Determine whether the shot has hit horizontal armor or vertical armor. This is a function the maximum range of the gun and the current range to target.
+<P>2) Calculate the armor penetration (something like the penetration factor in Ironclads). This is a function of the mass and velocity of the shell, but it is also affected by the tech level of the ammunition. In WWI German's used superior "capped" shells, which no one else had until WWII. Everyone else's shells had a high percentage of duds.
+<P>3) Determine what part of the ship was hit. This will probably mean different functions (or a table) for horizontal vs vertical hits. This is because certain parts of the ship are almost impossible to hit with plunging fire (e.g. barbettes, waterline, rudder) while other parts are almost impossible to hit with horizontal fire (e.g. fuel bunker, ammo magazine, turret that does not bear).
+<P>3.5) If that section does not exist on the target ship, figure out what to do with the shot. This will usually happen when a certain turret does not exist.
+<P>4) Apply the penetration factor to the armor on the section hit and calculate damage. If the penetration factor is a lot more than the armor then do more damage. But even if the penetration factor is less than the armor a little damage might be done.
+<P>Here is a list of places a ship might be hit by plunging fire:
+<P>Superstructure, deck, smoke stack, turret A, turret B, turret C, turret D, turret E, turret F, secondary guns, deck torpedoes, ammo magazine*, fuel bunker*, bridge*, engine*, boiler room*, fire control (optics)*, radar*.
+<P>Here is a list of places a ship might be hit by horizontal fire:
+<P>Hull above waterline, hull at/below waterline, superstructure, smoke stack, turret A, turret B, turret C, turret D, turret E, turret F, barbettes, secondary guns, deck torpedoes, submerged torpedoes*, bridge*, rudder*, engine*, boiler room*, fire control (optics)*, radar*.
+<P>* indicates a critical hit, the possibility of which goes along with the area where the system exists. For example, good penetration of the deck or the hull can cause damage to the engines, boiler room, or fuel bunkers while good penetration of the barbettes or turrets can cause a magazine fire.
+<P>Magazine and fuel hits will cause a fire. Both had special valves that could be opened to quickly flood them with sea water and extinguish the fire. In the case of burning magazines, unless the valves are opened within one or two impulses the ship will blow up. Even if they are opened one or two main turrets will thereafter be out of commission because their magazines are flooded.
+<P>Wow! Now that I look at it, this seems like a lot! To start off, I think it is sufficient to determine plunging vs horizontal impact then what part of the ship was hit. Perhaps we can just keep a tally of damage and not even account for its effects until a later date. That is, after two ships spend an hour shooting at each other we will know that Turret A was destroyed 20 times, but we won't actually stop it from firing. Yet.
+<P>Comments, anyone?

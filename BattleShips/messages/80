@@ -1,0 +1,12 @@
+SUBJECT>Still problem with screen vs trig angles
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 12 May 1999, at 11:08 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>
+NEXT> 81
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>There is still a problem initiated when modifying an existing ships course<br> The problem is - if you request of course of 90 degrees (screen) the ship is<br> being displayed on the status page as now on or headed to 360 (0) degrees.<br> I have a conversion backwards someplace - I am still looking for it.<p> The impulser should not crash anymore - I found that problem and fixed it.<br> As soon as I fix this course bug - I'll add the ability to modify the speed of the ship - then I'll add the MUCH needed delete ship function ;-) With all of my testing tonight the status page is getting pretty unwieldy....

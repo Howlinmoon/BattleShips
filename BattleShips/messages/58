@@ -1,0 +1,12 @@
+SUBJECT>How accurate do we want?
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 20 April 1999, at 6:47 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: biff; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>54
+NEXT> 59
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Ok - it maybe a bit hard to decipher right now - thats because my table generator is busted and needs fixed. Eventually the range data will follow the other data for each individual ship.<br> As more ships are added - the individual data lines will enlongate - and at my current precision level - it will make for some VERY long lines.<p> Thus the question - where should I truncate the X,Y co-ordinates for the ships? Do we want them to remain integers?<br> Also - I plan on sticking in indicators in the range listings whether or not the enemy ship has been sighted by the current ship. This will be dependent on both the target ships ship_sighting_range and the sighting ship's sight multiplier. (normally that will be a 1.0)<br> Eventually what I'd really like is a bearing indicator to the other ship relative to the current ship assuming the bow of the current ship is "North" or 12oclock. Thus we can determine what arc the other ships are in relative to us and see what weapons will bear. How about a formula for determining given the current X,Y co-ords of two ships and their heading - what is their relative bearings to each other?

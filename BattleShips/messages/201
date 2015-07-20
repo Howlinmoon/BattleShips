@@ -1,0 +1,19 @@
+SUBJECT>Re: Technical Information About Convoys
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Monday, 12 July 1999, at 1:17 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>199
+NEXT> 202
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> parallel to each other and travelled at speds of 8-12 knots. On our
+<BR>&gt; scale, ships in the same column were a mere two pixels apart (400
+<BR>&gt; yards)! Distance between columns was usually four pixels (800 yards). <p> Since they are going so slow relative to our current battleships - collision<br>detection should be no problem using the new formulas. <br> In other words - we shouldn't have as many false positives and we certainly<br> wont have these ships skipping pixels...
+<P>&gt; The zig-zag turns that convoys made were a standard 45 degrees
+<BR>&gt; (not 90 as I had thought). Apparently this was kept as a fairly rigid
+<BR>&gt; standard to prevent convoy ships from colliding with each other. To
+<BR>&gt; make the zig-zag maneuver effective in thwarting U-boat attacks, the
+<BR>&gt; *timing* of the turns was varied, not the arc of turn. <p> Another reason for 45 degree turns is they are alot more time efficient then a 90 degree - since the 45 degree turn takes you less off of your desired heading. And the quicker the convoy puts into safe haven - the better. These sort of manuevers would have to have a critical time schedule - such as course 315 at 9:30, course 0 at 10:00, course 45 at 10:30 etc. This way you wouldn't need to be able to see your convoy partners - which maybe impossible in nasty weather. You would just assume they were turning when you did. This would explain the need to pre-plot so many turns in advance in "Submarine!" when you wanted to manuever the convoys. <p> Now we need some data for convoy ships so we can add them to the game.

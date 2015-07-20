@@ -1,0 +1,12 @@
+SUBJECT>Re: Experimental Star Map
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Monday, 15 March 1999, at 10:18 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: jimv.telxon.com; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>21
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>As an aside - I have been doing some experimentation - and it appears that I was only half correct where I stated that causing a repaint of the map would cause it to re-retrieve the starmap datafile from the server.<br> It appears to be a function of the browser's cache. I have done multiple minimizes and maximizes with Netscape and looking at the http logs on my server - it appears that netscape is retrieving the datafile from it's cache each time. Now - I am NOT sure that if the datafile on the server had changed between re-displays if it (netscape) would have noticed that the cached copy was out of date and retrieved a fresh copy.<br> This is one problem that I will have to research otherwise it will not be possible to do realtime map viewing. As a workaround - I believe a shift-reload will force netscape to re-retrieve another copy from my server. Unfortunately - I still need to work on some updater issues - and as a result it is NOT running so the current starmap data is static.<br> So even tho Netscape may report that it is loading the datafile - it's really loading it from your cache...

@@ -1,0 +1,12 @@
+SUBJECT>Enhanced Combat Simulator
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 16 June 1999, at 1:22 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>
+NEXT> 171
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>The combat simulator now queries the turret information to see what guns bear, and then it queries the gun information to see if the guns that DO bear are in range or not. A summary is printed for each ship - amid a bunch of debug stuff..<p> For now - that wierd gun that handles the dual ammo loads is being ignored - only the first type of ammo is being used. Find two ships packing two different types of guns WITH a different range - and select a range between the two so one ship is out of range - and you should see the simulator declare that one ship cannot fire.

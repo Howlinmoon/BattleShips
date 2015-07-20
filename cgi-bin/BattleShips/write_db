@@ -1,0 +1,41 @@
+#+----------+--------------+------+-----+---------+-------+
+#| Field    | Type         | Null | Key | Default | Extra |
+#+----------+--------------+------+-----+---------+-------+
+#| how_many | mediumint(9) |      | PRI | 0       |       |
+#+----------+--------------+------+-----+---------+-------+
+
+#+---------------------+--------------+------+-----+---------+-------+
+#| Field               | Type         | Null | Key | Default | Extra |
+#+---------------------+--------------+------+-----+---------+-------+
+#| ship_id             | mediumint(9) |      | PRI | 0       |       |
+#| ship_name           | varchar(50)  |      |     |         |       |
+#| ship_owner          | varchar(50)  |      |     |         |       |
+#| ship_heading        | varchar(6)   |      |     |         |       |
+#| ship_x              | varchar(12)  |      |     |         |       |
+#| ship_y              | varchar(12)  |      |     |         |       |
+#| ship_speed          | varchar(5)   |      |     |         |       |
+#| ship_sighting_range | varchar(12)  |      |     |         |       |
+#| ship_sight_factor   | varchar(5)   |      |     |         |       |
+#+---------------------+--------------+------+-----+---------+-------+
+
+#my $dbh = Mysql -> connect("localhost","test");
+
+my $command = "";
+        $command = "select how_many from how_many_ships";
+        my $sth=$dbh-> query($command);
+        die "Error with command $command\n" unless (defined $sth);
+        my @arr=();
+        while (@arr = $sth->fetchrow)
+        {
+        ($test_ships) = @arr;
+        }
+
+        $command = "";
+        $command = "replace into how_many_ships (how_many) values ($test_ships) ";
+        $sth = $dbh->query($command);
+die "error with command $command" unless (defined $sth);
+
+$command = "";
+$command = "insert into master_ship_chart (ship_id, ship_name, ship_owner, ship_heading, ship_x, ship_y, ship_speed, ship_sighting_range, ship_sight_factor) values ($test_ships, \"$ship_name\", \"$ship_owner\", $ship_heading, $ship_x, $ship_y, $ship_speed, $ship_sighting_range, $ship_sight_factor)";
+	$sth = $dbh->query($command);
+die "error with command $command" unless (defined $sth);

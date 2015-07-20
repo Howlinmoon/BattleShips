@@ -1,0 +1,23 @@
+SUBJECT>Volleys?
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 22 June 1999, at 12:15 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>179
+NEXT> 181
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>
+<P>&gt; This algorithm assumes all fire & damage within an impulse
+<BR>&gt; is simultaneous. It also assumes that the number of volleys from all
+<BR>&gt; ships, and the number of hits in each volley have already been determined
+<BR>&gt; (the log practically has this already). The volley also needs to know
+<BR>&gt; the type of gun and the actual range. I am leaving random numbers
+<BR>&gt; as they are . . . feel free to multiply by 100.
+<P>&gt; Grav_Constant = 10
+<P>&gt; Penetration_Constant = 60000
+<P>&gt; For Volley = 1 to number_of_volleys
+<P>&gt; For Round = 1 to number_of_hits(Volley)
+<P><p> Ok - I am confused - you seem to be mixing and matching volleys and hits randomly. Right now - suppose ship X has 3 turrets that bear, for a total of 6 shots. Is that 6 volleys? And suppose out of those 6 shots 4 are hits. Looking at the above line makes me want to assume that we are doing something in the middle of the nested loops 24 times... This does'nt make sense to me....<br> Now - it seems to me what would make sense is something like this...<p> Wait a minute - I *think* I understand now - I was reading the last line I quoted as "Volley" being another name for number_of_hits - but you're probably using "Volley" as an index for the ARRAY number_of_hits... Ok - this makes sense. So in my case "Volley" would be interchangeable with number of ships firing. (Why did'nt you just use "for ship = 1 to number of ships"???) And I just save how many hits everyone got - and then once all hit determination is accomplished THEN allocate damage all around. If this is correct - then I understand... Otherwise ;-)

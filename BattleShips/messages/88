@@ -1,0 +1,14 @@
+SUBJECT>My Plans for the Map
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Friday, 14 May 1999, at 1:19 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>87
+NEXT> 89
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>>> The Map - I have some ideas... more later <br>
+<BR>&gt;I am very interested to hear your ideas. <p>
+<P>Well - Ever since you sent me that rough map last week I have been thinking of how I can incorporate it into a java map. My first idea was to scale it to a proper size and use it for the background of a map similar to the one I made for GO - where the ships would actually be manuvering on it...<br> Problem with that tho - is the map would take too long to download - and thats a bad thing. Solution - since it's rough - it should be easy to convert to simple vectors - give me a bunch of end points and I can re-plot the map on the fly and color it in using java's built in graphic functions. Then it would be a breeze to scale on the fly and I could plot the ships position "on" that map. Another good side effect of it being very rough - it has perfectly flat coastlines which would make it fairly simple to determine if a ship has or will stray onto solid ground - and either have the ship stop or be sunk...<p> This is a ways done my list of things to do - but it could come to the top much quicker if I dont have to determine the points for each of the vectors myself... My new add ship routine queries the impulser to determine what the range of used ship IDs are (low to high) and then it lists out the actual used ones. The add ship routine then can make a safe judgement on what id to give a ship. We may have 5 ships in the game - but it's entirely possible their ship ID's may range from 7 to 20 with only 7,10,15,19,20 being used... In this case the add ship routine would make the new ship ID #1...

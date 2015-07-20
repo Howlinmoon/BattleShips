@@ -1,0 +1,21 @@
+SUBJECT>Re: TaskForce Status V
+POSTER>Mike
+EMAIL>
+DATE>Friday, 4 June 1999, at 2:49 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: mike_work; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>142
+NEXT> 144
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>
+<BR>&gt; Task Force Waypoints are NOT yet possible. Running into
+<BR>&gt; a logistics problem - deciding what to do if the ship
+<BR>&gt; belonging to a task force has it's own waypoints.
+<BR>&gt; I will probably toss any personal waypoints out and
+<BR>&gt; swap in the task force's waypoints. Right now a task
+<BR>&gt; force waypoint is merely a way of giving ALOT of ships
+<BR>&gt; at one time personal waypoints. So this is probably how
+<BR>&gt; it will remain.
+<P>I think this is all you need. Once a TF has "rallied," being a part of a TF <i>should</I> mean just accepting waypoints en mass. Typically the TF will all make the same maneuvers as the lead ship. Would you like me to help write a function that would accept the paremeters (ship_position_in_TF, type_of_turn, lead_ship_waypoint_X, lead_ship_waypoint_Y) and return (ship_waypoint_X, ship_waypoint_Y)?

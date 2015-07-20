@@ -1,0 +1,12 @@
+SUBJECT>First Attempt at Ship Classes
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 18 May 1999, at 11:05 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>
+NEXT> 93
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Unfortunately it's not working very well just yet - but I wanted a rough ship class selector for keying course, speed and if appropriate, depth changes. Right now as of tonight it crashes the impulser when you add a ship - I'll fix that tomorrow soon as I can find a chance. The add routine DOES work tho - you just can't see the results...

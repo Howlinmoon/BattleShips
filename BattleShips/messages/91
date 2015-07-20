@@ -1,0 +1,14 @@
+SUBJECT>Time and Space scale
+POSTER>Mike Substelny
+EMAIL>
+DATE>Tuesday, 18 May 1999, at 3:21 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>I just <A HREF = "http://204.210.200.63:4080/game_design/ship_status.html">launched a few ships</A>. They are at realistic speeds. As you can see, except for the submerged U-Boat, they all skip pixels at the current granularity.
+<P>If we are happy with the 3 impulses per minute speed and the 3:1 time scale, then we CAN compensate for the skipped pixels mathematically. For example, if we want to see if a ship hit a mine we don't need the ship to actually spend an impulse in the same pixel; we could check to see if the ship passed through the mine pixel the same mathematical way VGAP does it.
+<P>Can anyone else think of negative consequences to having some ships skip pixels?

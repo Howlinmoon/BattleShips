@@ -1,0 +1,12 @@
+SUBJECT>Database accident...
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Sunday, 23 May 1999, at 11:18 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>
+NEXT> 115
+IMAGE>
+LINKNAME>NEW Add New test ship page
+LINKURL>http://beholder.dhs.org:4080/game_design/add_test_ship2.html
+<P>While working on implementing some new tables into the master database and a new www based sql admin tool - the entire contents of my sql server mysteriously vanished...<br> The data (test ships) are no big deal - unfortunately, I also lost the structure of the existing tables.<br> Luckily - for reference I am also copying the structures of my tables into the programs that access them - so I can remember what the field names are called and their storage types.<br> Unfortunately - I sometimes add elements to the table structures and not bother to update the listings in my programs ;-) This is a setback - and may take longer than anticipated now to implement waypoints.<p> In the meantime - I was planning on implementing a few more fields in the add a new test ship page - try the link below. NOTE - obviously not all fields will be appropriate for each ship type. I am planning on having sub-pages dependant on the values filled for the primary page. I.e. you wont have a torp tube prompt if you are launching a BB... I just threw all of the elements I was tenatively planning on "implementing" on one page for reference. Remember - simplicity first - keep that in mind when suggesting enhancements.

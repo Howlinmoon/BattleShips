@@ -1,0 +1,12 @@
+SUBJECT>TaskForce Status II
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 2 June 1999, at 1:15 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>135
+NEXT> 137
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Status of Task Forces as of this minute<p> The Task Force creation page is now somewhat less non-functional, currently the only button that does anything is the tf_add one. Fill in a name for your task force, and a country - then hit the button. It SHOULD show the count of task forces created so far - as of this moment I have 2 test ones created. The next one will be 3 etc. The task force will then be in existance and saved/loaded from the sql db - but still not used just yet. There is no ingame method of displaying existing task forces for verification just yet - but you can use the www based sql page to do that. Simply click on the link on the ship status page, click on "test" on the far left side - then when the tables appear on the left column, click on "task_force_master". It will then update the right frame with the field description for this table - what you want to do is click BELOW the table on "browse" - this will then display the contents of the table.<p> NOTE - the data is in the sql database is OLD - only the data currently being processed by the impulser is kept fresh. BUT - within an impulse of creating the new task force - the impulser SHOULD refresh the sql database and then the browse list should be upto date.

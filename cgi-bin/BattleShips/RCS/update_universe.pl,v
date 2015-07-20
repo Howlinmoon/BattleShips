@@ -1,0 +1,579 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	99.05.13.03.13.47;	author orcus;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.02.24.03.36.28;	author orcus;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.02.24.03.19.23;	author orcus;	state Exp;
+branches;
+next	;
+
+
+desc
+@The Impulser
+@
+
+
+1.3
+log
+@last updaye
+@
+text
+@#!/usr/bin/perl -w
+#use strict;
+use diagnostics;
+use Mysql;
+$pi = 3.14159265358979323846;
+$two_pi = 2 * $pi;
+unlink "./stop_update";
+unlink "./add_ship";
+unlink "./delete_ship";
+# "stop_update" is the semaphor to halt the update
+# "add_ship" is the semaphor to indicate to the updater that it needs to
+# "delete_ship" is the semaphor to indicate to the updater that it needs to
+# delete a ship - and the file contains the id number of the ship to be deleted. 
+# fetch a newcopy of the ships from the SQL server
+
+open(LOG,">>/home/www/game_design/impulse.log");
+
+($rsec,$rmin,$rhour,$rmday,$rmon,$ryear,$wday,$yday,$isdst) = localtime(time);
+if ($rsec < 10) {
+        $rsec = "0".$rsec;
+        }
+if ($rmin < 10) {
+        $rmin = "0".$rmin;
+        }
+if ($rhour < 10) {
+        $rhour = "0".$rhour;
+        }
+if ($rmday < 10) {
+        $rmday = "0".$rmday;
+        }
+$rmon=$rmon+1;
+if ($rmon < 10) {
+        $rmon = "0".$rmon;
+        }
+$junk = $isdst;
+$junk = $yday;
+$junk = $wday;
+
+print LOG "\nUniverse Updater started at: $rmon/$rmday/$ryear $rhour:$rmin:$rsec\n";
+close(LOG);
+# retrieve pertient info from planets
+# parent star, old planet angle, planet orbit, planet delta
+# retrieve X and Y values for star
+# calculate new angle, save
+# calculate new X and Y save
+my $dbh = Mysql -> connect("localhost","test");
+
+my $command = "";
+	$command = "select how_many from how_many_planets";
+	my $sth=$dbh-> query($command);
+	die "Error with command $command\n" unless (defined $sth);
+	my @@arr=();
+	while (@@arr = $sth->fetchrow)
+	{
+	($planet_index) = @@arr;
+	}
+
+
+	$command = "";
+        $command = "select how_many from how_many_test_ships";
+        $sth=$dbh-> query($command);
+        die "Error with command $command\n" unless (defined $sth);
+        @@arr=();
+        while (@@arr = $sth->fetchrow)
+        {
+        ($number_test_ships) = @@arr;
+	}
+for ($star = 1; $star <= 100 ; $star++) {
+	$command = "select x_co_ord, y_co_ord from master_star_chart where id_number = $star";
+	$sth = $dbh -> query($command);
+	die "Error with command $command\n" unless (defined $sth);
+
+# iterate thru the returned row(s)
+
+	 @@arr = ();
+	while (@@arr = $sth->fetchrow)
+	{
+	($star_x_coord, $star_y_coord) = @@arr;
+	}
+	$starx[$star]=$star_x_coord;
+	$stary[$star]=$star_y_coord;
+} # for $star...
+
+$impulse = 0;
+
+# retrieve planet data from SQL server
+
+for ($current_planet = 1; $current_planet <= $planet_index; $current_planet++) {
+
+#Build up SQL command
+$command = "";
+$command = "select init_angle, orbit, orbit_delta, type, mass, density, name, star from master_planet_chart where id_number = $current_planet";
+$sth= $dbh -> query($command);
+die "Error with command $command\n" unless (defined $sth);
+
+# iterate thru the returned row(s)
+
+ @@arr = ();
+while (@@arr = $sth->fetchrow)
+	{
+($old_angle[$current_planet], $orbit[$current_planet], $orbit_delta[$current_planet], $planet_type[$current_planet], $planet_mass[$current_planet], $planet_density[$current_planet], $planet_name[$current_planet], $star[$current_planet]) = @@arr;
+	}
+# remove the following line before re-running!
+#$orbit_delta[$current_planet] = $orbit_delta[$current_planet] * 1000;
+} # end of planet for loop
+
+#Retrieve Data currently online for Ships in motion
+print "number of test ships = $number_test_ships\n";
+exit;
+for ($current_ship = 1; $current_ship <= $number_test_ships; $current_ship++) {
+
+	$command = "select current_x, destination_x, current_y, destination_y, velocity_x, velocity_y, accel_x, accel_y, warp_factor, overall_velo, heading, overall_accel, eta, name from test_ships where id_number = $current_ship";
+
+$sth = $dbh -> query($command);
+die "Error with command: $command\n" unless (defined $sth);
+
+# iterate thru the returned rows
+
+@@arr = ($sth->fetchrow);
+	{
+($ship_x[$current_ship],$end_x[$current_ship],$ship_y[$current_ship],$end_y[$current_ship],$ship_velocity_x[$current_ship],$ship_velocity_y[$current_ship],$ship_accel_x[$current_ship],$ship_accel_y[$current_ship],$ship_warp_factor[$current_ship],$ship_overall_velo[$current_ship],$ship_heading[$current_ship],$ship_overall_accel[$current_ship],$ship_eta[$current_ship],$ship_name[$current_ship]) = @@arr;
+	}
+} # end of ship for loop	
+
+# Main loop can start here
+# place a file called "stop_update" in game dir to bring it down gracefully.
+# *************************** MAIN LOOP **************************
+
+while (! -f "stop_update") {
+	if (-f "save_planets") {
+	for ($current_planet = 1; $current_planet <= $planet_index; $current_planet++) {
+$command = "";
+       $command = "replace into master_planet_chart (id_number,x_co_ord,y_co_ord,init_angle, orbit_delta, orbit, type, mass, density, name, star) values ($current_planet,$planetx[$current_planet],$planety[$current_planet],$new_angle[$current_planet], $orbit_delta[$current_planet],$orbit[$current_planet], \"$planet_type[$current_planet]\", $planet_mass[$current_planet], $planet_density[$current_planet], \"$planet_name[$current_planet]\", $star[$current_planet])";
+
+$sth = $dbh -> query($command);
+
+
+die "Error with command $command\n" unless (defined $sth);
+
+        } # end of for-loop  saving planets to SQ
+unlink "./save_planets"; # remove semaphore - signalling job done
+open(LOG,">>/home/www/game_design/impulse.log");
+print LOG "Planetary Data SQLd as requested\n";
+close (LOG);
+} # end of save_planets
+#try to thrash around here less with a sleep 1
+sleep 1;
+($rsec,$rmin,$rhour,$rmday,$rmon,$ryear,$wday,$yday,$isdst) = localtime(time);
+if ($rsec < 10) {
+        $rsec = "0".$rsec;
+        }
+if ($rmin < 10) {
+        $rmin = "0".$rmin;
+        }
+if ($rhour < 10) {
+        $rhour = "0".$rhour;
+        }
+if ($rmday < 10) {
+        $rmday = "0".$rmday;
+        }
+$rmon=$rmon+1;
+if ($rmon < 10) {
+        $rmon = "0".$rmon;
+        }
+
+while( ($rsec/20) == int($rsec/20)) { # Determines when we conduct an update
+
+open(LOG,">>/home/www/game_design/impulse.log");
+
+$impulse = $impulse + 1;
+
+open (IMP,">./what_imp") || die "Could not open what_imp for writing\n";
+print IMP "$impulse\n";
+close (IMP);
+
+#Above keeps an updated record of what impulse we are on
+
+print LOG "Impulse #$impulse at: $rmon/$rmday/$ryear $rhour:$rmin:$rsec\n";
+#close(LOG);
+
+if (-f "./add_ship") { # If semaphore present - load up new ships
+	unlink "./add_ship";
+#	print "add_ship unlinked\n";
+        $command = "";
+        $command = "select how_many from how_many_test_ships";
+        $sth=$dbh-> query($command);
+        die "Error with command $command\n" unless (defined $sth);
+        @@arr=();
+        while (@@arr = $sth->fetchrow)
+        {
+        ($new_number_test_ships) = @@arr;
+        }
+#	print "New Number of ships retrieved is $new_number_test_ships\n";
+#	print "Old Number of ships on file was $number_test_ships\n";
+	if ($new_number_test_ships != $number_test_ships) { 
+#	print "The number of ships differed\n";
+#this means there were indeed some new ships to retrieve
+#only retrieve the new ships - the data on file for the old ships is no doubt
+#obsolete by many impulses	
+
+		for ($current_ship = ($number_test_ships + 1); $current_ship <= $new_number_test_ships; $current_ship++) {
+
+        $command = "select current_x, destination_x, current_y, destination_y, velocity_x, velocity_y, accel_x, accel_y, warp_factor, overall_velo, heading, overall_accel, name from test_ships where id_number = $current_ship";
+
+$sth = $dbh -> query($command);
+die "Error with command: $command\n" unless (defined $sth);
+
+# iterate thru the returned rows
+
+@@arr = ($sth->fetchrow);
+        {
+($ship_x[$current_ship],$end_x[$current_ship],$ship_y[$current_ship],$end_y[$current_ship],$ship_velocity_x[$current_ship],$ship_velocity_y[$current_ship],$ship_accel_x[$current_ship],$ship_accel_y[$current_ship],$ship_warp_factor[$current_ship],$ship_overall_velo[$current_ship],$ship_heading[$current_ship],$ship_overall_accel[$current_ship],$ship_eta[$current_ship],$ship_name[$current_ship]) = @@arr;
+        }
+} # end of ship for loop
+#print "end of ship for loop\n";
+#update ship counter to the new correct value
+$number_test_ships = $new_number_test_ships;
+print LOG "Added new ships to database\n";
+$update = 1;
+} # end of $numbers differ if...
+
+} # end of add_ship semaphore check...
+if (-f "del_ship") {
+	open (DEL,"./del_ship") || die "Could not open del_ship\n";
+	while (<DEL>){
+	chop;
+	$killship = $_;
+	}
+	print LOG "Asked to kill ship $killship\n";
+	for ($XX = $killship; $XX<= ($number_test_ships - 1); $XX++) {
+	$ship_x[$XX] = $ship_x[$XX+1];
+	$end_x[$XX] = $end_x[$XX+1];
+	$ship_y[$XX] = $ship_y[$XX+1];
+	$end_y[$XX] = $end_y[$XX+1];
+	$ship_velocity_x[$XX] = $ship_velocity_x[$XX+1];
+	$ship_velocity_y[$XX] = $ship_velocity_y[$XX+1];
+	$ship_accel_x[$XX] = $ship_accel_x[$XX+1];
+	$ship_accel_y[$XX] = $ship_accel_y[$XX+1];
+	$ship_warp_factor[$XX] = $ship_warp_factor[$XX+1];
+	$ship_overall_velo[$XX] = $ship_overall_velo[$XX+1];
+	$ship_heading[$XX] = $ship_heading[$XX+1];
+	$ship_overall_accel[$XX] = $ship_overall_accel[$XX+1];
+	$ship_eta[$XX] = $ship_eta[$XX+1];
+	$ship_name[$XX] = $ship_name[$XX+1];
+	}
+	unlink "./del_ship";
+	$number_test_ships = $number_test_ships - 1;
+	$update = 1;
+    }	
+close(LOG);
+# ******** start planet loop
+# Dynamically generates starmap.data every impulse.
+open (HTML,">/home/www/game_design/starmap.planets") || die "Could not open starmap.planets for creating\n";
+
+open (STARS,">/home/www/game_design/starmap.head") || die "Could not open starmap.stars for writing\n";
+print STARS "TitleText: Universe is on Impulse: $impulse Updated at $rmon/$rmday/$ryear $rhour:$rmin:$rsec (\"Fill\" to Reset)\n";
+print STARS "Grid: on\n";
+print STARS "XLabel: X Axis\n";
+print STARS "YLabel: Y Axis\n";
+print STARS "Marks: points\n";
+print STARS "NumSets: 3\n";
+print STARS "Color: on\n";
+print STARS "Lines: off\n";
+print STARS "DataSet: Planets\n";
+close(STARS);
+for ($current_planet = 1; $current_planet <= $planet_index; $current_planet++) {
+	
+
+$new_angle[$current_planet] = $old_angle[$current_planet] + $orbit_delta[$current_planet];
+
+if ($new_angle[$current_planet] > $two_pi) {
+	$new_angle[$current_planet] = $new_angle[$current_planet] - $two_pi;
+	} # keeps angle from getting out of control
+
+$planetx[$current_planet] = int( (sin($new_angle[$current_planet]) * $orbit[$current_planet]) + $starx[$star[$current_planet]]);
+
+$planety[$current_planet] = int( (cos($new_angle[$current_planet]) * $orbit[$current_planet]) + $stary[$star[$current_planet]]);
+
+print HTML "$planetx[$current_planet],$planety[$current_planet]\n";
+} # end of for( current planet...)
+close (HTML);
+
+# Handle the ship movement here......
+open(SHIPS,">/home/www/game_design/starmap.ships") || die "Could not open starmap.ships for creating\n";
+
+print SHIPS "DataSet: Ships\n";
+open (SHIP_STAT,">/home/www/game_design/testtail.html") || die "Could not open testtail for writing\n";
+print SHIP_STAT "<FORM method=\"POST\" action=\"/cgi-bin/game_design/del_test_ship.pl\">\n";
+
+for ($current_ship = 1; $current_ship <= $number_test_ships; $current_ship++) {
+
+	if (sqrt( ($ship_x[$current_ship]-$end_x[$current_ship])**2 + ($ship_y[$current_ship]-$end_y[$current_ship])**2) <= sqrt($ship_velocity_x[$current_ship]**2 + $ship_velocity_y[$current_ship]**2)) {
+ 
+	$ship_x[$current_ship] = $end_x[$current_ship]; #ship has arrived at destination.
+	$ship_y[$current_ship] = $end_y[$current_ship];
+	$ship_velocity_x[$current_ship] = 0;
+	$ship_accel_x[$current_ship] = 0;
+	$ship_velocity_y[$current_ship] = 0;
+	$ship_accel_y[$current_ship] = 0;
+	}
+	else
+	{
+	$ship_velocity_x[$current_ship] = $ship_velocity_x[$current_ship] + $ship_accel_x[$current_ship];
+	$ship_velocity_y[$current_ship] = $ship_velocity_y[$current_ship] + $ship_accel_y[$current_ship];
+	$ship_x[$current_ship] = $ship_x[$current_ship] + $ship_velocity_x[$current_ship];
+	$ship_y[$current_ship] = $ship_y[$current_ship] + $ship_velocity_y[$current_ship];
+	}
+if ($ship_eta[$current_ship] > 0 ) {
+	$ship_eta[$current_ship] = $ship_eta[$current_ship] - 1;
+	}
+$ship_overall_velo[$current_ship] = sqrt($ship_velocity_x[$current_ship]**2 + $ship_velocity_y[$current_ship]**2);
+
+print SHIP_STAT "<TR><TD WIDTH=\"9%\"><INPUT TYPE=\"radio\" VALUE=$current_ship NAME=\"delship\">$ship_name[$current_ship]</TD>\n";
+print SHIP_STAT "<TD WIDTH=\"18%\">$ship_warp_factor[$current_ship]</TD>\n";
+print SHIP_STAT "<TD WIDTH=\"11%\">$ship_x[$current_ship]</TD>\n";
+print SHIP_STAT "<TD WIDTH=\"11%\">$ship_y[$current_ship]</TD>\n";
+print SHIP_STAT "<TD WIDTH=\"06%\">$ship_eta[$current_ship]</td>\n";
+print SHIP_STAT "<TD WIDTH=\"14%\">$end_x[$current_ship]</TD>\n";
+print SHIP_STAT "<TD WIDTH=\"14%\">$end_y[$current_ship]</TD>\n";
+print SHIP_STAT "<TD WIDTH=\"12%\">$ship_heading[$current_ship]</TD>\n";
+print SHIP_STAT "<TD WIDTH=\"11%\">$ship_overall_velo[$current_ship]</TD></TR>\n";
+print SHIPS "$ship_x[$current_ship],$ship_y[$current_ship]\n";
+
+
+} # end of for test_ship loop
+close(SHIPS);
+print SHIP_STAT "</TABLE>\n";
+print SHIP_STAT "<INPUT NAME=\"button\" TYPE=\"submit\" VALUE=\"Press To Remove This Ship\"></FORM>\n";
+
+print SHIP_STAT "</BODY>\n";
+print SHIP_STAT "</HTML>\n";
+close(SHIP_STAT);
+open (IMP,">/home/www/game_design/test_imp.html") || die "Could not open test_imp for creating\n";
+print IMP "<br><center>Universe is on Impulse# $impulse</center>\n";
+close (IMP);
+system "cat /home/www/game_design/testhead_1.html /home/www/game_design/test_imp.html /home/www/game_design/testhead_2.html /home/www/game_design/testtail.html > /home/www/game_design/ship_status.html";
+
+system "cat /home/www/game_design/testhead2.html /home/www/game_design/testtail.html > /home/www/game_design/ship_status2.html";
+
+#Retrieve the ships in motion and update their co-ordinates
+#+---------------+--------------+------+-----+---------+-------+
+#| Field         | Type         | Null | Key | Default | Extra |
+#+---------------+--------------+------+-----+---------+-------+
+#| id_number     | mediumint(9) |      | PRI | 0       |       |
+#| current_x     | varchar(15)  |      |     |         |       |
+#| current_y     | varchar(15)  |      |     |         |       |
+#| velocity_x    | varchar(20)  |      |     |         |       |
+#| velocity_y    | varchar(20)  |      |     |         |       |
+#| accel_x       | varchar(20)  |      |     |         |       |
+#| accel_y       | varchar(20)  |      |     |         |       |
+#| warp_factor   | mediumint(9) |      |     | 0       |       |
+#| overall_velo  | varchar(20)  |      |     |         |       |
+#| heading       | varchar(20)  |      |     |         |       |
+#| overall_accel | varchar(20)  |      |     |         |       |
+#| name          | varchar(30)  | YES  |     | NULL    |       |
+#+---------------+--------------+------+-----+---------+-------+
+
+system "cat /home/www/game_design/starmap.head /home/www/game_design/starmap.planets /home/www/game_design/starmap.stars /home/www/game_design/starmap.ships > /home/www/game_design/starmap.data";
+
+##if ( (($rmin == "05") && ($rsec == "00")) || ($update == 1) {
+##$update = 0;
+# 5 minutes after the hour - update the sql database
+	
+##for ($current_planet = 1; $current_planet <= $planet_index; $current_planet++) {
+##$command = "";
+##       $command = "replace into master_planet_chart (id_number,x_co_ord,y_co_ord,init_angle, orbit_delta, orbit, type, mass, density, name, star) values ($current_planet,$planetx[$current_planet],$planety[$current_planet],$new_angle[$current_planet], $orbit_delta[$current_planet],$orbit[$current_planet], \"$planet_type[$current_planet]\", $planet_mass[$current_planet], $planet_density[$current_planet], \"$planet_name[$current_planet]\", $star[$current_planet])";
+##
+##$sth = $dbh -> query($command);
+##
+##
+##die "Error with command $command\n" unless (defined $sth);
+##
+##	} # end of saving planets to SQL
+
+# Now store the current ship database
+# purge old test ship count before adding new one
+## 	$command = "delete from how_many_test_ships";
+# Send the query
+##$sth = $dbh->query($command);
+
+# Make sure that $sth returned reasonably
+##die "Error with command $command" unless (defined $sth);
+##        $command = "";
+##        $command = "replace into how_many_test_ships (how_many) values ($test_ships) ";
+ #       print "SQL Command:$command\n";
+##        $sth = $dbh->query($command);
+##die "error with command $command" unless (defined $sth);
+##for ($current_ship = 1; $current_ship <= $number_test_ships; $current_ship++) {
+##$command = "";
+##       $command = "replace into test_ships (id_number, current_x, destination_x,current_y, destination_y, velocity_x, velocity_y, accel_x, accel_y, warp_factor, overall_velo, heading, overall_accel, eta, name) values ($current_ship, $ship_x[$current_ship],$end_x[$current_ship],$ship_y[$current_ship],$end_y[$current_ship],$ship_velocity_x[$current_ship],$ship_velocity_y[$current_ship],$ship_accel_x[$current_ship],$ship_accel_y[$current_ship],$ship_warp_factor[$current_ship],$ship_overall_velo[$current_ship],$ship_heading[$current_ship],$ship_overall_accel[$current_ship],$ship_eta[$current_ship],\"$ship_name[$current_ship]\")";
+##
+##
+##$sth = $dbh -> query($command);
+##
+##die "Error with command $command\n" unless (defined $sth);
+##
+##} # end of saving ships to the SQL server
+##
+##open(LOG,">>/home/www/game_design/impulse.log");
+##
+##print LOG "Database saved to SQL server at: $rmon/$rmday/$ryear $rhour:$rmin:$rsec\n";
+##close(LOG);
+
+##} # end of if 05 minute update SQL server...
+
+##sleep 1; #make sure we dont do an update twice in one second
+
+###update $rsec to break out of the == 20 loop uptop...
+
+##($rsec,$rmin,$rhour,$rmday,$rmon,$ryear,$wday,$yday,$isdst) = localtime(time);
+
+##if ($rsec < 10) {
+##        $rsec = "0".$rsec;
+##        }
+
+##if ($rmin < 10) {
+##        $rmin = "0".$rmin;
+##        }
+##
+} # end of while 20... while
+
+} # end of while (! -f....)
+
+# If this section is reached - we are requested to shutdown.
+print "\nPreparing to shutdown - saving database\n";
+for ($current_planet = 1; $current_planet <= $planet_index; $current_planet++) {
+$command = "";
+       $command = "replace into master_planet_chart (id_number,x_co_ord,y_co_ord,init_angle, orbit_delta, orbit, type, mass, density, name, star) values ($current_planet,$planetx[$current_planet],$planety[$current_planet],$new_angle[$current_planet], $orbit_delta[$current_planet],$orbit[$current_planet], \"$planet_type[$current_planet]\", $planet_mass[$current_planet], $planet_density[$current_planet], \"$planet_name[$current_planet]\", $star[$current_planet])";
+$sth = $dbh -> query($command);
+
+die "Error with command $command\n" unless (defined $sth);
+} # end of planet update to sql server
+
+# Now store the current ship database
+
+for ($current_ship = 1; $current_ship <= $number_test_ships; $current_ship++) {
+$command = "";
+       $command = "replace into test_ships (id_number, current_x, destination_x, current_y, destination_y, velocity_x, velocity_y, accel_x, accel_y, warp_factor, overall_velo, heading, overall_accel, name) values ($current_ship, $ship_x[$current_ship],$end_x[$current_ship],$ship_y[$current_ship],$end_y[$current_ship],$ship_velocity_x[$current_ship],$ship_velocity_y[$current_ship],$ship_accel_x[$current_ship],$ship_accel_y[$current_ship],$ship_warp_factor[$current_ship],$ship_overall_velo[$current_ship],$ship_heading[$current_ship],$ship_overall_accel[$current_ship],$ship_eta[$current_ship],\"$ship_name[$current_ship]\")";
+
+
+$sth = $dbh -> query($command);
+
+die "Error with command $command\n" unless (defined $sth);
+
+} # end of saving ships to the SQL server
+
+open(LOG,">>/home/www/game_design/impulse.log");
+
+print LOG "Databases saved to SQL server - shutting down at: $rmon/$rmday/$ryear $rhour:$rmin:$rsec\n";
+close(LOG);
+exit;
+@
+
+
+1.2
+log
+@adjust directory structure
+@
+text
+@a67 1
+
+d108 2
+d360 2
+a361 2
+if ( (($rmin == "05") && ($rsec == "00")) || ($update == 1) {
+$update = 0;
+d364 10
+a373 8
+for ($current_planet = 1; $current_planet <= $planet_index; $current_planet++) {
+$command = "";
+       $command = "replace into master_planet_chart (id_number,x_co_ord,y_co_ord,init_angle, orbit_delta, orbit, type, mass, density, name, star) values ($current_planet,$planetx[$current_planet],$planety[$current_planet],$new_angle[$current_planet], $orbit_delta[$current_planet],$orbit[$current_planet], \"$planet_type[$current_planet]\", $planet_mass[$current_planet], $planet_density[$current_planet], \"$planet_name[$current_planet]\", $star[$current_planet])";
+
+$sth = $dbh -> query($command);
+
+
+die "Error with command $command\n" unless (defined $sth);
+a374 1
+	} # end of saving planets to SQL
+d377 1
+a377 1
+        $command = "delete from how_many_test_ships";
+d379 1
+a379 1
+$sth = $dbh->query($command);
+d382 3
+a384 3
+die "Error with command $command" unless (defined $sth);
+        $command = "";
+        $command = "replace into how_many_test_ships (how_many) values ($test_ships) ";
+d386 34
+a419 34
+        $sth = $dbh->query($command);
+die "error with command $command" unless (defined $sth);
+for ($current_ship = 1; $current_ship <= $number_test_ships; $current_ship++) {
+$command = "";
+       $command = "replace into test_ships (id_number, current_x, destination_x,current_y, destination_y, velocity_x, velocity_y, accel_x, accel_y, warp_factor, overall_velo, heading, overall_accel, eta, name) values ($current_ship, $ship_x[$current_ship],$end_x[$current_ship],$ship_y[$current_ship],$end_y[$current_ship],$ship_velocity_x[$current_ship],$ship_velocity_y[$current_ship],$ship_accel_x[$current_ship],$ship_accel_y[$current_ship],$ship_warp_factor[$current_ship],$ship_overall_velo[$current_ship],$ship_heading[$current_ship],$ship_overall_accel[$current_ship],$ship_eta[$current_ship],\"$ship_name[$current_ship]\")";
+
+
+$sth = $dbh -> query($command);
+
+die "Error with command $command\n" unless (defined $sth);
+
+} # end of saving ships to the SQL server
+
+open(LOG,">>/home/www/game_design/impulse.log");
+
+print LOG "Database saved to SQL server at: $rmon/$rmday/$ryear $rhour:$rmin:$rsec\n";
+close(LOG);
+
+} # end of if 05 minute update SQL server...
+
+sleep 1; #make sure we dont do an update twice in one second
+
+#update $rsec to break out of the == 20 loop uptop...
+
+($rsec,$rmin,$rhour,$rmday,$rmon,$ryear,$wday,$yday,$isdst) = localtime(time);
+
+if ($rsec < 10) {
+        $rsec = "0".$rsec;
+        }
+
+if ($rmin < 10) {
+        $rmin = "0".$rmin;
+        }
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d252 1
+a252 1
+open (HTML,">/home/www/ptplot/demo/starmap.planets") || die "Could not open starmap.planets for creating\n";
+d254 1
+a254 1
+open (STARS,">/home/www/ptplot/demo/starmap.head") || die "Could not open starmap.stars for writing\n";
+d283 1
+a283 1
+open(SHIPS,">/home/www/ptplot/demo/starmap.ships") || die "Could not open starmap.ships for creating\n";
+d357 1
+a357 1
+system "cat /home/www/ptplot/demo/starmap.head /home/www/ptplot/demo/starmap.planets /home/www/ptplot/demo/starmap.stars /home/www/ptplot/demo/starmap.ships > /home/www/ptplot/demo/starmap.data";
+@

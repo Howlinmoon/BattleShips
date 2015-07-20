@@ -1,0 +1,127 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	99.05.26.12.25.33;	author orcus;	state Exp;
+branches;
+next	;
+
+
+desc
+@Galactic Overlords solar display utility
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#!/usr/bin/perl -w
+
+# display_solar.pl
+# Retrieves and displays the current co-ords of an entire solar system
+
+# Set Semaphore to indicate to updater it needs to save planets to SQL server
+# Sleep - then retrieve information directly from SQL server
+
+#use strict;
+use diagnostics;
+use CGI;  # available from http://www.perl.com/CPAN/
+use Mysql;
+my $dbh = Mysql -> connect("localhost","test");
+# ------------------------------------------------------------
+# Name some global variables
+
+# Create an instance of CGI
+my $query = new CGI;
+
+# Send an appropriate MIME header
+print $query->header("text/html");
+
+# Get the id to match from the query string
+my $star_id = $query->param("solar_system");
+
+# Check that the user entered a valid star system
+if ( ($star_id < 1) || ($star_id > 100) )
+{
+    print $query->start_html(-title => "Invalid Solar System Specified!");
+    print "<P>Print - You must specify a valid system between 1 and 100 inclusive. ";
+    print " Please Try Again. And Dont screw up this time.</P>\n";
+    exit;
+}
+
+
+# send semaphore to Updater
+system "touch /home/www/cgi-bin/game_design/save_planets";
+sleep 10; # sleep 10 seconds to give system time to carry out 
+# better yet - do a -f to see if semaphore gone - indicating task carried out
+
+# Retrieve total number of planets on file
+my $command = "";
+        $command = "select how_many from how_many_planets";
+        my $sth=$dbh-> query($command);
+        die "Error with command $command\n" unless (defined $sth);
+        my @@arr=();
+        while (@@arr = $sth->fetchrow)
+        {
+        ($planet_index) = @@arr;
+        }
+
+$command = "";
+        $command = "select x_co_ord, y_co_ord, type, mass, radius, energy, name,planets from master_star_chart where id_number = $star_id";
+        $sth = $dbh -> query($command);
+        die "Error with command $command\n" unless (defined $sth);
+
+# iterate thru the returned row(s)
+
+          @@arr = ();
+        while (@@arr = $sth->fetchrow)
+        {
+        ($star_x,$star_y,$star_type,$star_mass,$star_radius,$star_energy,$star_name,$star_planets) = @@arr;
+        }
+
+if ($star_planets == 0) {
+	print "This Star has no Planets Orbitting it.<p>\n";
+	exit;
+}
+print "<HTML>\n";
+print "<HEAD>\n";
+#print "  <META NAME="GENERATOR" CONTENT="Infernal Machine 1.0">
+print "<TITLE>Planet Status for $star_name</TITLE>\n";
+print "</HEAD>\n";
+print "<BODY>\n";
+print "<CENTER>Planet Status for Star System <a href=\"http://beholder.ml.org:4080/game_design/stars2.html\">$star_name</a></center><p>\n";
+print "<center><table BORDER=\"1\" CELLSPACING=\"2\" CELLPADDING=\"0\">\n";
+print "<TR><TD>Name</td><TD>X Co-Ord</td><TD>Y Co-Ord</td><TD>Type</td><TD>Orbit</td><TD>Density</td></tr>\n";
+for ($current_planet = 1; $current_planet <= $planet_index; $current_planet++) {
+
+#Build up SQL command
+$command = "";
+$command = "select init_angle, orbit, orbit_delta, type, mass, density, name, x_co_ord, y_co_ord, star from master_planet_chart where id_number = $current_planet";
+$sth= $dbh -> query($command);
+die "Error with command $command\n" unless (defined $sth);
+
+# iterate thru the returned row(s)
+
+ @@arr = ();
+while (@@arr = $sth->fetchrow)
+        {
+($init_angle, $orbit, $orbit_delta, $planet_type, $planet_mass, $planet_density, $planet_name, $planet_x, $planet_y, $star)= @@arr;
+        }
+if ($star_id == $star) {
+	print "<TR><TD>$planet_name</td><TD>$planet_x</td><TD>$planet_y</td><TD>$planet_type</td><TD>$orbit</td><TD>$planet_density</td></tr>\n";
+#print "Er - Hi - come back later<br>";
+	}
+
+} # end of planet for loop
+
+print "</table></center>";
+print "</body></html>\n";
+exit;
+
+@

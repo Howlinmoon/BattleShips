@@ -1,0 +1,12 @@
+SUBJECT>TaskForce Status III
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 2 June 1999, at 11:19 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>136
+NEXT> 138 139
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Status of Taskforces: The Task Force management page is now being dynamically generated every impulse - just like the ship status page. It does NOT auto-refresh since that would be annoying ;-) Existing task forces are now listed on that page - right now you STILL can only add new ones - soon you will be able to add/remove ships from task forces - and then later, be able to delete taskforces. Finally - I'll work on assigning rallying points for task forces and task force waypoints and possibly formations. As soon as everything except formations is done - it will be time to focus on a rough java map AND combat. Personally I want to implement rudimentary combat first - since it will be quicker to have something to show for my efforts - and I want to sink the Hood :-)

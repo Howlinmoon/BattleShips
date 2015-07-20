@@ -1,0 +1,29 @@
+SUBJECT>Re: The Wait is Over!
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 28 April 1999, at 11:29 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>65
+NEXT> 68
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> Here is the Direction Formula, which gives the absolute direction
+<BR>&gt; of a target relative to your position in positive degrees between
+<BR>&gt; 0 and 360:
+<P>&gt; If (Ydiff >=0) Then DIRECTION = (arccos(Xdiff/range) * 180
+<BR>&gt; / pi)
+<BR>&gt; Else DIRECTION = 360 - (arcos(Xdiff/range) * 180 / pi)
+<P>&gt; Want to know what guns bear on that target? Then you need to
+<BR>&gt; calculate a BEARING, taking your own facing (HEADING) into account.
+<BR>&gt; This formula gives it, again in positive degrees from 0 to 360:
+<P>&gt; If (MyHeading >= DIRECTION) Then BEARING = DIRECTION - MyHeading
+<BR>&gt; Else BEARING = MyHeading - Direction
+<P>I Trust if I apply these same formulas to the ENEMY ship I can determine which of my guns bear WHERE on his hull?<br>
+<P>In an upcoming addon to the ship status page - I'm going to be using SFB style firing arcs - and I'd like to report which arc the enemy is facing towards the current ship. This way we can tell if we are raking their bow/stern or hitting their broadside.<br>
+<P>&gt; We can use detailed data later. For now, let's assume a generic
+<BR>&gt; turning ability of Battleships as 20 degrees per impulse (at this
+<BR>&gt; rate, a Battleship can make a complete circle in 18 minutes). <p> Dont you mean 18 impulses here? Which is exactly 6 minutes? (20 * 18 = 360)<br>
+<P>I'm right now working on adding onto the ship design page to allow entry of the following fields. For now:
+<P>Desired Course, Rudder Position, Which Arcs have Guns and how many, What to do when sighted Enemy ship when:<br> Enemy Ship is Larger<br> Enemy Ship is Faster<br> Enemy Ship is Reducing Range<br> Enemy Ship is Increasing Range<br> <p> Those should keep me busy for quite some time - stay tuned... The ship's name on the main ship status page will become a link to a more detailed individual ship status page when this is ready.

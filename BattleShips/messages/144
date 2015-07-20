@@ -1,0 +1,15 @@
+SUBJECT>Rallying and Forming up
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Friday, 4 June 1999, at 3:08 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: biff; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>143
+NEXT> 145
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> Would you like me to help write a function that would accept the paremeters
+<BR>&gt; (ship_position_in_TF, type_of_turn, lead_ship_waypoint_X, >lead_ship_waypoint_Y)
+<BR>&gt; and return (ship_waypoint_X, ship_waypoint_Y)?
+<P>No - this is pretty easy and I have had it figured out for some time. I'm going to default to having the ship with the lowest id number be the lead ship for now, he will have the leftmost position in line-abreast, the first position for inline, and the upper left corner position for the combo-box formation<br> I'm probably going to use a waypoint #0 - which will be the rallying waypoint - everyone will go there at their maximum speed - and then when all are in position - the tf will move out for the first waypoint at the maximum speed of the slowest member of the tf. They will form up at the rallying point in formation - and then will have individually tailored waypoints based on the tf main waypoint and their personal position within the tf. (id order again)<br> Later on down the road we can implement re-arranging a ships position in the tf order - but for now they will be done strictly by the numbers.<p> I must admit to being very rusty in Geometry - whilst I got straight A's in it (was my favorite field of mathematics) I have'nt used it much since high school. I need the formula for determining the X2 Y2 co-ordinates n distance from a point X1,Y1 at an angle r. I assume w/out much research it will be something like X2 = cos(r) * n + X1, and Y2 = sin(r) * n + Y1...<br> Am I close? I would need a formula like this for implementing a wedge formation...

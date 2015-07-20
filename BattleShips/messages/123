@@ -1,0 +1,12 @@
+SUBJECT>Waypoint update II
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 25 May 1999, at 1:09 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>119
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Status of Waypoints:<br> Waypoints are now parsed, saved to the sql server, and restored from it when the impulser is restarted. A count of waypoints pending for each ship in transit are now displayed on the ship status page. Very close to actually being able to use them. Feel free to add in some waypoints - in fact please do. When the code to use them goes live - they will be used.

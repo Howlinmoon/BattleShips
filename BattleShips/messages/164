@@ -1,0 +1,24 @@
+SUBJECT>Gun Size and Firing Arc
+POSTER>Mike
+EMAIL>
+DATE>Tuesday, 15 June 1999, at 9:01 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>162
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> What exactly does the number after the
+<BR>&gt; gunsize mean in the gun tables? (main
+<BR>&gt; guns). An example is the 45 in this
+<BR>&gt; description: 'British 13.5"/45'
+<P>These came with the gun data, we're using them to help with gun identification. The way I interpret it, this number is the callibre of the shell, which seems to be independent of the barrel diameter. If you look at <A HREF = "http://www.warships1.com/Weapons/WNBR_main.htm">this page</A>for example, you will see that a 12"/50 cal is different from a 12"/45 cal, and an 18"/40 cal is different from an 18"/45 cal.
+<P>I will try to find out better wording for this later. Perhaps it refers to shell length.
+<P>&gt; Also - "2,0,150,210,360" means this gun has 2 arcs
+<BR>&gt; - one from 0-150 degrees and the other from
+<BR>&gt; 210-360 degrees? I need this information so
+<BR>&gt; in the combat simulator I can determine which
+<BR>&gt; guns bear per side - and roll accordingly...
+<P>Yes, I think you have it. The first number, e.g. 2, means two guns per turret, not two firing arcs. All guns have two arcs. For those few guns which only had one real arc, I have inserted 999,999 for the second arc.
+<P>To see some ships with strangely placed turrets, check out the <A HREF = "http://warships1.com/GERbb05_Konig-LD-Bern.jpg">Konig</a>, <A HREF = "http://warships1.com/GERbb03_Heligoland-LD-Bern.jpg">Helgoland</A>, <A HREF = "http://warships1.com/BRbb02_Bellerophon-LD1.jpg">Bellerphon</A>, and <A HREF = "http://warships1.com/BRbc07_Invincible-LD1.jpg">Invincible</A> classes.

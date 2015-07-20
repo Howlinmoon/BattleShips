@@ -1,0 +1,20 @@
+SUBJECT>Re: Ship Status Page...
+POSTER>Mike Substelny
+EMAIL>
+DATE>Friday, 7 May 1999, at 8:47 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>75
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> Now - when the secondary page is accessed
+<BR>&gt; - there is a delay while loading. This
+<BR>&gt; delay is caused by it setting a semaphore
+<BR>&gt; for the impulser to get it to write the current
+<BR>&gt; data to the sql server.
+<P>Great. I'll go check it out immediately.
+<P>&gt; By The way - how do you like the new background?
+<BR>&gt; Hopefully easier to read over.
+<P>Yes, this is much easier to read, thanks.

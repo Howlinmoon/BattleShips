@@ -1,0 +1,26 @@
+SUBJECT>Damage Allocation
+POSTER>Mike
+EMAIL>
+DATE>Tuesday, 22 June 1999, at 11:41 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>176
+NEXT> 180
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>This algorithm assumes all fire & damage within an impulse is simultaneous. It also assumes that the number of volleys from all ships, and the number of hits in each volley have already been determined (the log practically has this already). The volley also needs to know the type of gun and the actual range. I am leaving random numbers as they are . . . feel free to multiply by 100.
+<P>Grav_Constant = 10
+<P>Penetration_Constant = 60000
+<P>For Volley = 1 to number_of_volleys
+<P>For Round = 1 to number_of_hits(Volley)
+<P>; first determine if this round hits horizontal or vertical armor
+<P>if random() < gun_max_range(volley)/actual_range(volley)/Grav_Constant then horizontal(Round) = 1
+<P>Else horizontal(Round) = 0
+<P>; now calculate Penetration factor. For now this is super simplified
+<P>Penetration(Round) = shell_velocity1(gun_type((Round)) * shell_weight1(gun_type(Round)) / penetration_constant
+<P>; then determine where it hit. it would be useful to have this number in a variable
+<P>location(Round) = Random
+<P><I>The rest of this is preliminary. Actual formula in next message.</I>
+<P>If Horizontal(Round) = 1 then
+<P>Hull above waterline 15 - 15 hull at/below waterline 5 - 20 superstructure 25 - 45 smoke stack 5 - 50 turret A 5 - 55 turret B 5 - 60 turret C 5 - 65 turret D 5 - 70 turret E 5 - 75 turret F 5 - 80 barbettes 4 - 84 secondary guns 13 - 97 deck torpedoes 3 - 100

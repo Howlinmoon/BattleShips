@@ -1,0 +1,12 @@
+SUBJECT>Re: Progress has been made
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 24 February 1999, at 8:19 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: jimv.telxon.com; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>5
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>As an update - what I am planning on doing is generating a "scaling factor"<br> by taking 250 (1/2 the x and y dimensions) - dividing it by 10million - and<br> then multiplying each co-ordinate in turn by this number - and adding it to<br> 250,250 prior to plotting it. This in theory should map the negative values<br> correctly in the java display - since I can only plot Quadrant II values.<br> (Assuming quadrants are number from N/E clockwise to N/W)<br>

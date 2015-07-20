@@ -1,0 +1,24 @@
+SUBJECT>Initial Formulae
+POSTER>Mike Substelny
+EMAIL>msubstel@lorainccc.edu
+DATE>Friday, 16 April 1999, at 3:44 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: mike_work; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Conversion data 1 knot = 1 nautical mile / hour. 1 nautical mile = 6080 feet, so 1 knot = 1.15 land miles / hour.
+<P>Initial assumptions 1 pixel = 608 feet (as discussed below), three impulses per minute (as in GO) and time scale 3:1. This gives a conversion factor of 1 knot = 0.1666667 pixels / impulse. We will use a right-oriented map, with zero degrees to the left (East) and 90 degrees to the North.
+<P>To create a ship, players need to give it a starting X and a starting Y, initializing SHIPX and SHIPY. To make the ship move, players input course (in degrees) and velocity (knots).
+<P>HEADING = course * PI / 180
+<P>SPEED = knots *0.1666667
+<P>DeltaX = SPEED * COS(HEADING)
+<P>DeltaY = SPEED * SIN(HEADING)
+<P>Every impulse, SHIPX = SHIPX + DeltaX
+<P>SHIPY = SHIPY + DeltaY
+<P>Note that this granularity and scale will result in any ship that goes faster than about 10 knots skipping some pixels. No big deal for now. We can fine tune this when we decide how often to update the impulser for players.
+<P>If you want to do some simple sighting, all you have to do is set an arbitrary sighting distance (for example, 20 nautical miles), then calculate the range between ships every impulse.
+<P>RANGE = SQRT((ship1X - ship2X)^2 + (ship1Y - ship2Y)^2)
+<P><PRE> If RANGE < SIGHTINGDISTANCE then (. . . sighted . . .)</PRE>

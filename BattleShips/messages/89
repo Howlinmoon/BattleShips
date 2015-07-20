@@ -1,0 +1,19 @@
+SUBJECT>Longitude and Latitude
+POSTER>Mike Substelny
+EMAIL>
+DATE>Tuesday, 18 May 1999, at 9:35 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>88
+NEXT> 94
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Using our current coordinate system and scale, this formula will calculate longitude and latitude for players. The point 0,0 is just off the west coast of Africa. Dead north of that is Greenwich, England, on the Prime Meridian. Greenwich is in Western England, toward Ireland.
+<P>ScaleConstant = 565.0801815667510
+<P>Latitude = Ycoordinate * ScaleConstant
+<P>Longitude = Xcoordinate * (COS(Latitude/180*PI) * ScaleConstant)
+<P>The line of 180 degrees longitude will be a problem. This is where wraparound will take place. It is a simple matter to calculate when a ship has wrapped around (when longitude > 180 or < -180) then calculate a new X coordinate:
+<P>X = Longitude/(COS(Latitude/180/PI) * ScaleConstant)
+<P>The problem is calculating the range between two ships on opposite sides of the 180 line. That will be tricky. I am open to suggestions.
+<P>BTW I will work on that vector map of the North Atlantic ASAP, but probably not today.

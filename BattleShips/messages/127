@@ -1,0 +1,12 @@
+SUBJECT>NEW SQL WWW INTERFACE!
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 26 May 1999, at 9:50 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>
+NEXT>
+IMAGE>
+LINKNAME>Nifty New SQL Interface
+LINKURL>http://beholder.dhs.org:4080/cerberus/
+<P>Check this link out! I could'nt run this nifty utility on my main Linux box, beholder, but it is running ok on my secondary box - cerberus. This link is actually being proxied by beholder and is running on cerberus. It is a very nice interface to the sql server I am running.<br> Select the "test" database - and you'll find the tables I have created for the game thus far. Select a table and use "browse" to view it's internals. It goes w/out saying that modifying the format of the tables or their contents could be disastorous to the game. Feel free to experiment by creating new tables tho. You should also be able to do queries on the existing table data - but do keep in mind that they get stale fairly quickly.<p> sample query: select ship_name from master_ship_chart where ship_id = 3<br> You can also use boolean logic in the queries - feel free to experiment.

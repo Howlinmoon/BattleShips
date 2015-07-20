@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+    <TITLE>Impulser Control Panel</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFF">
+<H1><TT><B>Impulser Control Panel (tm)</B></TT></H1>
+<P>
+This form is used to upload new versions of the impulser and execute them.<br>
+Please ensure that the file you are uploading is named "impulser.txt", any other<br>
+name will be unable to be executed. (for now)<br>
+Also ignore file slots 2-4<br>
+<P>
+	<FORM ENCTYPE="multipart/form-data" ACTION="/old/cgi-bin/upload.cgi" METHOD="POST">
+	<TABLE BORDER=0 WIDTH="460">
+	<TR>
+	    <TD ALIGN=RIGHT>
+		File 1:
+	    </TD>
+	    <TD>
+		<INPUT TYPE="FILE" NAME="file-to-upload-01" SIZE="35">
+	    </TD>
+	</TR>
+	<TR>
+	    <TD ALIGN=RIGHT>
+		File 2:
+	    </TD>
+	    <TD>
+		<INPUT TYPE="FILE" NAME="file-to-upload-02" SIZE="35">
+	    </TD>
+	</TR>
+	<TR>
+	    <TD ALIGN=RIGHT>
+		File 3:
+	    </TD>
+	    <TD>
+		<INPUT TYPE="FILE" NAME="file-to-upload-03" SIZE="35">
+	    </TD>
+	</TR>
+	<TR>
+	    <TD ALIGN=RIGHT>
+		File 4:
+	    </TD>
+	    <TD>
+		<INPUT TYPE="FILE" NAME="file-to-upload-04" SIZE="35">
+	    </TD>
+	</TR>
+		<TR>
+			<TD COLSPAN=2>&nbsp;<BR></TD>
+		</TR>
+	<TR>
+	    <TD>
+		<INPUT TYPE="SUBMIT" VALUE="Upload File(s)!">
+	    </TD>
+	    <TD ALIGN=RIGHT>
+		<INPUT TYPE="RESET" VALUE="Reset Form">
+	    </TD>
+	</TR>
+	</TABLE>
+	</FORM>
+<hr>
+Use this link to <a href="http://bigorc.com:4080/old/cgi-bin/game_design/stop_impulser.pl">STOP</a> the Impulser.<br>
+Use this link to <a href="http://bigorc.com:4080/old/cgi-bin/game_design/start_impulser.pl">START</a> the Impulser.<br>
+(NOTE - the start semaphore is only checked every 5 minutes - so there maybe a delay<br>
+in starting - but the stopping the impulser should take effect within seconds)<br>
+Use this link to <a href="http://bigorc.com:4080/old/cgi-bin/game_design/copy_impulser.pl">COPY</a> impulser.txt over the old one.<br>
+(The old one WILL be backed up just in case)
+You can view the <a href="console.txt">Console Log</a> - but you may want to stop/restart<br>
+the impulser first - especially if it has been running for some time - since this log file<br>
+can grow very large.<br>
+</BODY>
+</HTML>

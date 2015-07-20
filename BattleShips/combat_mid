@@ -1,0 +1,16 @@
+    </SELECT></CENTER></TD>
+    <TD WIDTH="20%">
+    <P><CENTER>&nbsp;<INPUT NAME="bearing1" TYPE="text" SIZE="5"
+    MAXLENGTH="5"></CENTER></TD>
+    <TD WIDTH="20%">
+    &nbsp;<INPUT NAME="optics1" TYPE="text" SIZE="5" MAXLENGTH="5"></TD> 
+    <TD WIDTH="20%">
+    <P><CENTER>&nbsp;<INPUT NAME="crew_skill1" TYPE="text" SIZE="5"
+    MAXLENGTH="5"></CENTER></TD>
+    <TD WIDTH="20%">
+    <P><CENTER>&nbsp;<INPUT NAME="sighting1" TYPE="text" SIZE="5"
+    MAXLENGTH="5"></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="20%">
+    &nbsp;<SELECT name="ship2">

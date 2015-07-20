@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+  <TITLE>German AI toggles</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#C0C0C0" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+<center><H2>German AI Control Panel</h2></center>
+<FORM ACTION="/old/cgi-bin/game_design/mod_germ_ai.pl" ENCTYPE="x-www-form-urlencoded"
+METHOD="POST">
+German Ship ID #<INPUT NAME="ship_id" TYPE="text" SIZE="3"><br>
+
+Should This Vessel Use AI? <INPUT TYPE="radio" VALUE="YES"
+NAME="use_ai" CHECKED="1">Yes <INPUT TYPE="radio" VALUE="NO" 
+NAME="use_ai">No<br>
+<hr>
+(The rest of these are ignored if the above is &quot;No&quot;<br>
+
+<P>Distance this vessel should strive to close within of target
+vessel:<INPUT NAME="target_range" TYPE="text" SIZE="5" MAXLENGTH="5">.<br>
+
+When Distance is achieved - should broadside be presented?
+<INPUT TYPE="radio" VALUE="YES" NAME="broadside" CHECKED="1">Yes
+<INPUT TYPE="radio" VALUE="NO" NAME="broadside">No<br>
+
+Should vessel allow itself to be outnumbered? <INPUT TYPE="radio"
+VALUE="YES" NAME="outnumber" CHECKED="1">Yes <INPUT TYPE="radio"
+VALUE="NO" NAME="outnumber">No<br>
+
+What percent of remaining flotations should retreat threshold
+be set at? <INPUT NAME="float_thresh" TYPE="text" SIZE="3" MAXLENGTH="3"><br>
+
+If out of Gunnery Range - should vessel pursue only target?
+<INPUT TYPE="radio" VALUE="YES" NAME="pursue" CHECKED="1">Yes
+<INPUT TYPE="radio" VALUE="NO" NAME="pursue">No<br>
+
+Should Vessel always switch to closer target? <INPUT TYPE="radio"
+VALUE="YES" NAME="closer" CHECKED="1">Yes <INPUT TYPE="radio"
+VALUE="NO" NAME="closer">No<br>
+
+Should Vessel always switch to more damaged target? <INPUT
+TYPE="radio" VALUE="YES" NAME="damaged" CHECKED="1">Yes <INPUT
+TYPE="radio" VALUE="NO" NAME="damaged">No<br>
+
+Should Vessel always return fire when fired apon?
+<input type="radio" value="YES" name="return_fire" checked="1">Yes <input
+type = "radio" value = "NO" name = "return_fire">No <br>
+<P>&nbsp;</P>
+
+<P><INPUT NAME="name" TYPE="submit" VALUE="Make It So"><INPUT
+NAME="name" TYPE="reset" VALUE="Reset"></FORM>
+
+</BODY>
+</HTML>

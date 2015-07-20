@@ -1,0 +1,318 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	99.05.26.12.27.05;	author orcus;	state Exp;
+branches;
+next	;
+
+
+desc
+@Galactic Overlords stuff
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#!/usr/bin/perl -w
+
+#$pi = 3.14159265358979323846;
+$Gee = .000196;
+$C = 6000;
+
+#+---------------+--------------+------+-----+---------+-------+
+#| Field         | Type         | Null | Key | Default | Extra |
+#+---------------+--------------+------+-----+---------+-------+
+#| id_number     | mediumint(9) |      | PRI | 0       |       |
+#| current_x     | varchar(15)  |      |     |         |       |
+#| current_y     | varchar(15)  |      |     |         |       |
+#| velocity_x    | varchar(20)  |      |     |         |       |
+#| velocity_y    | varchar(20)  |      |     |         |       |
+#| accel_x       | varchar(20)  |      |     |         |       |
+#| accel_y       | varchar(20)  |      |     |         |       |
+#| warp_factor   | mediumint(9) |      |     | 0       |       |
+#| overall_velo  | varchar(20)  |      |     |         |       |
+#| heading       | varchar(20)  |      |     |         |       |
+#| overall_accel | varchar(20)  |      |     |         |       |
+#| name          | varchar(30)  | YES  |     | NULL    |       |
+#+---------------+--------------+------+-----+---------+-------+
+
+#use strict;
+use diagnostics;
+use CGI;  # available from http://www.perl.com/CPAN/
+use Mysql;
+
+# Create an instance of CGI
+my $query = new CGI;
+
+# Send an appropriate MIME header
+print $query->header("text/html");
+
+# Grab values from the form 
+# Prints are for debug only
+my $ship_name = $query->param("ship_name");
+print "Ship Name: $ship_name<br>\n";
+my $star_system = int($query->param("star_system"));
+print "Starting Star System is: $star_system\n<br>";
+my $start_planet = int($query->param("start_planet"));
+print "Starting Planet is: $start_planet\n<br>";
+my $end_system = int($query->param("end_system"));
+print "Ending Star System is: $end_system\n<br>";
+my $end_planet = int($query->param("end_planet"));
+print "Ending Planet is: $end_planet\n<br>";
+my $ship_speed = int($query->param("shipspeed"));;
+
+# Impulse accel table in Gravs
+$imp_accel[1] = 1.0;
+$imp_accel[2] = 2.0;
+$imp_accel[3] = 2.5;
+$imp_accel[4] = 3.0;
+$imp_accel[5] = 5.0;
+$imp_accel[6] = 10.0;
+# Warp Factor Table
+
+for ($xx = 1; $xx <= 9; $xx++) {
+	$imp_accel[6+$xx] = $xx;
+}
+
+
+print "Ship Speed Index:(refer to the source of the form for this meaning)  $ship_speed\n<br>";
+
+
+# need to retrieve the current ship ID number - increment and use it.
+# get this value from SQL database
+
+my $dbh = Mysql -> connect("localhost","test");
+
+my $command = "";
+        $command = "select how_many from how_many_test_ships";
+        my $sth=$dbh-> query($command);
+        die "Error with command $command\n" unless (defined $sth);
+        my @@arr=();
+        while (@@arr = $sth->fetchrow)
+        {
+        ($test_ships) = @@arr;
+        }
+
+print "Currently There are $test_ships on file - this will be ";
+	$test_ships = $test_ships + 1;
+print "the $test_ships ship on file\n<br>";
+	
+	if ($star_system > 100) {
+	print "<br>\nInvalid Star System Chosen - Resubmit<br>\n";
+	exit;
+	}
+	if ($star_system < 1 ) {
+	        print "<br>\nInvalid Star System Chosen - Resubmit<br>\n";
+        exit;
+        }
+	#die "You Picked an Invalid Starting Star System #" unless ( ($star_system > 0) && ($star_system < 101) );
+
+       $command = "select planets from master_star_chart where id_number = $star_system";
+        $sth = $dbh -> query($command);
+        die "Error with command $command\n" unless (defined $sth);
+
+# iterate thru the returned row(s)
+
+         @@arr = ();
+        while (@@arr = $sth->fetchrow)
+        {
+        ($how_many_planets) = @@arr;
+        }
+
+print "The Selected Start Star has $how_many_planets planets orbitting it\n<br>";
+	if ($start_planet > $how_many_planets) {
+	print "Sorry - you picked a planet number that is too large for that system\n<br>";
+	exit;
+	}
+	if ($start_planet < 0 ) {
+	print "Please choose a positive number for the start planet number\n<br>";
+	exit;
+	}
+
+#	die "Please Choose a Planet within the Valid Amount\n<br>" unless ( ($start_planet <= $how_many_planets) && ($start_planet > 0) );
+#	die "This Star Has No Planets Orbitting it - Try Another One\n<br>" unless ($how_many_planets > 0);
+
+
+#Check on the End Point Now:
+
+       $command = "select planets from master_star_chart where id_number = $end_system";
+        $sth = $dbh -> query($command);
+        die "Error with command $command\n" unless (defined $sth);
+
+# iterate thru the returned row(s)
+
+         @@arr = ();
+        while (@@arr = $sth->fetchrow)
+        {
+        ($how_many_plants) = @@arr;
+        }
+
+print "The Selected End Star has $how_many_plants planets orbitting it\n<br>"
+;
+	if ($end_planet > $how_many_planets) {
+	print "There are fewer than that many planets - choose another end planet\n<br>";
+	exit;
+	}
+	if ($end_planet < 1) {
+	print "Please choose a positive planet number for the end planet\n<br>";
+	exit;
+	}
+  
+#       die "Please Choose a Planet within the Valid Amount\n<br>" unless ( ($end <= $how_many_plants) && ($end_planet > 0) );
+#        die "This Star Has No Planets Orbitting it - Try Another One\n<br>" unless ($how_many_plants > 0);
+
+
+# now we have the start and end planets - need to retrieve their X and Ys.
+# first - convert the relative (to star) planet id into normalized IDs
+        $command = "select how_many from how_many_planets";
+        $sth=$dbh-> query($command);
+        die "Error with command $command\n" unless (defined $sth);
+        @@arr=();
+        while (@@arr = $sth->fetchrow)
+        {
+        ($number_of_planets) = @@arr;
+        }
+$found_star = 0;
+for ($xx = 1; $xx <= $number_of_planets; $xx++) {
+	
+$command = "";
+$command = "select star from master_planet_chart where id_number = $xx";
+        $sth=$dbh-> query($command);
+        die "Error with command $command\n" unless (defined $sth);
+        @@arr=();
+        while (@@arr = $sth->fetchrow)
+        {
+        ($what_star) = @@arr;
+        }
+	if ($what_star == $star_system) {
+		$found_star = $found_star +1;
+		if ($found_star == $start_planet) {
+			$this_planet = $xx;
+			$xx = $number_of_planets }
+					}
+	}
+
+$command = "";
+$command = "select x_co_ord, y_co_ord from master_planet_chart where id_number = $this_planet";
+$sth= $dbh -> query($command);
+die "Error with command $command\n" unless (defined $sth);
+
+# iterate thru the returned row(s)
+
+ @@arr = ();
+while (@@arr = $sth->fetchrow)
+        {
+($start_x,$start_y) = @@arr;
+	}
+
+# Now find ending planets co-ords
+
+$found_star = 0;
+for ($xx = 1; $xx <= $number_of_planets; $xx++) {
+
+$command = "";
+$command = "select star from master_planet_chart where id_number = $xx";
+        $sth=$dbh-> query($command);
+        die "Error with command $command\n" unless (defined $sth);
+        @@arr=();
+        while (@@arr = $sth->fetchrow)
+        {
+        ($what_star) = @@arr;
+        }
+        if ($what_star == $end_system) {
+                $found_star = $found_star +1;
+                if ($found_star == $end_planet) {
+                        $this_planet = $xx;
+                        $xx = $number_of_planets }
+                                        }
+	}
+
+$command = "";
+$command = "select x_co_ord, y_co_ord from master_planet_chart where id_number = $this_planet";
+$sth= $dbh -> query($command);
+die "Error with command $command\n" unless (defined $sth);
+
+# iterate thru the returned row(s)
+
+ @@arr = ();
+while (@@arr = $sth->fetchrow)
+        {
+($end_x,$end_y) = @@arr;
+        }
+
+print "The Test Vessel $ship_name has the following Starting Co-Ords $start_x , $start_y<br>\n";
+print "and the following Ending Co-Ords $end_x , $end_y<b>\n";
+#print "Here is the ArcTangent for those points: ";
+
+$delta_x = ($end_x - $start_x);
+$delta_y = ($end_y - $start_y);
+
+$heading = atan2($delta_y,$delta_x);
+# purge old test ship count before adding new one
+        $command = "delete from how_many_test_ships";
+# Send the query
+$sth = $dbh->query($command);
+
+# Make sure that $sth returned reasonably
+die "Error with command $command" unless (defined $sth);
+
+#print "Return code was $sth\n";
+        $command = "";
+        $command = "replace into how_many_test_ships (how_many) values ($test_ships) ";
+ #       print "SQL Command:$command\n";
+        $sth = $dbh->query($command);
+die "error with command $command" unless (defined $sth);
+#print "return code was $sth\n";
+
+#print "\nSQL database updated with new total of test ships en route.\n<br>";
+
+#Compute starting parameters
+
+#$heading_deg = $heading * (180 / $pi);
+# if ship_speed = 1..7 - it is sublight, > 7 it is Warp
+$distance = sqrt (($start_x - $end_x)**2 + ($start_y - $end_y)**2);
+if ($ship_speed < 8 ) {
+	$overall_accel = $imp_accel[$ship_speed];
+	$velocity_x = 0;
+	$velocity_y = 0;
+	$warp_factor = 0;
+	$accel_x = cos($heading) * $overall_accel * $Gee;
+	$accel_y = sin($heading) * $overall_accel * $Gee;
+	$overall_velo = 0; #This will be updated when impulsing
+	$travel_time = int($distance / (sqrt(2 * $overall_accel * $distance) / 2) + .5);
+	}
+
+if ($ship_speed > 7 ) {
+	$overall_accel = 0;
+	$warp_factor = $imp_accel[$ship_speed];
+	$velocity_x = cos($heading) * $C * (($warp_factor)**3);
+	$velocity_y = sin($heading) * $C * (($warp_factor)**3);
+	$accel_x = 0;
+	$accel_y = 0;
+	$overall_velo = sqrt($velocity_x**2 + $velocity_y**2);
+	$travel_time = int($distance / $overall_velo + .5);
+	}
+
+$command = "";
+$command = "insert into test_ships (id_number, current_x, destination_x, current_y, destination_y, velocity_x, velocity_y, accel_x, accel_y, warp_factor, overall_velo, heading, overall_accel, eta, name) values ($test_ships, $start_x,$end_x,$start_y,$end_y,$velocity_x,$velocity_y,$accel_x, $accel_y,$warp_factor,$overall_velo,$heading,$overall_accel,$travel_time, \"$ship_name\")";
+#print "Command Sent to Sql Server = $command\n<br>";
+
+	$sth = $dbh->query($command);
+die "error with command $command" unless (defined $sth);
+print "<br>\n";
+print "<B>Your Submission was accepted - The Ship is Launched</b>\n<br>";
+print "<B>Total Distance to Travel is $distance<br>\n";
+print "The Ship should arrive at its destination in $travel_time impulses - unless it encounters a Nasty Berserker</b>\n<br>";
+system "touch /home/www/cgi-bin/game_design/add_ship";
+system "chmod a+rw /home/www/cgi-bin/game_design/add_ship";
+exit;
+
+@

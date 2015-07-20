@@ -1,0 +1,12 @@
+SUBJECT>Ship Deletion
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Thursday, 13 May 1999, at 11:09 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>
+NEXT> 84 87 90
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>As you'll see from the individual ship Status page - there is now a button for deleting the current ship. Unfortunately, at this time it's not quite working properly if you delete a ship in the middle of the pack.<p> I see alot of work ahead - and I think we need to prioritize somewhat<br> Categories of work remaining to be done:<br> The Map - I have some ideas... more later<br> Ship Classes - right now all ships are treated equeally - they should'nt be.<br> Weapon fire/Damage<br> Standing Orders - even braindead ai - right now all ships go in straight lines<br> Submarines - this should be fairly simple - but requires ship classes<br> Way Points and/or general plotting - this requires the map<br> Lots more I can'nt think of right now<p> My tenative plans are to fix the bugs my new features have introduced and then start contemplating a rudimentary java based map. The first attempt will be something similar to GO's dot map - except I plan on being able to highlight a selected ship with a circle around it or some such. Later I'll try drawing rough outlines if you are zoomed in close enough.

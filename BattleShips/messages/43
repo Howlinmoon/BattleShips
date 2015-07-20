@@ -1,0 +1,12 @@
+SUBJECT>Where to begin
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 13 April 1999, at 8:03 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: jimv.telxon.com; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>
+NEXT> 46 49
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Thus begs the question - where do we start?<br> 1) Determine the size of the map? Has to be 3d for Subs and would be nice eventually to be able to support varying depths<br> 2) How do we want the map to look? I can probably come up with a quickie demo map showing some ships in various orientations on it using java's line command.<br> 3) On the map - it would probably be best to limit ourselves to this subset of ship types to start with:<p> Freighter - could be subclassed into tanker, ore, mil transport<br> Destroyer - a staple - a must have<br> Submarine - could be subclassed later into various configurations<br> Battleship<br> Aircraft Carrier<br> This generic classes should be good enough to start with<br> 4) Visibility or sighting - we need to determine range stuff is visible at assuming we are not using radar to start with. A large ship is of course visible at a greater distance and a large ship under full steam is of course even more visible. A submarine at periscope depth is very hard to spot unless you look in exactly the right direction or the sun reflects off of the lenses in the scope.<br> 5) How to resolve combat - I'd vote for my earlier idea of computing attack/defense/speed values dynamically for each ship for each engagement and simply having high score win. Although - the combat should be resolved in steps and not all at once - it's should be possible to have both sides disengage if neither is willing to pursue the other. (in other words - a stalemate)<p> I should be able to come up with a demo map with a few ships on it that we could try out various orders on in not too long a time - but I need some guidance on where to start.

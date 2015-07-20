@@ -1,0 +1,54 @@
+SUBJECT>Gun Stats for Same Seven WWI Ship Classes
+POSTER>Mike
+EMAIL>
+DATE>Wednesday, 26 May 1999, at 2:18 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>124
+NEXT> 151
+IMAGE>
+LINKNAME>
+LINKURL>
+<P><b>Game Stats on the guns of those four British and Three German WWI Battleship Classes:</b> <br><b>&nbsp;</b> <br><b></b>&nbsp; <table BORDER COLS=7 WIDTH="100%" > <tr> <td><b>Gun</b></td>
+<P><td><b>Used on Class</b></td>
+<P><td><b>Rounds/Impulse</b></td>
+<P><td><b>Shell Velocity*</b> <br><b>(feet/sec)</b></td>
+<P><td><b>Shell Weight* (lbs)</b></td>
+<P><td><b>Max Elevation* (degrees)</b></td>
+<P><td><b>Max Range (pixels)</b></td> </tr>
+<P><tr> <td>British 12" <br>Mark X</td>
+<P><td>Belerphon</td>
+<P><td>1.5</td>
+<P><td>2,850</td>
+<P><td>850</td>
+<P><td>13.5</td>
+<P><td>93</td> </tr>
+<P><tr> <td>British 13.5" Mark V</td>
+<P><td>Iron Duke <br>King&nbsp; George V</td>
+<P><td>1.5</td>
+<P><td>a) 2,700 <br>b) 2,500</td>
+<P><td>a) 1,250 <br>b) 1,400</td>
+<P><td>20</td>
+<P><td>Mike needs to calculate**</td> </tr>
+<P><tr> <td>British 15" <br>Mark I</td>
+<P><td>Queen Elizabeth</td>
+<P><td>2</td>
+<P><td>2,462</td>
+<P><td>1,920&nbsp;</td>
+<P><td>20</td>
+<P><td>117</td> </tr>
+<P><tr> <td>German14.96" <br>SK C/14&nbsp;</td>
+<P><td>Bayern</td>
+<P><td>2.5</td>
+<P><td>2,625</td>
+<P><td>2010</td>
+<P><td>20</td>
+<P><td>125&nbsp;</td> </tr>
+<P><tr> <td>German 12" <br>SK C/12</td>
+<P><td>K&ouml;nig <br>Kaiser</td>
+<P><td>3</td>
+<P><td>2,805</td>
+<P><td>893</td>
+<P><td>16</td>
+<P><td>110</td> </tr> </table>
+<P><p>* these three fields will be used later to calculate armor penetration <p>** apparently this British gun could fire two different armor piercing shells, a lighter one for long range and a heavier one for short range.&nbsp; Kind of reminds me of Federation overloaded photons.&nbsp; I need to think about how to take stuff like this into account, since we will probably see this sort of thing again. <p>This is more than enough information to have the ships shoot at each other and calculate number of hits per impulse.&nbsp; Allocating damage, including armor penetration, will take a lot more work.&nbsp; But this data will get us shooting quickly and give us a great head start on damage allocation.

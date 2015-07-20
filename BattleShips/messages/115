@@ -1,0 +1,18 @@
+SUBJECT>Re: Database accident...
+POSTER>Mike
+EMAIL>
+DATE>Monday, 24 May 1999, at 9:19 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>114
+NEXT> 116
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> I.e. you wont have a torp tube prompt if you are launching a BB...
+<BR>&gt; I just threw all of the elements I was tenatively planning on "implementing"
+<BR>&gt; on one page for reference. Remember - simplicity first - keep that
+<BR>&gt; in mind when suggesting enhancements.
+<P>Actually most fields will be fine for most ships. Except for CVs and cargo ships just about all classes of ships sometimes carried torpedoes. BBs, BCs, CAs and CLs definitely did. The main fields that will be different are those associated with submarines and CVs. Perhaps the fields for main guns and turrets could track maximum depth, number of aircraft in hangar, aircraft fuel & ammunition, battery capacity, and such.
+<P>Actually the list looks fairly complete for a start. Fuel is going to be an issue eventually, but players should not have to supply that information. Eventually, for most ships in most scenarios the data will be pre-ordained in a database and the players won't be able to change it. That is, most of the time players won't have the option of putting 500" armor on the H.M.S. Rodney and reducing the Bismark's guns to pea shooters (sorry, Dave).
+<P>BTW History Channel showed a 2-hour documentry about the Bismark over the weekend. It really got me psyched!

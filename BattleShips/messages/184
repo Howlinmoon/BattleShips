@@ -1,0 +1,22 @@
+SUBJECT>Shots_hit vs volleys
+POSTER>Mike
+EMAIL>
+DATE>Wednesday, 23 June 1999, at 10:02 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>182
+NEXT> 185 186
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> DO we want to allow different guns in the same turret
+<BR>&gt; to fire at different targets?
+<P>No, this would be unrealistic.
+<P>&gt; Personally - I'm not sure why we are even going
+<BR>&gt; the extra step and including volleys - why not
+<BR>&gt; simply at the start of the combat routine -
+<BR>&gt; initialize shots_hit to 0, and then increment
+<BR>&gt; it by one for every shot from every ship that
+<BR>&gt; hits - and for every hit - save this information.
+<P>This will work just fine. In this case you need to keep track of four things: target ship ID, range, gun type, and bearing from the target to the firing ship, for each shot that hits. I suggested the volley concept because most of this information will be duplication . . . if the Bismark's main guns hit the Hood with seven shells in an impulse, then those four fields will be exactly the same for all seven shots_hit.
+<P>It's fine with me if you want to keep track of individual shells instead of grouping them into volleys.

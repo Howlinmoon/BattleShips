@@ -1,0 +1,43 @@
+for ($other_ship =1; $other_ship <= $number_test_ships; $other_ship++) {
+	if ($current_ship != $other_ship)
+        {
+	$range_to_ship[$current_ship][$other_ship] = sqrt(($ship_x[$current_ship] - $ship_x[$other_ship]) **2 + ($ship_y[$current_ship] - $ship_y[$other_ship]) **2);
+	$pretty_range = int($range_to_ship[$current_ship][$other_ship]);
+
+	$Xdiff = $ship_x[$other_ship] - $ship_x[$current_ship];
+	$Ydiff = $ship_y[$other_ship] - $ship_y[$current_ship];
+
+	$dirextion = atan2($Ydiff,$Xdiff)*180/$pi;
+	if ($dirextion < 0)
+	{
+	$dirextion = $dirextion + 360;
+	}
+
+	if ($ship_course[$current_ship] >= $dirextion)
+           {
+           $baering = $dirextion - $ship_course[$current_ship];
+           }
+           else
+           {
+           $baering = $ship_course[$current_ship] - $dirextion;
+           }
+	$pretty_bearing = int($baering);
+	$pretty_bearing = (-$pretty_bearing)-270;
+	if ($pretty_bearing < 0)
+	   {
+           $pretty_bearing += 360;
+	   }
+	}
+	else
+	{
+	$pretty_range = "N/A";
+	$pretty_bearing = "N/A";
+	}
+#	print SHIP_STAT "<td align=\"center\">$range_to_ship[$current_ship][$other_ship]</td>";
+	print SHIP_STAT "<td align=\"center\">$pretty_range</td>";
+	print SHIP_STAT "<td align=\"center\">$pretty_bearing</td>";
+	
+	}
+print SHIP_STAT "</tr>\n";
+
+} # end of for test_ship loop

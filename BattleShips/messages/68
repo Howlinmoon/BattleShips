@@ -1,0 +1,31 @@
+SUBJECT>Re: The Wait is Over!
+POSTER>Mike Substelny
+EMAIL>
+DATE>Thursday, 29 April 1999, at 9:21 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>66
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> I Trust if I apply these same formulas to the ENEMY ship I can
+<BR>&gt; determine which of my guns bear WHERE on his hull?
+<P>Yes. The only drawback is that a bearing of zero degrees has to be somewhere, which will make it difficult to combine arcs. Currently zero is dead ahead. So the LF firing arc is 0-60 degrees and the RF firing arc is 320-360 degrees. While the RX, LS, and RS arcs are continuous the FX arc must be broken into two arcs. LS = 0-180, RS = 180-360, RX = 60-320, but FX = 0-120 plus 240-360.
+<P>&gt; In an upcoming addon to the ship status page - I'm going to be
+<BR>&gt; using SFB style firing arcs - and I'd like to report which arc the
+<BR>&gt; enemy is facing towards the current ship. This way we can tell if
+<BR>&gt; we are raking their bow/stern or hitting their broadside.
+<P>&gt; I'm right now working on adding onto the ship design page to
+<BR>&gt; allow entry of the following fields. For now:
+<P>&gt; Desired Course, Rudder Position, Which Arcs have Guns and how
+<BR>&gt; many, What to do when sighted Enemy ship when: Enemy Ship is Larger
+<BR>&gt; Enemy Ship is Faster Enemy Ship is Reducing Range Enemy Ship is
+<BR>&gt; Increasing Range Those should keep me busy for quite some time
+<BR>&gt; - stay tuned... The ship's name on the main ship status page will
+<BR>&gt; become a link to a more detailed individual ship status page when
+<BR>&gt; this is ready.
+<P>Great! I will try to find some data on naval terminology. For now I think rudder positions can be "rudder amidships", "port rudder" and "starboard rudder."
+<P>&gt; Dont you mean 18 impulses here? Which is exactly 6 minutes?
+<BR>&gt; (20 * 18 = 360)
+<P>It will tie up the host and the player for 6 minutes, but rememner we are on a 3:1 time scale. So on game scale the BB turns a full circle in 18 minutes, which is probably pretty close to reality. At least close enough for now.

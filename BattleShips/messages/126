@@ -1,0 +1,12 @@
+SUBJECT>Waypoints are here!
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 26 May 1999, at 7:21 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>119
+NEXT> 128
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Well - my first attempt at doing waypoints is now operational - but it has limitations which I'll have to fix in the near future:<p> 1) If you manually override the ship's course while it is following a waypoint - and DONT put it back on track later, it will never reach the current waypoint. (nor will it proceed to the next one until the current waypoint is reached)<p> 2) Due to the order of processing during an impulse - it appears that a ship from a dead stop can not be ordered to follow a waypoint. When a waypoint is processed - the ship assumes the waypoint speed as it's target speed. It also measures the distance to the waypoint. The following turn it will accellerate to 5, but for some reason when it measures the distance again to the waypoint - it comes up with the same distance as last turn - and since this passes my check to see if the distance this turn is GREATER than last turn - the waypoint code concludes that we have reached our destination waypoint.<p> 3) As a temporary fix for 2), I am now checking to see if the distance is greater than last impulse AND if the distance is less than 25 remaining to the waypoint. If so THEN it assumes it has arrived.<p> 4) As of right now - there is no way to remove a waypoint from the queue of waypoints for a particular ship - it WILL have to reach the current waypoint before looking at any other ones.<p> 5) The ship deletion code has been temporarily disabled - you can try to delete a ship but since I craftily renamed the semaphore I check for in the impulser - the ship deleter will never be acknowledged now and wait forever. Right now the code to handle juggling the queues of waypoints around does'nt exist in the ship deletion area - and would royally screw things up as it is.<p> 6) Depth changes are not being handled at this moment - submarines should follow waypoints just like every other vessel - but they will not use the depth change field just yet. Will be easy to implement.<p> 7) Ships apon reaching their last waypoint will set a speed of zero and keep their original course. Players at that time are able to submit more waypoints or simply manually adjust the course and speed.<p>

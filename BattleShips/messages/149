@@ -1,0 +1,12 @@
+SUBJECT>Task Force Status VI
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Monday, 7 June 1999, at 1:07 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>142
+NEXT> 152
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Ok - Waypoints of a rudimentary sort have been implemented finally for Task Forces. Currently - all that happens is when you have ships assigned to a task force and assign the task force a waypoint - it queries to see if this is the first waypoint for the task force. If it IS the first waypoint - it initializes all of it's member ships waypoints to none - and then gives them all the current task force waypoint as their own.<p> Right now rallying and forming up are not implemented - if a scattered mess of ships is assigned the same task force - and then the task force is given a waypoint - ALL of the ships will immediately drop what they are doing and make their way to the first waypoint - irrespective of whenever the rest of the tf will be there. It is quite possible to have a "train" of ships passing thru the waypoints at staggered intervals. Eventually more smarts will be implemented enabling having all of the ships WAIT at the first checkpoint until the rest of the tf is there - and then setout for waypoint #2. Also - as you can see by my test task force - speeds are not being compared right now - and every ship will attempt to do the speed set by the waypoint - and the stragglers will fall behind quickly.<p> Further polishing of taskforces wont be happening for a while yet - since I really need to go back and re-implement ship deleting, add task force deletion and most importantly - waypoint deletion. I dont think I have the patience to wait for my stragglers to reach their first waypoint ;-)

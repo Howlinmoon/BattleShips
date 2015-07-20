@@ -1,0 +1,14 @@
+SUBJECT>Pretty Cool! But it's a foggy, foggy, foggy, foggy world!
+POSTER>Mike Substelny
+EMAIL>msubstel@lorainccc.edu
+DATE>Monday, 19 April 1999, at 9:19 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: mike_work; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>51
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>I checked the database to see that Jim's Bismark has set sale, so to speak. Great!
+<P>In my last message last week I said something misleading. I said you could set a sighting distance in nautical miles, the proceeded to give a sighting formula in pixels. If you put SIGHT_DISTANCE = 20 in that formula then you can barely see two nautical miles. The whole world is in a fog bank.
+<P>To get actual nautical miles, multiply SIGHT_DISTANCE by a factor of ten. Twenty NM, a more realistic sighting distance, is 200 pixels.

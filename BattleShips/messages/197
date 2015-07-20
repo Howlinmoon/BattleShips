@@ -1,0 +1,12 @@
+SUBJECT>Crude Text map now active
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Thursday, 1 July 1999, at 10:17 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>There is now a link from the <a href="/old/game_design/ship_status.html">ShipStatus</a> Page to a <a href="/old/game_design/map.html">text map</a> ala old TRS-80 style wargame type maps. This is meant to fill the void until time is available to write a decent one in Java. (dont hold your breath)<br> Visual Range is now determined during the impulses and reported in ships logs when they sight/lose sight of a foreign vessel. It is considered in the combat routines partially now - if a ship is in gunnery range BUT not within visual range - then the ship will not fire. At the moment - thats the only consideration given for range - ships will STILL "spot" enemy ships when their AI is activated and they are fired apon. This will be corrected later Friday.<br> You can modify a ship's parameters from the text map now - plus view it's logs. The Ship Status icon is now printed adjacent to the ship ID number - until I figure out a better placement for it. There is no stacking on that map - if ships are bunched close - the last drawn ship will overwrite another one in the same scaled spot.

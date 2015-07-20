@@ -1,0 +1,14 @@
+SUBJECT>Simulator Working Well! How to Pick a Target?
+POSTER>Mike
+EMAIL>
+DATE>Wednesday, 16 June 1999, at 3:39 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>168
+NEXT> 173
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>The <A HREF = "http://204.210.200.85:4080/old/game_design/combat_sim.html">ENHANCED COMBAT SIMULATOR</A> is great! I encourage everyone to try it out. Note the way Jim repositioned the background artwork to make it look like two BBs shooting at each other (at really, really close range!)
+<P>Almost all the data needed to feed the combat algorithms is available from the impulser program and the databases. The only thing that is missing is a field designating the firing ship's target. This is needed to keep every ship from firing all its guns at every other ship on the map every impulse.
+<P>For now, could the target be selected manually by the player, possibly on the same screen where course changes are made? We don't even need to worry about complex stuff like splitting fire between two targets at this time. Just a field that says <B>Enter target ship number:____</B> or something like that.

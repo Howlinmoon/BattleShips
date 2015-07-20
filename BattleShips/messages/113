@@ -1,0 +1,20 @@
+SUBJECT>Re: Waypoint Status
+POSTER>Mike
+EMAIL>
+DATE>Friday, 21 May 1999, at 3:42 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>112
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> By Monday hopefully waypoints will be at least
+<BR>&gt; partially operational.
+<P>Great! I am itching to work on combat, too.
+<P>&gt; There is a slight bug in the speed limiter I implemented
+<BR>&gt; yesterday - I have the limiter BEFORE the accellerator...
+<BR>&gt; which explains why my subs can do 15 submerged when the
+<BR>&gt; speed limit is 10...
+<P>Yeah, I wondered why I was able to increase speed for one impulse, then get knocked back down. It was very strange.
+<P>How come my ships get knocked down after one impulse, but your don't?

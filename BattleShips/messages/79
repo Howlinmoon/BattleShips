@@ -1,0 +1,12 @@
+SUBJECT>Re: Course Changes now Work
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 11 May 1999, at 9:44 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>77
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Actually the ships WILL turn right...<br> The problem is - right now I am merely comparing the two degrees - course and desired_course. If course > desired_course I subtract at most 20 degrees each impulse to bring course == desired_course. Unfortunately - at the moment if current course is 359 degrees and desired course is 1 degree - the ship will turn left 358 degrees. Or - if the current course is 1 degree and the desired course is 359 degrees - then the ship will turn right 358 degrees. I'll fix this later today.

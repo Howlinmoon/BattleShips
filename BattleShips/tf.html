@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>Task Force Management Page</TITLE>
+</HEAD>
+<BODY>
+NOTE! THIS IS only somewhat ACTIVE YET!
+<FORM action="/cgi-bin/game_design/taskforce.pl" method= "post">
+<P><CENTER>Task Force Management</CENTER></P>
+
+<P>Create Or Delete a Task Force</P>
+
+<P><INPUT TYPE="radio" VALUE="1" NAME="tf">Test Task Force</P>
+
+<P><INPUT TYPE="radio" VALUE="2" NAME="tf" CHECKED="1">Another
+Test Task Force</P>
+
+<P><INPUT NAME="del_force" TYPE="submit" VALUE="Delete Task Force"></P>
+
+<P>Name of New TaskForce: <input name="taskforce" type="text" size="20"><INPUT NAME="command" TYPE="submit" VALUE="add_tf">
+</P>
+Country Creating TaskForce: <SELECT name="country">
+<OPTION VALUE="usa" SELECTED>USA
+<OPTION VALUE="japan">JAPAN
+<OPTION VALUE="england">ENGLAND
+<OPTION VALUE="germany">GERMANY
+<OPTION VALUE="italy">ITALY
+<OPTION VALUE="japan">JAPAN
+<OPTION VALUE="other">other
+</SELECT><BR>
+</form>
+<form>
+<P><HR ALIGN=LEFT></P>
+
+<P>Recruit or Dismiss Ships from Current Task Forces</P>
+
+<P>Ship A is in Task Force <INPUT TYPE="radio" VALUE="0" NAME="force1"
+CHECKED="1">NONE <INPUT TYPE="radio" VALUE="1" NAME="force1">A
+<INPUT TYPE="radio" VALUE="2" NAME="force1">B <INPUT TYPE="radio"
+VALUE="3" NAME="force1">C</P>
+
+<P>Ship B is in Task Force <INPUT TYPE="radio" VALUE="0" NAME="force2"
+CHECKED="1">NONE <INPUT TYPE="radio" VALUE="1" NAME="force2">A
+<INPUT TYPE="radio" VALUE="2" NAME="force2">B<INPUT TYPE="radio"
+VALUE="3" NAME="force2">C</P>
+
+<P><INPUT NAME="recruiter" TYPE="submit" VALUE="Task Force Recruiter"></FORM>
+
+</BODY>
+</HTML>
+

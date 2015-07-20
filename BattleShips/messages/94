@@ -1,0 +1,12 @@
+SUBJECT>Longitude and Latitude Eratta
+POSTER>Mike Substelny
+EMAIL>
+DATE>Wednesday, 19 May 1999, at 11:10 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>89
+NEXT> 95
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>I think I got the formula backwards. Everywhere you see "* ScaleConstant" it should be "/ ScaleConstant."

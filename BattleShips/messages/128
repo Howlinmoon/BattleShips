@@ -1,0 +1,12 @@
+SUBJECT>Update
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 26 May 1999, at 11:41 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>126
+NEXT> 129
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>There appears to be something wrong when a ship finishes one waypoint - it does'nt seem to be automatically using the next one. I'll have to look into why this is happening - I think it's because a variable is'nt being reset from the first waypoint and the value is now out of whack for the second one. A ship starting from a dead stop should work now - I fixed it earlier and now it assumes that if the distance remaining is < 10, it is at it's destination. I dont think anything in the water will do > 10 pixels in 1 impulse, ships at 40 knots are doing roughly 7. The aforementioned problem also accounts for the ships not displaying their eta correctly... I'll fix that later today.

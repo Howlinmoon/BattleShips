@@ -1,0 +1,12 @@
+SUBJECT>Slight Changes
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 1 June 1999, at 8:05 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Not much has changed over the weekend - coding will resume today on adding task forces to the game. Last week when waypoints were implemented, a slight problem became apparent with them if the next waypoint after the currently followed one required roughly greater than 3 impulses of course changes. What was happening was the ship calculated it's required course from it's CURRENT co-ordinates to get to the next waypoint. Usually this course change took more than one impulse to accomplish. By the time the ship had finished coming about on it's newly calculated course, it was now on a course from it's present co-ordinates that would be a few degress off from where it needed to be to intersect it's waypoint. What would happen is that the ship would then come very close to the next waypoint - but then stop closing distance and start widening it - as it passed it's perigee. When this happened - range would usually NOT be within my trigger range of 10 - and the ship would continue on it's way into oblivion. Of course if the second waypoint was close to the first, a few degrees off course made a minor difference. A LONG range waypoint off by a few degrees meant missing it by an ocean..<p> How this has been fixed is now EVERY impulse that a ship is indicated as following a waypoint, it's target course is RE-calculated and it's heading is adjusted to this new course if required. Which means it WILL be guaranteed to bullseye it's destination.<p> A side effect of this new behaviour is it is now IMPOSSIBLE to override the course of a ship following a waypoint. It WILL start working toward the new course, but the following impulse it will be self corrected back towards it's original destination. I'm going to leave it like this for now - I'll have a course override button sometime that will allow the turning off of waypoint following. When waypoint following is Re-activated - the ship will automatically course-correct itself to resume pursuing it's scheduled waypoint.

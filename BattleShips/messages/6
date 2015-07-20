@@ -1,0 +1,12 @@
+SUBJECT>WWW based SQL maintenance
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 24 February 1999, at 8:13 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: jimv.telxon.com; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>
+NEXT> 7
+IMAGE>
+LINKNAME>WWW Based admin front end
+LINKURL>http://beholder.dhs.org:4080/cgi-bin/myadmin/myadmin-0.2.cgi
+<P>I now have a www front end for maintaining the onboard SQL server. See link below. Note - the only active db at this time is "test" - selecting the default "mysql" one will only generate an error. Feel free to experiment with creating tables - but PLEASE do not delete or modify the ones I have created already.

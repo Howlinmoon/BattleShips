@@ -1,0 +1,26 @@
+SUBJECT>Waypoint Ideas
+POSTER>Mike
+EMAIL>
+DATE>Tuesday, 25 May 1999, at 10:08 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>119
+NEXT> 121
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> One issue needs to be addressed tho -if a waypoint exists- do I allow
+<BR>&gt; manual override of the navigation? I could disallow manual control
+<BR>&gt; (easy way) or I could simply disable the waypoint following as soon
+<BR>&gt; as a manual course is input - and then have it resume when instructed
+<BR>&gt; to via the all purpose ship modification page.
+<P>Here's my $.02 on the subject.
+<P>Prompt the player for a waypoint and a speed, and what action to take upon arrival (I can only think of 3 choices, for now just capture an ASCII character which will be ignored) and store the ASCII character in a FIFO queue. Store the coordinates and speed in variables, and pass them to the current Turn Ship subroutine.
+<P>Within the Turn Ship subroutine, you must see if the current course is <=20 from the new course (i.e. this is the last impulse of the turn). If it is, you need to do two more calculations. First, you need to RECALCULATE the course (based on new current coordinates) so that the ship will hit the waypoint exactly. Second you need to calculate the impulse the ship will arrive. Simply calculate the distance from the current coordinates to the waypoint coordinates SQRT(DELTAX^2 + DELTAY^2), then divide by the number of pixels per impulse at the current speed (knots * 0.1666667). Use the speed ordered by the player, not the current speed in case the ship is accelerating or decelerating.
+<P>Store the impulse of arrival in a variable just like the waypoint coordinates.
+<P>If the voyage is interrupted by player action (changing course or speed), erase the variable for impulse of arrival but keep everything else. Turn on a button that gives them the choice of "Resume Course to Waypoint." Obviously if they select this option all you need to do is pass the coordinates to the waypoint routine described above, which will calculate the new impulse of arrival.
+<P>If the player does not "Resume Course to Waypoint" but instead selects a new waypoint, then destroy everything in the queue before proceeding to the waypoint routine.
+<P>If the voyage is not interrupted, when the appointed impulse arrives pop the instruction character out of the queue. For now have the ship come to a stop. Later we will have it follow orders at this time.
+<P>-------------------------------
+<P>Wanna add more? When the player selects a waypoint you can give him an estimate of when the ship will arrive. Calculate the distance from the current coordinates to the waypoint coordinates SQRT(DELTAX^2 + DELTAY^2), then divide by the number of pixels per impulse at the current speed (knots * 0.1666667). Again, use the speed ordered by the player, not the current speed (in case the ship is proceeding to the waypoint at a speed different from current). This will give a rough estimate of the number of impulses the ship will take to arrive.
+<P>If you like we could calculate the exact impulse of arrival as soon as the player inputs the waypoint anstead of after the turn. This just seemed easier.

@@ -1,0 +1,15 @@
+SUBJECT>Waypoints are way cool!
+POSTER>Mike
+EMAIL>
+DATE>Wednesday, 26 May 1999, at 1:03 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>129
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>I have been sailing ships to waypoints all morning, and they seem to be working well now. Great!
+<P>Elementary Task Force management will be pretty simple now. To assemble a task force, just pick the ships that will be in the task force and select a point on which to converge. Pass that as a waypoint to all the ships. Have them stop when they arrive. A few of them will collide but for now we don't care. They will all be scattered randomly within a few pixels of the assembly point.
+<P>Once all the ships have arrived, all you have to do is pass the same waypoints & speeds to all ships at the same time. They will move as a task force.
+<P>In the future we could add more sophistocated TF management, allowing the ships to assume a nice looking formation and stay in formation automatically. But for now the above two TF management tools would be sufficient to play a basic game (until we start checking for friendly/friendly collisions!)

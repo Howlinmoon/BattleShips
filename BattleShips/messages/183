@@ -1,0 +1,12 @@
+SUBJECT>code re-arrangement
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 23 June 1999, at 7:53 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>I just re-arranged part of the program flow in the impulser - something that I have been meaning to do for some time. In the past - some routines like the one that updates the sql tables on demand from external cgi programs, would only do so during the execution of an impulse. This meant those requests could be delayed upto 19 seconds sometimes. A request such as this was done when new ships are being added since the new ship routine had to know how many ships were in the game at that time.<br> That routine and a few others were moved out of the main impulse conducting loop and placed in the idle loop. The idle loop is where the impulser waits for the 20 second intervals to count down before executing the main impulse loop. While in the idle loop - to be friendly to the rest of the system it does'nt simply run in circles as fast as it can - it sleeps for a second at a time - so the maximum delay should now be roughly 1-2 seconds instead of 19. So somethings that seemed to take forever to finish should now be somewhat more snappier...

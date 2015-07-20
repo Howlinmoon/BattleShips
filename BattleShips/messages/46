@@ -1,0 +1,56 @@
+SUBJECT>Re: Where to begin
+POSTER>Mike Substelny
+EMAIL>msubstel@lorainccc.edu
+DATE>Tuesday, 13 April 1999, at 11:57 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: mike_work; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>43
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>
+<P>&gt; Thus begs the question - where do we start? 1) Determine the
+<BR>&gt; size of the map? Has to be 3d for Subs and would be nice eventually
+<BR>&gt; to be able to support varying depths
+<P>I agree that navigating and maneuvering ships on the map is our first consideration.
+<P>We could have a 2D map with a "depth" variable for subs, and possibly an "altitude" variable for airplanes. As I said before, I'd like to start in the WWI era, so we don't worry about radar or airplanes, and torpedoes and submarines have limited performance and accuracy.
+<P>From a programming standpoint, I am not sure how to handle terrain. I assume we need a database which gives the general shape of land masses. I do not know where to obtain such a database. For now, could we just use rectangular continents?
+<P>&gt; 2) How do we want the map to look? I can probably come up with a quickie
+<BR>&gt; demo map showing some ships in various orientations on it using java's
+<BR>&gt; line command.
+<P>The line command sounds good for rectangular continents.
+<P>&gt; 3) On the map - it would probably be best to limit ourselves to this
+<BR>&gt; subset of ship types to start with: Freighter - could be subclassed
+<BR>&gt; into tanker, ore, mil transport Destroyer - a staple - a must have
+<BR>&gt; Submarine - could be subclassed later into various configurations
+<BR>&gt; Battleship Aircraft Carrier This generic classes should be good
+<BR>&gt; enough to start with.
+<P>Yes, this is more than enough. Frankly we could probably get away with "Capital Ships" to include Battleships, Battlecruisers and Cruisers (later carriers) and "Support Ships" to include Destroyers, Escorts, Minesweepers, and Tenders. "Cargo Ships" would include freighters, transports, tankers, and Q ships. Submarines would be a class unto themselves.
+<P>&gt; 4) Visibility or sighting - we need to determine range stuff is visible at
+<BR>&gt; assuming we are not using radar to start with. A large ship is of course
+<BR>&gt; visible at a greater distance and a large ship under full steam is of course
+<BR>&gt; even more visible. A submarine at periscope depth is very hard to spot
+<BR>&gt; unless you look in exactly the right direction or the sun reflects off of
+<BR>&gt; the lenses in the scope.
+<P>Every ship will be described by a bunch of static variables, like tonnage, belt armor, deck armor, main gun size, secondary gun size, etc.. One of those variables will be silhouette size.
+<P>As Jim said, under some circumstances higher speed makes a ship easier to see. This is because the huge clouds of black smoke billowing out of its smoke stack can be seen from many miles away.
+<P>&gt; 5) How to resolve combat - I'd vote for my earlier idea of computing
+<BR>&gt; attack/defense/speed values dynamically for each ship for each engagement
+<BR>&gt; and simply having high score win. Although - the combat should be
+<BR>&gt; resolved in steps and not all at once - it's should be possible to
+<BR>&gt; have both sides disengage if neither is willing to pursue the other.
+<BR>&gt; (in other words - a stalemate)
+<P>This would be okay to start, but eventually we would want a detailed combat system. That would make it a lot more fun to design your own ships or play shorter tactical games. It would also help account for lucky shots, like the Bismark got against the Hood and the Ark Royale got against the Bismark.
+<P>It seems to me that a "Battlewagon" style combat system would be pretty easy to implement. In fact, the first version of the game might use the "Battlewagon" penetration tables almost exactly as they are. We would simply add our superior movement rules, and a very tiny bit of artificial intelligence (to make decisions like "Should I run away?").
+<P>&gt; I should be able to come up with a demo map with a few ships on it that
+<BR>&gt; we could try out various orders on in not too long a time - but I need some
+<BR>&gt; guidance on where to start.
+<P>I think the first thing to be able to do is move ships around on a map and have them sight each other in broad daylight. First we should be able to take a squadron of generic ships, have them assemble into a formation (chosen by the player), and follow a course (chosen by the player).
+<P>The next step would be to have the generic ships execute a turn while maintaining in formation. Turns are really the only maneuvers fleets make in formation.
+<P>After that we should have the ships look for objects on the map, and report events. They should send an email whenever they spot a new object or lose contact with an object. We will assume all ships have the same silouhette and it is always broad daylight.
+<P>Finally, they should have enough simple AI to follow standing orders when such an event happens. If a cargo convoy spots a periscope it might change formation or change course. If a cruiser squadron spots a Battleship it might run away or follow the BB at a safe distance. (I am looking forward to this part).
+<P>If we could do these things we would be halfway to fighting our first battle. The rest would be just "fleshing out" the simulation with details.
+<P>Initial Dynamic Variables for each ship:
+<P>X coordinate, Y coordinate, heading, and speed. Later we will add "assigned formation position" and some variables having to do with standing orders.
+<P>Previously we discussed the time scale, and sort of settled on 3:1. Now we need to discuss time and space granularity. Is GO's three impulses per minute good for this game, or should we go for two or four? That decision will help us figure out the granularity of the big map. Remember, in this game the host machine does not need to spend millions of CPU cycles recalculating the positions of planets and moons every impulse! The decision might have more to do with bandwidth than CPU speed. How many downloads per minute can the players handle?

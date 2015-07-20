@@ -1,0 +1,21 @@
+SUBJECT>Thoughts on Granularity
+POSTER>Mike Substelny
+EMAIL>msubstel@lorainccc.edu
+DATE>Tuesday, 13 April 1999, at 4:19 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: mike_work; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>43
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Conversion data 1 knot = 1 nautical mile / hour. 1 nautical mile = 6080 feet, so 1 knot = 1.15 land miles / hour.
+<P>The slowest vessels we will see are probably submerged WWI submarines, the slowest of which could make 5 knots maximum. The fastest vessels are probably WWII destroyers & PT boats that could get up to the 40 knot range.
+<P>To start we'll assume we go with a time scale of 3:1 and a time granularity of three impulses / minute, and that we don't want the fastest ship to jump any pixels on the big map's smallest scale. Skipping pixels could be an important factor when we allow players to drop mines in certain pixels.
+<P>In one impulse the fastest ships will cover 4053 feet, about 2/3 nautical mile. Thus if we don't want the fastest ships to skip a pixel we need to go with a granularity of .6667 nautical miles per pixel.
+<P>At that scale, the English channel would be about 32 pixels across.
+<P>I don't think that is big enough.
+<P>At that granularity, certain players could cram a whole fleet into one pixel.
+<P>So I am in favor of using a finer granularity. I suggest about ten pixels / nautical mile. That would make the English Channel 217 pixels across. Most ships would never skip a pixel, and the map could have pretty good detail. One pixel would be about 608 feet, about the length of a Heavy Cruiser. The biggest Battleships will be about 1.3 pixels long. Sorry, Dave, no stacking!
+<P>Unfortunately, at this granularity if we don't want any ship to skip any pixels then we need to run the game at about 20 impulses / minute. Could players handle an impulse every three seconds?
+<P>What does everyone think?

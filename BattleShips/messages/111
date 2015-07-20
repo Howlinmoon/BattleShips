@@ -1,0 +1,12 @@
+SUBJECT>Waypoints - a work in progress
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Thursday, 20 May 1999, at 10:57 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>
+NEXT> 112
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>On the ship modification page there is now a place to add a waypoint to the selected ship. The way point submission consists of three components:<br> The X,Y target, the Speed to switch to at the target, and if the selected ship is a submarine, the depth to switch to at the target. The Depth field defaults to 0 for non-submarines.<p> I have a db initialized right now that keeps track of how many waypoints each ship has and their corresponding X,Y,depth values for each one. At this time waypoints are NOT finished and do nothing.<br>Displaying and Deleting previously set waypoints are longer range plans for the weekend or next week. For Friday I simply hope to get adding working and have the ships actually follow them.

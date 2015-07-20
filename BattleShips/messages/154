@@ -1,0 +1,48 @@
+SUBJECT>Possible Text Based SSD?
+POSTER>Mike
+EMAIL>
+DATE>Tuesday, 8 June 1999, at 12:13 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>124
+NEXT> 156
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>A Text Based SSD might look like this. If we can adopt a database something like this, there could be a web page where the player could look at this data in real time. Then we could do damage allocation and actually sink a ship!
+<P>For now we would either assume all hits penetrate armor, or we would use super - simple armor formulas like in Battlewagon.
+<P><B>TEXT BASED SSD</b>
+<P>Ship Name: HMS Iron Duke
+<P>Max Speed: 21 knots - - <i>Current Speed: 10 knots</i>
+<P>Fuel Capacity: 3,300 tons coal - - <i>Current fuel: 2,147 tons coal</i> (fuel consumption will be complicated, let's leave it static for now)
+<P>Max Flotation = 50 - - <I>Current Flotation = 50</i>
+<P>Current Leak Rate = 0 / impulse
+<P>Belt Armor  12
+<P>Deck Armour 3
+<P>Turret face 11
+<P>Turret top  5
+<P>Barbette armor 10
+<P>Tower Armor 10
+<P>Turret A: 2 x Mark V bearing 210 to 360 and 0 to 150
+<P>Turret B: 2 x Mark V bearing 210 to 360 and 0 to 150
+<P>Turret C: 2 x Mark V bearing 20 to 175 and 185 to 340
+<P>Turret D: 2 x Mark V bearing 30 to 330
+<P>Turret E: 2 x Mark V bearing 30 to 330
+<P>Turret F: none
+<P>Secondary Gun A 1 x Mark XII(?) bearing 0 to 150
+<P>Secondary Gun B 1 x Mark XII(?) bearing 0 to 150
+<P>Secondary Gun C 1 x Mark XII(?) bearing 0 to 150
+<P>Secondary Gun D 1 x Mark XII(?) bearing 0 to 150
+<P>Secondary Gun E 1 x Mark XII(?) bearing 20 to 180
+<P>Secondary Gun G 1 x Mark XII(?) bearing 220 to 360
+<P>Secondary Gun H 1 x Mark XII(?) bearing 220 to 360
+<P>Secondary Gun I 1 x Mark XII(?) bearing 220 to 360
+<P>Secondary Gun J 1 x Mark XII(?) bearing 220 to 360
+<P>Secondary Gun K 1 x Mark XII(?) bearing 180 to 340
+<P>Secondary Gun L 1 x Mark XII(?) bearing 180 to 340
+<P>Anti Aircraft A 50 cal AA
+<P>Anti Aircraft B 50 cal AA
+<P>Anti Aircraft C 4 50 cal AA
+<P>Anti Aircraft D 4 50 cal AA
+<P>Deck Torpedoes: None
+<P>Submerged Torpedoes:  4 x 21 inch

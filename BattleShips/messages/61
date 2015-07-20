@@ -1,0 +1,12 @@
+SUBJECT>Turning on a dime...
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 21 April 1999, at 2:01 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: jimv.telxon.com; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>
+NEXT> 62
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>It occurred to me that when I get around to adding a page for midflight course corrections and speed corrections for the existing test ships - that I dont know how we want to implement turns.<br> I feel that we should not simply allow ships to perform unrealistic high energy turns on the ocean - turns that would throw most of the crew overboard... What I propose is we attempt to simulate a rudder. This rudder will be something you can set say from -45deg to +45deg relative to the stern. And the longer you keep the rudder over - the greater the course change. We can also implement a helmsman who could control the rudder given a desired course - and ship would turn slowly in that direction. How fast it turns would be dependant on it's mass, engine power and current speed. A hulk like the bismark going full ahead is going to have a much larger turning radius than a small PT boat just trolling along... You come up with a formula - I'll implement it ;-)

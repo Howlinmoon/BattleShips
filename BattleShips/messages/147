@@ -1,0 +1,12 @@
+SUBJECT>Delays in page responses...
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Sunday, 6 June 1999, at 3:38 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>146
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>You will no doubt notice what appears to be a delay in pages being displayed - what is happening is - before the www server would serve half of a page and then pause while something was acknowledged - then print the acknowledgment and the remaining half of the www page. Proxy servers however - can't serve just half of a page - so they WAIT until the entire page is served from the remote server - THEN they relay it to you. So - what is happening is you dont SEE the page loading halfway - pausing - and then finishing - you just get the end result.

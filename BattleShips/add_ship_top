@@ -1,0 +1,14 @@
+<HTML>
+<meta http-equiv="Expires" content="Saturday, 12-Nov-94 14:05:51 GMT">
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>Add a New Test Ship *NEW*</TITLE>
+</HEAD>
+<BODY>
+
+<FORM ACTION="/old/cgi-bin/game_design/add_new_ship.pl" ENCTYPE="x-www-form-urlencoded"
+METHOD="POST">
+<P><CENTER>*NEW* Ship Creation Page</CENTER></P>
+Name(s) of Ship(s):<INPUT NAME="ship_name" TYPE="text" SIZE="20">(seperated
+by commas if more than one)<BR>
+Class of Ship <SELECT NAME="Ship_Class">

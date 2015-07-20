@@ -1,0 +1,12 @@
+SUBJECT>Ship Deletion should be working
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 18 May 1999, at 1:24 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>83
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>I worked on stamping out the bugs in my ship deletion routine - and now it seems to finally be working fine. Deleting a ship in the middle of the list will shuffle the order downward by one.<p> I also tweaked the ship speed modifier slightly to change the speed per impulse by 5 instead of 1. And there are links now at the ends of some results pages back to the ship status screen.

@@ -1,0 +1,34 @@
+#!/usr/bin/perl -w
+
+#use strict;
+use diagnostics;
+use CGI;  # available from http://www.perl.com/CPAN/
+use Mysql;
+
+# Create an instance of CGI
+my $query = new CGI;
+
+# Send an appropriate MIME header
+print $query->header("text/html");
+
+# Grab values from the form 
+# Prints are for debug only
+
+my $ship_id = $query->param("ship");
+print "Toggling Waypoint following for ship #$ship_id<br>\n";
+# prepare semaphore for instructing impulser about speed change.
+
+open (CHANGE_SPEED,">pause_waypoint.$$");
+print CHANGE_SPEED "$ship_id\n";
+close (CHANGE_SPEED);
+
+open (SEMAPHORE,">pause_waypoint");
+print SEMAPHORE "$$\n";
+close (SEMAPHORE);
+
+print "Signalling Impulser about waypoint toggle - waiting for ACK<br>\n";
+while (-f "pause_waypoint")
+{
+}
+print "Received ACK - Waypoint Pause has been toggled.<br>\n";
+print "Return to <a href=\"http://bigorc.com:4080/game_design/ship_status.html\">Ship Status Page</a><br>\n";

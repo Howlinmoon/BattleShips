@@ -1,0 +1,9 @@
+TitleText: Universe is on Impulse: 47 Updated at 03/10/99 13:06:00 ("Fill" to Reset)
+Grid: on
+XLabel: X Axis
+YLabel: Y Axis
+Marks: points
+NumSets: 3
+Color: on
+Lines: off
+DataSet: Planets

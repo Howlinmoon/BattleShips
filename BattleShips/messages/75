@@ -1,0 +1,12 @@
+SUBJECT>Ship Status Page...
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Thursday, 6 May 1999, at 1:12 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>71
+NEXT> 76
+IMAGE>
+LINKNAME>Ship Status Page
+LINKURL>http://204.210.200.63:4080/game_design/ship_status.html
+<P>In the past the secondary ship status page was displaying data that was never being updated - since it extracts it's data from the sql server db file. Until recently - this file was'nt being updated unless you added a ship. Now - when the secondary page is accessed - there is a delay while loading. This delay is caused by it setting a semaphore for the impulser to get it to write the current data to the sql server. It is also waiting for the semaphore to be removed by the impulser to signify that it has finished accessing the db. <p> By The way - how do you like the new background? Hopefully easier to read over.

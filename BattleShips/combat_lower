@@ -1,0 +1,22 @@
+    </SELECT></TD> 
+    <TD WIDTH="20%">
+    <P><CENTER>&nbsp;<INPUT NAME="bearing2" TYPE="text" SIZE="5"
+    MAXLENGTH="5"></CENTER></TD>
+    <TD WIDTH="20%">
+    <P><CENTER>&nbsp;<INPUT NAME="optics2" TYPE="text" SIZE="5" 
+    MAXLENGTH="5"></CENTER></TD>
+    <TD WIDTH="20%">
+    <P><CENTER>&nbsp;<INPUT NAME="crew_skill2" TYPE="text" SIZE="5"
+    MAXLENGTH="5"></CENTER></TD>
+    <TD WIDTH="20%">
+    <P><CENTER>&nbsp;<INPUT NAME="sighting2" TYPE="text" SIZE="5"
+    MAXLENGTH="5"></CENTER></TD>
+  </TR>
+</TABLE></CENTER></P>
+
+<P><CENTER>Range <INPUT NAME="range" TYPE="text" SIZE="10" MAXLENGTH="10"></CENTER></P>
+
+<P><CENTER><INPUT NAME="name" TYPE="submit" VALUE="Test Hit Probability"></CENTER></FORM>
+
+</BODY>
+</HTML>

@@ -1,0 +1,12 @@
+SUBJECT>tonights updates
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 20 July 1999, at 11:08 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Tonight I fixed a nasty sighting bug that caused all ships to be invisible to each other - and made the ocean a very dull place to be. A new german_ai flag was added called "collis_avoid" - but like some other flags, this one is being ignore for now. Mike's new collision detection formula has been partially intergrated into the movement code, instead of actually sinking ships when this new code detects a collision, until we are certain that it is working as expected, it merely logs a message in the ships log(s) involved in the collision. This needs to be tested yet. Now when the ships are refloated, all of the ship logs are purged. The German AI control panel still needs some work, cap_priority and collis_avoid need to be configurable. For now - they both default to being on.

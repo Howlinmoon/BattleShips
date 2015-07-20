@@ -1,0 +1,12 @@
+SUBJECT>Starting to work on ships log
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Thursday, 17 June 1999, at 1:09 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>173
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Ok - there is now a new column on the main ship status page called "Log". Currently each ship has an "*" in it's column as a place holder. I'll later use that spot for a one char status display. Like if it's under attack etc etc. For now the only thing that gets recorded there is it's receipt of a target. Unfortunately I dont have the expiration tag set - so you have to shift-reload to ensure you are viewing the latest copy and not the one from your browsers cache. This will be a fancier www page and wont need the shift-reload real soon - I just did it this way for now since I could throw it together really quick. Now my attention will turn toward importing the combat calculations from the simulator into my distance calculation part of the impulser. Even w/out the prints - the combat simulator is pretty big so importing it could really bust the impulser for while. I plan on tackling that tonight - and hopefully I'll have a nice full ship log of attacks on other ships for the morning. Targets are being saved and reloaded from the db tables - so feel free to assign some targets to your ships - they will use them later tonight. Also - the weather is still fixed at "-2" for now - since I consider it a low priority...

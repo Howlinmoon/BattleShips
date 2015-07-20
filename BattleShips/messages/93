@@ -1,0 +1,12 @@
+SUBJECT>Fixed and More...
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 19 May 1999, at 7:58 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>92
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Ok - I fixed the problems adding the extra field "ship class" brought onboard, and for good measure I added two more columns to the ship status page. NOTE as of this moment ALL of these three new columns for show only - they ARE saved to the db and restored from it - but right now there is no way to change their contents and nothing queries against them. But that will change hopefully later today. Once I have these three columns functional - they I shall turn my attention to a first attempt at a map.<p>

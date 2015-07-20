@@ -1,0 +1,12 @@
+SUBJECT>Waypoint Update
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Monday, 24 May 1999, at 11:10 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>
+NEXT> 120 123 126
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Well - I am making progress - if you add a waypoint to a ship it is STILL not being used - BUT you'll now notice that it is tabulating how many waypoints the currently selected ship has accumulated. I have a very simple method of doing waypoints outlined mentally - I hope to have it partially implemented by lunch time tomorrow. One issue needs to be addressed tho - if a waypoint exists - do I allow manual override of the navigation? I could disallow manual control (easy way) or I could simply disable the waypoint following as soon as a manual course is input - and then have it resume when instructed to via the all purpose ship modification page. This method is a bit more complicated. I'll probably do a compromise for starters - if the ship is already following a preset waypoint - and you screw it up - it will remain screwed up and NEVER reach the next waypoint unless you manually point the ship back to the next waypoint. Now that I think of this - this is not that easily done - my current waypoint determination routine would be fooled by this into thinking the ship had reached the current waypoint - and it would adjust course for the next one....

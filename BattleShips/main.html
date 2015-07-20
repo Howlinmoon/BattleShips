@@ -1,0 +1,424 @@
+<html><meta http-equiv="Expires" content="Saturday, 12-Nov-94 14:05:51 GMT"> <head>
+<SCRIPT LANGUAGE="Javascript1.2">
+
+<!--
+/* syncFrames.js (Cross-browser Synchronized Frames)
+* Copyright (c) 1998 Mecklermedia Corp. To receive the right to license
+* this code to use on your site the original code must be copied from
+* Webreference.com. License is granted if and only if this entire copyright 
+* notice is included, and you link from the page on which the code is used 
+* to Webreference at http://webreference.com/dhtml/ for the latest version.
+* By Peter Belesis. v1.0 980325 - column 17.
+*/
+NS4 = (document.layers) ? 1 : 0;
+IE4 = (document.all) ? 1 : 0;
+leftFrame = parent.frames.leftGuy;
+topFrame = parent.frames.topGuy;
+if (IE4) onscroll = keepTogether;
+if (NS4) onload = checkScroll;
+function keepTogether(){
+leftFrame.document.body.scrollTop = document.body.scrollTop;
+topFrame.document.body.scrollLeft = document.body.scrollLeft;
+}
+function checkScroll() {
+if (leftFrame.scrollbars.visible) {
+setInterval("scrollFrame()",10);
+}
+else {
+setInterval("scrollLayer()",10);
+}
+}
+function scrollLayer() {
+topFrame.document.layers[0].left = -pageXOffset;
+leftFrame.document.layers[0].top = -pageYOffset;
+}
+function scrollFrame() {
+leftFrame.scrollTo(leftFrame.pageXOffset,pageYOffset);
+topFrame.scrollTo(pageXOffset,topFrame.pageYOffset);
+}
+//-->
+
+
+</SCRIPT>
+</head>
+<BODY TEXT="#000000" BGCOLOR="#C0C0C0" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+<table BORDER=3>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="999999" ><a href="/old/game_design/ships_logs/ship_log.2.html">*</a></td><td align="center" BGcolor="999999"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=2">0</a></td>
+<td align="center" BGcolor="999999"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="999999"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="999999"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="999999"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="999999"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="999999"  width="20" height="40" >180</td>
+<td align="center" BGcolor="999999"  width="20" height="40" >0</td>
+<td align="center" BGcolor="999999"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="999999"  width="20" height="40" >38121</td>
+<td align="center" BGcolor="999999"  width="20" height="40" >450.87</td>
+<TD align="center" BGcolor="999999"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="999999"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="999999"  width="20" height="40" >22</td><td align="center" BGcolor="999999"  width="20" height="40" >126</td><td align="center" BGcolor="999999"  width="20" height="40" >N/A</td><td align="center" BGcolor="999999"  width="20" height="40" >N/A</td><td align="center" BGcolor="999999"  width="20" height="40" >24</td><td align="center" BGcolor="999999"  width="20" height="40" >193</td><td align="center" BGcolor="999999"  width="20" height="40" >309</td><td align="center" BGcolor="999999"  width="20" height="40" >325</td><td align="center" BGcolor="999999"  width="20" height="40" >298</td><td align="center" BGcolor="999999"  width="20" height="40" >8</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.3.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=3">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38126.58</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >474.84</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >66</td><td align="center" BGcolor="009900"  width="20" height="40" >24</td><td align="center" BGcolor="009900"  width="20" height="40" >13</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >326</td><td align="center" BGcolor="009900"  width="20" height="40" >328</td><td align="center" BGcolor="009900"  width="20" height="40" >323</td><td align="center" BGcolor="009900"  width="20" height="40" >8</td></tr>
+<tr>
+<td align="center" BGcolor="999999" ><a href="/old/game_design/ships_logs/ship_log.4.html">*</a></td><td align="center" BGcolor="999999"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=4">0</a></td>
+<td align="center" BGcolor="999999"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="999999"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=1">1</a></td>
+<TD align="center" BGcolor="999999"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="999999"  width="20" height="40" >Jim</TD>
+<td align = "center" BGcolor="999999"  width="20" height="40" ><img src="germany.gif"></td>
+<td align="center" BGcolor="999999"  width="20" height="40" >134</td>
+<td align="center" BGcolor="999999"  width="20" height="40" >0</td>
+<td align="center" BGcolor="999999"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="999999"  width="20" height="40" >38301.75</td>
+<td align="center" BGcolor="999999"  width="20" height="40" >199.21</td>
+<TD align="center" BGcolor="999999"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="999999"  width="20" height="40" >6</TD>
+<td align="center" BGcolor="999999"  width="20" height="40" >331</td><td align="center" BGcolor="999999"  width="20" height="40" >189</td><td align="center" BGcolor="999999"  width="20" height="40" >309</td><td align="center" BGcolor="999999"  width="20" height="40" >190</td><td align="center" BGcolor="999999"  width="20" height="40" >326</td><td align="center" BGcolor="999999"  width="20" height="40" >193</td><td align="center" BGcolor="999999"  width="20" height="40" >N/A</td><td align="center" BGcolor="999999"  width="20" height="40" >N/A</td><td align="center" BGcolor="999999"  width="20" height="40" >228</td><td align="center" BGcolor="999999"  width="20" height="40" >124</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.5.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=5">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=1">1</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Jim</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="germany.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >192</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38077.25</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >155.13</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >6</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >172</td><td align="center" BGcolor="009900"  width="20" height="40" >298</td><td align="center" BGcolor="009900"  width="20" height="40" >176</td><td align="center" BGcolor="009900"  width="20" height="40" >323</td><td align="center" BGcolor="009900"  width="20" height="40" >176</td><td align="center" BGcolor="009900"  width="20" height="40" >228</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr>
+<td align="center" BGcolor="009900" ><a href="/old/game_design/ships_logs/ship_log.1.html">*</a></td><td align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/show_waypoints.pl?ship=1">0</a></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" ><a href="/old/cgi-bin/game_design/modify_tf.pl?tf=2">2</a></td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >Mike</TD>
+<td align = "center" BGcolor="009900"  width="20" height="40" ><img src="british.gif"></td>
+<td align="center" BGcolor="009900"  width="20" height="40" >180</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >0</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >21.0000</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >38102.93</td>
+<td align="center" BGcolor="009900"  width="20" height="40" >464.46</td>
+<TD align="center" BGcolor="009900"  width="20" height="40" >1000</TD>
+<TD align="center" BGcolor="009900"  width="20" height="40" >3</TD>
+<td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >N/A</td><td align="center" BGcolor="009900"  width="20" height="40" >22</td><td align="center" BGcolor="009900"  width="20" height="40" >307</td><td align="center" BGcolor="009900"  width="20" height="40" >25</td><td align="center" BGcolor="009900"  width="20" height="40" >246</td><td align="center" BGcolor="009900"  width="20" height="40" >331</td><td align="center" BGcolor="009900"  width="20" height="40" >324</td><td align="center" BGcolor="009900"  width="20" height="40" >310</td><td align="center" BGcolor="009900"  width="20" height="40" >4</td></tr>
+<tr bgcolor="black">
+<td>Log</td><td>WPs</td><td>ETA</td><td>TF</td><td>Depth</td><td>Owner</td><td>Country</td><td>Course</td><td>Knots</td><td>Max_spd</td><td>X_Co_ord</td><td>Y_Co_ord</td><td>Sighting</td><td>Sight_Mult</td><td>Range Ship_1</td><td>Bearing Ship_1</td><td>Range Ship_2</td><td>Bearing Ship_2</td><td>Range Ship_3</td><td>Bearing Ship_3</td><td>Range Ship_4</td><td>Bearing Ship_4</td><td>Range Ship_5</td><td>Bearing Ship_5</td></tr>
+</TABLE>
+</body></html>

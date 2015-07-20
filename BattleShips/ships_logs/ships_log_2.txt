@@ -1,0 +1,14 @@
+<option><<< Ships Log Purged >>></option>
+
+<option>07:14 On January 1, 1931 Have sighted tanker-2.</option>
+<option>07:14 On January 1, 1931 Have sighted tanker-3.</option>
+<option>07:14 On January 1, 1931 Have sighted freighter-2.</option>
+<option>07:14 On January 1, 1931 Have sighted freighter-3.</option>
+<option>07:14 On January 1, 1931 Have sighted tanker-4.</option>
+<option>07:14 On January 1, 1931 Have sighted tanker-5.</option>
+<option>07:14 On January 1, 1931 Have sighted tanker-6.</option>
+<option>07:14 On January 1, 1931 Have sighted freighter-4.</option>
+<option>07:14 On January 1, 1931 Have sighted freighter-5.</option>
+<option>07:14 On January 1, 1931 Have sighted freighter-6.</option>
+<option>Impulser Restarted Old Target is 0</option>
+<option>07:19 On January 1, 1931 Have sighted Iron Duke.</option>

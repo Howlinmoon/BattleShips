@@ -1,0 +1,12 @@
+SUBJECT>Task Force Status VII
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Monday, 7 June 1999, at 11:13 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>149
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Not many changes to report tonight - You can now dump every waypoint a tf has - en masse. Later I'll modify this to dump individually - but I needed to have something to reset them for testing. Also notice the nice snazzy new timestamp for the ship status page - I can query those values for combat purposes... and maybe I should toss them into the sighting algorithm too - it would only make sense that sighting would diminish... I'll tackle that in the morning... Still have some db logistics to figure out before attempting to flesh out the test ships with the stats for combat - I should be able to start some ideas at lunch..

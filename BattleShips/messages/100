@@ -1,0 +1,12 @@
+SUBJECT>Netscape to the Rescue
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Thursday, 20 May 1999, at 8:32 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>97
+NEXT> 106
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Looking at the source to that second status ship page - and thanks to Netscape I spotted what the problem was - It showed "less than"Sighting instead of "less than"TD"greater than"Sighting - netscape is nice in that it makers errors in html BLINK when viewing the source. (I can't recall offhand how to use the & syntax for embedding displayable less than and greater than signs in html) That problem should be fixed now. Also - the seaview discovered a problem - I was'nt handling the depth correctly when saving the ships back to the sql server - I found the spot that was missing the depth setting and fixed it.<p> Now during lunch today I shall take a stab at incorporating a Task Force management page that will allow you to create and delete Task Forces - plus assign ships to them. Once THAT is working - THEN I'll concentrate on working out a way to give orders to an entire task force - but that is probably a day or so down the road. Definitely by Monday TF should be fully operational unless it turns out to be alot hairier than I am expecting.

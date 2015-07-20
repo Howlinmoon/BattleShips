@@ -1,0 +1,12 @@
+SUBJECT>Where did the &quot;monitor&quot; go...
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Friday, 14 May 1999, at 8:23 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>83
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Well - as I implied above - the ship deleter function uncovered a problem with my basic design of the ship database.<br> When the add ship routines are ran - the sql server is queried to see how many ships are in existance already (say 6) and then it chooses that number +1 (say 7) to be the ship ID # of the new ship you are adding.<br> So - that means after 10 ships are added - the 7th ship has a ship id # of "7". So whats the problem? The problem is what happens when I delete ship #6? Well - I had orginally envisioned keeping the ship id number with each ship in existance until it was removed - and NOT changing a given ships id number as long as it's around. I could then index way points (as an example) for a given ship by it's unique id number.<br> Unfortunately - doing things this way breaks alof of my code that assumes it can simple for-next type loop from 1 to the number of ships in existance and retrieve all of their stats.<br> This is not true - since in the above case with ship #6 being deleted, ship #9 now has a ship id # of 10. Still.<br> And then when I add a ship - I can't just look at the number of ships in existance and assume I can use shipid "number of ships + 1"... that would more than likely cause a current ship to be overwritten.<p> To make a long story short - up until this morning I have been assuming that each ship numerically had the same numeric ship id#. (Ship #7 has ship_id 7<br> Now what I have to do is not only keep track of the amount of ships in the game - I must also keep track of the highest ship_id number in the game. So when I am adding a ship - the add routine will search ship id's from 1 to highest ID number and find the first vacant one - and if there are none - then it will add one to the end of the list. I'll try to implement this re-ordering at lunch today... In the meantime - if you use the ship deleter - the database can and probably will delete the wrong ship - which is what happened to the poor "USS Monitor"... And now you know the rest of the story.

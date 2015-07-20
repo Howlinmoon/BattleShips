@@ -1,0 +1,12 @@
+SUBJECT>Waypoint Status
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Friday, 21 May 1999, at 1:25 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>111
+NEXT> 113
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Well - I had to take a short lunch today since I needed to run out to an electronics store to buy parts for a recently deceased 17" monitor. When I returned I fixed a bug in the way point parser routine, and I added logic to the impulser to retrieve waypoints passed via semaphores from the way point cgi parser routine - but it does NOT do anything with them at this time.<p> By Monday hopefully waypoints will be at least partially operational. Soon, when a new test ship is added - an entry in my "how_many_waypoints" db will be added for that new ship ID with a value of 0. This will indicate to the impulser that this particular ship has no way points set. When a waypoint is added via my all purpose modify_ship.pl cgi routine, it's counter will be incremented in that db, and an entry will be inserted into the "waypoint_master" db - containing the ship ID, the waypoint number for this ship (i.e. the 3rd waypoint of 7), the waypoint, the depth change and speed change. Naturally the depth change will be 0, unless the vessel is a submarine.<p> There is a slight bug in the speed limiter I implemented yesterday - I have the limiter BEFORE the accellerator... which explains why my subs can do 15 submerged when the speed limit is 10... I'll fix that later.

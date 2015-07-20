@@ -1,0 +1,12 @@
+SUBJECT>Should be fixed now
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Thursday, 13 May 1999, at 6:39 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>80
+NEXT> 82
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>The course modification cgi-bin routine was receiving the "screen friendly" course from the individual ship status page, performing the trig friendly operation on it - then submitting the screen friendly version to the impulser by mistake - which thought it was the trig friendly version. All fixed now.

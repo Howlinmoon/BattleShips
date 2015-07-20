@@ -1,0 +1,18 @@
+SUBJECT>For Those Interested in Calculating for Themselves
+POSTER>Mike
+EMAIL>
+DATE>Monday, 28 June 1999, at 4:52 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>190
+NEXT> 193
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>When I said:
+<P>&gt; 1.17 * SQRT(your height) = distance in nautical miles.
+<P>I omitted the units. "Your height" is the number of feet your eye is above the surface of the water or flat land. If you are sitting in a row boat four feet above the water, your horizon is 1.17 * SQRT(4) = 2.38 nautical miles away.
+<P>If you are standing on the deck of a pleasure yacht about nine feet above the surface, your horizon is 1.17 * SQRT(9) = 3.51 nautical miles away.
+<P>If you are in the crows nest of a BB a hunderd feet above the surface, your horizon is 1.17 * SQRT(100) = 11.7 nautical miles away, which is 117 pixels in our game.
+<P>In theory you could get line of sight to a tall object beyond the horizon. If you can see its horizon then you can see it. Another 100 foot tall BB would also have a 11.7 NM horizon, and you might see it from 23.4 nautical miles away (234 pixels)! Assuming of course it is big enough to see at that distance and conditions are perfect.
+<P>In practice we will probably never have one ship sight another at this extreme distance. The main reason is because the crows nest is so small and you have to be much closer to see the hull over the horizon. Thus all the modifiers built into the formula.

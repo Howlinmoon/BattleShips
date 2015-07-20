@@ -1,0 +1,12 @@
+SUBJECT>Gun Names
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Thursday, 10 June 1999, at 10:53 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>155
+NEXT> 160
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Well - I fixed the discrepancies between the original 7 ship classes and the names of the guns. Since I search keyed on the name of the gun - the calibre alone really does'nt cut it - we need to specify the nationality of the gun in the hull table - since the nationality of the gun is specified in the gun table. Actually - out of the original seven ships - "Bayern" does'nt work - I believe due to a typo in one of the two gun names - either in the gun table or the hull table. I was'nt sure which one was wrong - their is only 1 char difference between the two names.<p> Currently right now from the ship status page you can order the impulser to update the list of available hulls for use by the new add ship page. After adding a hull to the db AND making sure to increment the hull counter table - clicking on that link will signal the impulser to read the hull counter - and then read that many hull types from the hull chart. It then parses out the name of the ship class and makes it a selectable option on the add ship page. (the new one. Note: The impulser does NOT mind if the hull counter is actually lower than the number of hulls in the hull table - this way if some hulls are in progress you dont have to worry about the impulser grabbing the half finished hulls when doing it's lookup. Now - if the counter is HIGHER than the actual amount of Hulls - thats a bad thing...<p> Tomorrow after reviewing the messages here re: the formulas and gun charts - I'll endeavour to come up with a combat simulation page that will let you choose two ships, a range between them, bearing to each other - possibly some more variables - and then have a fire button to submit those parameters and the cgi program will do the crunching and spit out the hit results. For a ship to participate - it's main gun descriptions must be in sync with themselves - or else it wont be selectable.<br> Depending on how this turns out - I should be able to allow more than one ship per side for simulating fleet combat. BUT - this will raise the question - who goes first? With guns being of different speeds (rof) it makes no sense to force them to fire simultaneously...

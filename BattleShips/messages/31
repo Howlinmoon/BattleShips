@@ -1,0 +1,19 @@
+SUBJECT>Opinions Please! How about we start simple?
+POSTER>Mike Substelny
+EMAIL>
+DATE>Tuesday, 6 April 1999, at 12:23 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: mike_work; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>
+NEXT> 32 35
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>I've been thinking about all the work from last year, calculating scale factors and gravitational constants and such, and it seems to me that there is still too much work to do before we start having fun with this game.
+<P>So I want to toss out this idea for comments. What if we start by developing a simpler game in the same format?
+<P>The mode of play would be pretty much the same, but we could have it up and running a LOT faster.
+<P>Perhaps we could do a 2D naval game, something like Battlewagon, Ironclads, or Wooden Ships and Iron Men. We would still have ships (represented by blips) moving on a real time map, but the rules for movement would be a whole lot easier. We would not have to worry about gravity or relativity, and plotting a course would be a LOT easier!
+<P>In researching the Galactic Overlords game, I found a magazine article about how NASA calculates the course of spaceships heading for other planets in our solar system. Oh My God, is it ever complicated! And calculating a course to a planet in another solar system is much worse.
+<P>This would also give us a chance to jump straight into combat, without worrying about economics and exploration.
+<P>We are certainly capable of doing a fun and realistic space game, but for the sake of efficient software development we could have a realistic naval game up and running AND PLAYTESTING a whole lot faster. After we got the bugs worked out and we were happy with the style of play, <I>then</I> we could adapt the same engine for a space game.
+<P>This is just a suggestion. No matter what the group decides I will support our efforts.

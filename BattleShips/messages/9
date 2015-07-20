@@ -1,0 +1,12 @@
+SUBJECT>Perl Programs
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 24 February 1999, at 8:40 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: jimv.telxon.com; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Here are links to the current versions of these Perl programs<br> <p> <a href="/game_design/update_universe.pl">Universe Impulser</a><br> <a href="/game_design/rand.pl">Universe Generator</a><br> <a href="/game_design/del_test_ship.pl">Test Ship Deleter</a><br> <a href="/game_design/display_solar.pl">Display A Solar System</a><br> <a href="/game_design/new_test_ship.pl">Add A New Test Ship</a><br> <p> <b>*NOTE*</b>There is currently no www interface for using some of these,<br> that will be re-implemented later - possibly using java instead of forms.

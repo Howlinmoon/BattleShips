@@ -1,0 +1,12 @@
+SUBJECT>Fixed.
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 26 May 1999, at 12:20 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>128
+NEXT> 130
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Fixed. All ships should now continue on with their next waypoint after reaching their current one. The problem was, I had a flag "$following_waypoint[$current_ship]" that was set if a ship was following a waypoint, and AFTER the waypoint was reached, I forgot to reset it. This flag is checked along with the waypoint counter for each ship to see if a ship has any remaining waypoints, and if it does - IS it following one already. If not - then the ship's course is adjusted and it's sent on it's way. Problem was - I forgot to reset this flag so the ships passed the "do they have any remaining waypoints" test - but failed the "are they already plotted for one?". Also - you will notice that when switching from a finished waypoint to the next one that the ETA goes to 0, it will ALWAYS be zero, even when a ship is following a waypoint, until the ship has finished swinging about and is actually decreasing range between itself and it's waypoint goal. Once the final course adjustment is made - the ETA should stabilize and decrement by one each impulse as normal.

@@ -1,0 +1,15 @@
+SUBJECT>Experimental Star Map
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Thursday, 25 February 1999, at 10:40 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: biff; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>
+NEXT> 23 26
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>As Mike is aware - for a few weeks now I have been studying Java and plowing thru alot of examples in my <a href="http://sunsite.unc.edu/javafaq/">Java Developers Resource</a> book. You can see some of my earlier attempts at applets and applications <a href="/java/">here</a> if you are so inclined. The .java files w/out a corresponding html file are applications and you can't run them via the web.
+<P>I now have a rudimentary <a href="/game_design/starmap7.html">java starmap</a> - extremely barebones and devoid of any cool features. But - unlike ptplot which I was using last year - it's my own creation and I understand completely how it works.
+<P>IMPORTANT NOTE! At the moment - any repainting of the map - caused by minimizing your browser, bringing another window in front of it - etc,etc, - WILL cause the map to re-retrieve the entire datafile at this time. So - try not to do that - unless you enjoy waiting ;-) I will eventually move the data retrieval section out of the repaint section - and allow the viewer to specify he wants the data refreshed.
+<P>At this time the impulser is NOT running - none of these planets are moving. I only can work productively on one section at a time of this project - and getting the stars to display is next on the agenda. Hopefully by the weekend. Next week sometime the impulser SHOULD be running again and planets orbitting left and right. Maybe a week from now we'll be launching test ships again...

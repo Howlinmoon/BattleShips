@@ -1,0 +1,12 @@
+SUBJECT>Re: Experimental Star Map II
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Thursday, 11 March 1999, at 10:28 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: biff; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>21
+NEXT> 25
+IMAGE>
+LINKNAME>Latest Map
+LINKURL>http://beholder.dhs.org:4080/game_design/StarMap8.html
+<P>Stars are now implemented.<br> From here I am now going to concentrate on trying again to get the datafile<br> reloading routine OUT of the screen painting routine - so it does'nt hit<br> the server every time you update your window.<br> <p> Next I'll be experimenting with "mouse over" events to try and select a grid<br> square to use as a "zoom in" target.<br>

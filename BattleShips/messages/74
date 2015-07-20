@@ -1,0 +1,27 @@
+SUBJECT>Re: Working on ship status page
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 4 May 1999, at 6:30 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>73
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> It would probably be good to maintain a table of the ID's of
+<BR>&gt; all ships that are currently in sight, not just a tally of how many
+<BR>&gt; there are. That would be handy for players as well as for the Host
+<BR>&gt; program. 
+<P>I am already maintaing an array of distances from ship to ship - it's a simple thing to compare then with sighting range or gunner range or what have you...<br>
+<BR>&gt; It could be tricky to determine where "enemy territorial
+<BR>&gt; warters" are. Most of the Earth's surface is in International
+<BR>&gt; Waters; territorial waters are limited to within a few miles of the
+<BR>&gt; shore, as I recall. I was going to assume countries with very square borders like in your demo map - and then it's a simple matter of checking the x,y co-ords to see if you are within say, 10 nmiles of a countries border.<br>
+<BR>&gt; IMO a ship observing radio silence can't report its position,
+<BR>&gt; or what ships it can see, or any other current data. All it can do
+<BR>&gt; is listen for instructions until it gets the order to break silence
+<BR>&gt; and report (or some condition in its standing orders tells it to break
+<BR>&gt; silence). Until then its status page can only give last known position,
+<BR>&gt; standing orders, last know course & speed, and a THEORETICAL position
+<BR>&gt; as a stickpin on a map in the Admiral's office. <p> This is exactly my plans for radio silence. And running submerged.<br> And the admiral will have to *HOPE* that his ship is continuing to heed radio silence rules and the rumor of it's demise is only just that ;-)

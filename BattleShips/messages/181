@@ -1,0 +1,24 @@
+SUBJECT>Volleys Are Different From Hits
+POSTER>Mike
+EMAIL>
+DATE>Tuesday, 22 June 1999, at 3:51 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>180
+NEXT> 182
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> OK- this makes sense. So in my case "Volley" would be interchangeable
+<BR>&gt; with number of ships firing. (Why did'nt you just use "for ship
+<BR>&gt; = 1 to number of ships"???)
+<P>Yes, the number of volleys is different from the number of ships, and very different from number of hits. Each volley can represent multiple hits.
+<P>There are several reasons, which I thought I explained earlier. First, in a real game the number of volleys will usually be a lot less than the number of ships in the universe, so no use cycling through them again every impulse. Although if a limited scenario it is possible to have many *more* volleys than the number of ships in the universe in a single impulse. Consider Hood & KGV vs Bismark & Prinz Eugen, where both British ships fire main guns at Bismark (2 volleys) and secondaries at Prinz Eugen (2 volleys) while the Germans fire main guns at KGV (2 volleys) and secondaries at Hood (2 more). Or Hood and Prinz Eugen fire primaries & secondaries at each other (4 volleys) and Bismark & KGV fire everything at each other (4 more). These four ships could have 8 volleys . . . in fact they will almost always have 8 volleys!
+<P>In a real game one ship will often have more than one volley, either because it splits fire between two ships or because it fires two (or three) different sized guns at the same ship, or a combination of multiple gun sizes & multiple targets. So you can't cycle through the ID#s of firing ships to calculate damage.
+<P>Even in a simplified game it will be possible for more than one ship to be firing at the same target. So you can't cycle through ID#s of target ships.
+<P>Keeping track of volleys seems like the simplest way to do it. I strongly suggest you do not cycle through the ship ID#s to do damage allocation, because we would have to throw out that code and re-write damage allocation later on.
+<P>&gt; And I just save how many hits everyone
+<BR>&gt; got - and then once all hit determination
+<BR>&gt; is accomplished THEN allocate damage all
+<BR>&gt; around.
+<P>Exactly, but instead of saving how many hits a certain ship got, you save how many hits the volley got, plus the target, range, bearing (from target to firer) and gun type. Once the shells have hit the ID of the firing ship does not matter, so you don't really need to save the firing ship's ID.

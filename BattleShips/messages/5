@@ -1,0 +1,12 @@
+SUBJECT>Progress has been made
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 23 February 1999, at 10:50 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: biff; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>
+NEXT> 8
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Tonight I have resurected the SQL server, rebuilt the database structure to the same way I had it last year, and managed to fire up my random universe generator creating 917 planets. I now have a datafile with 917 pairs of X,Y co-ordinates that I shall be attempting to read with StarMap5. StarMap4 currently works fine - but for planets with x,y co-ords in the range of 0-500. The real planetary data has co-ords that range from about -10million to +10million. My short term goal is to scale this down to soemthing I can display on a 500x500 map and - just to verify that I can read external datafiles. I dont want to have to generate/read 917 <param... lines! If you copy starmap4.html local, you can edit the parameter lines to experiment.

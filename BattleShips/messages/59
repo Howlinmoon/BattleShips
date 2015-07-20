@@ -1,0 +1,34 @@
+SUBJECT>Re: How accurate do we want?
+POSTER>Mike Substelny
+EMAIL>msubstel@lorainccc.edu
+DATE>Tuesday, 20 April 1999, at 10:24 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: mike_work; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>58
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>
+<BR>&gt; Thus the question - where should I truncate the X,Y co-ordinates
+<BR>&gt; for the ships? Do we want them to remain integers?
+<P>Well, that depends on the final scale we select. It hinges on the decision about how many impulses per minute we will do.
+<P>At the present scale, it is certainly safe to *display* coordinates as integer only. It is also safe to assume that any time two ships are in the same pixel (even if the coordinates are off by a tiny fraction) those ships have collided.
+<P>However I hesitate to drop fractions entirely. Even at this scale a submerged WWI submarine (or any damaged ship) might take two or three impulses to move one pixel. If we truncate all fractions these ships will never move. Could we somehow keep a minimum number of decimal places, perhaps one or two only? That would be sufficient.
+<P>Also - I plan
+<BR>&gt; on sticking in indicators in the range listings whether or not the
+<BR>&gt; enemy ship has been sighted by the current ship. This will be dependent
+<BR>&gt; on both the target ships ship_sighting_range and the sighting ship's
+<BR>&gt; sight multiplier. (normally that will be a 1.0)
+<P>&gt; Eventually what I'd really like is a bearing indicator to the other ship
+<BR>&gt; relative to the current ship assuming the bow of the current ship is "North"
+<BR>&gt; or 12oclock. Thus we can determine what arc the other ships are in
+<BR>&gt; relative to us and see what weapons will bear. How about a formula
+<BR>&gt; for determining given the current X,Y co-ords of two ships and their
+<BR>&gt; heading - what is their relative bearings to each other?
+<P>I am cooking up some formulae this very moment.
+<P>One issue to address is the trigonometry / translation problem involved. A Naval officer reading a map assumes that zero degrees is dead North while 90 degrees is straight EAST, with increasing numbers running clockwise. Built-in computer trig functions assume that zero degrees is East and 90 degrees is North, with increasing numbers running counter-clockwise! So not only is a Naval compass displaced 90 degrees, it also runs the opposite direction.
+<P>Additionally, our coordinate system will have no basis in reality. For instance, you will never look on a globe and see lines depicting our coordinates . But it would be crazy to move ships around using degrees, minutes, and seconds of longitude and latitude as our coordinate system. The problem is that longitude & latitude units represent different amounts of surface distance depending on how far you are from the equator.
+<P>Here is my proposal to solve this:
+<P>We conduct all navigation and combat using the current coordinate system. We may also use it for initial playtesting. However, the players' screens will never show our coordinates. Their displays will automatically translate to longitude, latitude, and naval bearings and headings. The math will be built into the player's displays, NOT the impulser program.
+<P>We can save the longitude / latitude translation for later, when we decide what point on the world globe will be 0,0 in our coordinates. I would prefer not to have serious calculations involving "wrap-around" every impulse. For Y coordinates this is easy, since no ship can sail through the North Pole or South Pole. For X coordinates we should choose a zero point where naval battles are very unlikely, say the middle of Colorado. If everyone agrees then we can worry about this part later, when we actually try to make continents and oceans that look real.

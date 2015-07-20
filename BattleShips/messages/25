@@ -1,0 +1,24 @@
+SUBJECT>Looks Good! Map Scaling Formulae . . .
+POSTER>Mike Substelny
+EMAIL>
+DATE>Monday, 15 March 1999, at 10:03 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: mike_work; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>23
+NEXT> 28 30
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>I like the map and how it shows stars and planets. This is much better than VGAP!
+<P>Probably the easiest way of scaling the map is the same way as on the old 1998 map . . . make the granularity very small. Previously we were using about 10,000 KM per "grain". That way when you are viewing at a 1:1 ratio you might be looking at just a planet and the things orbitting it. To see a whole solar system you need to zoom out. To see the whole galaxy you need to zoom WAY out.
+<P>With this coordinate system, to calculate screen coordinates you need three things: the master matrix of all entity coordinates, the scaling factor the user wants, and the coordinates of the center (or one of the corners) of the area the user wants to view.
+<P>Suppose the user viewing area were 1,000 x 1,000 pixels (with 0,0 in the lower left corner and 500,500 in the center) and the Galaxy were 1,000,000 x 1,000,000 grains (with 0,0 in its center).
+<P>Now suppose the simplest case; the user wants to view one planet at arbitrary coordinates, say +50000,+50000. You want to calculate a set of "view coordinates" such that the planet is in the center of the screen, with a scale of 1:1. Thus 50000,50000 grains must become 500,500 pixels, and 50001,50001 must become 501,501 pixels. The function for all entities would be:
+<P>viewX = entityX - 50000 + 500 viewY = entityY - 50000 + 500
+<P>with no scaling factor needed, since the scale is 1:1. You calculate "view coordinates" for every entity in the galaxy and display them. Some languages are smart enough to ignore commands to display ponts that are off the screen. If this one isn't, then you will need to error trap.
+<P>Let's consider another easy case: the user wants to see the whole galaxy. Now we want coordinate 0,0 to be pixel 500,500 and coordinate -500000,-500000 to appear in pixel 0,0. In our hypothetical galaxy, this would require a scale factor of 1000:1. The function for all entities would be:
+<P>viewX = entityX/1000 + 500 viewY = entityY/1000 + 500
+<P>The general case is:
+<P>viewX = (entityX - Xoffset)/scalefactor + VIEWcenterX viewY = (entityY - Yoffset)/scalefactor + VIEWcenterY
+<P>Where Xoffset,Yoffset are the coordinates of the point the user wants to center on and scalefactor is the factor by which the map is zoomed out. VIEWcenterX,VIEWcenterY are the coordinates of the center of the viewing area of the user's screen.
+<P>This strategy should work for any sized 2D map, centered on any arbitrary point, with any sized user viewing area.

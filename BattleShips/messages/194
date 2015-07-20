@@ -1,0 +1,17 @@
+SUBJECT>Visibility, Moonlight and Weather
+POSTER>Mike
+EMAIL>
+DATE>Thursday, 1 July 1999, at 4:18 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>190
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>After a little research, I am inclined to keep the visibility close to its current form. Here are two factors:
+<P>First, warships in wartime always run with all their lights turned off. This was even more imperative before the advent of radar, and most crucial on moonless nights. Unlike passenger ships (or TV & movie starships) there are not rows of windows glowing with the light of staterooms and cabins. I got these details from my father, a US Navy veteran.
+<P>Second, history provides us with an excellent model for discussion. The Titanic struck an iceberg on a moonless night precisely because there wasn't enough light for the lookouts to see, even though their perch was more than 100 feet up. The best speculation I have found on the web says that the berg was probably less than a mile away before the lookouts spotted it.
+<P>Icebergs, unlike battleships, are very white and very tall. Had the iceberg been low in the water and painted battleship grey, the lookouts might not have seen it until they had already collided. And this is in clear weather!
+<P>However, given a little bit of moonlight, they would have been able to see the iceberg, or even a battleship, within a moderate distance. They probably could not have seen either as far away as the horizon, though.
+<P>Under the present game model, a clear, moonless night is visibility -10, a clear night with a half moon is visibility -5, and a clear night with a full moon is visibility -3. Rain or fog will reduce this substantially. I believe this model will yield realistic results.

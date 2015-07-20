@@ -1,0 +1,37 @@
+SUBJECT>Gun Names and Rate of Fire
+POSTER>Mike
+EMAIL>
+DATE>Friday, 11 June 1999, at 9:18 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>159
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> Well - I fixed the discrepancies between the original 7 ship
+<BR>&gt; classes and the names of the guns. Since I search keyed on the name
+<BR>&gt; of the gun - the calibre alone really does'nt cut it - we need to
+<BR>&gt; specify the nationality of the gun in the hull table - since the nationality
+<BR>&gt; of the gun is specified in the gun table.
+<P>The Nationality and the size are not the only factors. One country may have many guns of the same size that have different characteristics, especially rate of fire. This can be due to the guns themselves or possibly the support equipment (ammo elevators, power rams, etc.). That is why I tried to specify as much detail as I could in the gun names on the Master Hull table.
+<P>&gt; Actually - out of the original seven ships - "Bayern" does'nt work -
+<BR>&gt; I believe due to a typo in one of the two gun names - either in the
+<BR>&gt; gun table or the hull table.
+<P>Both need to be fixed. I will get right on it.
+<P>&gt; Tomorrow after reviewing the messages here re: the formulas
+<BR>&gt; and gun charts - I'll endeavour to come up with a combat
+<BR>&gt; simulation page that will let you choose two
+<BR>&gt; ships, a range between them, bearing to each other - possibly some
+<BR>&gt; more variables - and then have a fire button to submit those parameters
+<BR>&gt; and the cgi program will do the crunching and spit out the hit results.
+<P>I see this is already in the works. Great!
+<P>&gt; For a ship to participate - it's main gun descriptions must be in
+<BR>&gt; sync with themselves - or else it wont be selectable. Depending on
+<BR>&gt; how this turns out - I should be able to allow more than one ship
+<BR>&gt; per side for simulating fleet combat. BUT - this will raise the question
+<BR>&gt; - who goes first? With guns being of different speeds (rof) it makes
+<BR>&gt; no sense to force them to fire simultaneously...
+<P>In the real world, whoever had the longest range guns would usually fire the opening salvo as the ships closed in. Once both sides are in range then it is perfectly possible to fire simultaneously. Note that on our time scale shots fired at the beginning of an impulse will hit their target some time in the middle of the impulse.
+<P>Here is my 2 cents on how to account for rate of fire: First, sum up the number of guns firing by checking to see if each turret bears then adding only bearing guns to the sum. Then multiply this sum by the number of rounds per impulse for that gun type. The result will often be an integer (because most rates of fire are fractions of .5 and most turrets have an even number of guns). On the odd chance that it isn't an integer then you could keep the fraction in a holding variable and add it to the next impulse's fraction for that ship until it accumulates an extra shot.
+<P>Not perfect, but pretty good.

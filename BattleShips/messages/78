@@ -1,0 +1,15 @@
+SUBJECT>Yes, they work fine!
+POSTER>Mike Substelny
+EMAIL>
+DATE>Tuesday, 11 May 1999, at 9:43 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>77
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>I just sent the U.S.S. Monotor to intercept the Tramp Steamer and it has responded to orders. Very nice!
+<P>It sould not be too difficult to calculate a real intercept course, which figures out where a ship will be instead of where it is now. This is much easier with surface ships at constant speed than with spaceships which are accellerating. I will get on the math the next chance I get. It is a matter of finding the X,Y coordinates where two circles intersect (two points) then choosing the correct one of the two. It should not be bad.
+<P>Note that an actual "Intercept Mission" will be more difficult. The player should presume that a ship on an intercept mission will watch for its target to change course, then autonomously change its own course to pursue. This requires a little bit more AI, since it will need to keep an eye on its target.
+<P>One other possibility for the future: What if we give the players the tools to calculate the course for themselves, but we don't actually do it for them? They have a map on their monitor which allows them to mark points, then they push instruments (like a compass and protractor) around on the map, calculate the course they want, and then issue the orders. It would be more realistic, offer a greater challenge, and require more skill than just clicking on a button that says "Intercept: Bismark."

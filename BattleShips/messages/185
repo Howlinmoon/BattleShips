@@ -1,0 +1,13 @@
+SUBJECT>Super Simple Damage allocation?
+POSTER>Mike
+EMAIL>
+DATE>Wednesday, 23 June 1999, at 10:10 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>184
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>It has been interesting to drive ships around the map with their logs running. As we saw last night, if you park enemy ships close to each other they will keep shooting forever.
+<P>A useful interim step might be to start tracking how many hits a ship recieves. Perhaps after 100 hits the ship sinks. Or every hit destroys one flotation, so the number of hits to sink a ship will be variable. This could give us a good idea of how things are working. It would allow simple battles to be fought, which might encourage lurkers to experiment with the game (waypoints, TF management, firing arcs, and other stuff).

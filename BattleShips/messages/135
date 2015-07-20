@@ -1,0 +1,12 @@
+SUBJECT>TaskForce Status
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 1 June 1999, at 1:48 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>
+NEXT> 136
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>As was the waypoint management before it - taskforces are proceeding slowly. ALOT of time is spent on the interface - the actual coding of the taskforce management will go much quicker. Right now - from the semi-"display model" task force management page, you can "create" a taskforce. This new task force is then sent to the impulser for inclusion in the master list - and it acknowledges receiving it. As of this moment tho - the impulser then ignores taskforces after acknowledging it received the addition.

@@ -1,0 +1,42 @@
+SUBJECT>Re: Ship Deletion
+POSTER>Mike Substelny
+EMAIL>
+DATE>Friday, 14 May 1999, at 9:40 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>83
+NEXT> 88
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> The Map - I have some ideas... more later
+<P>I am very interested to hear your ideas.
+<P>&gt; Ship Classes - right now all ships are treated
+<BR>&gt; equeally - they should'nt be.
+<P>I agree. What will be the function of ship classes? I have found something interesting in my research. For identification purposes, sailors and aviators in both WWI and WWII depended more on sillhouette than size of a target ship. A classic example is that British sailors got the Bismark and the Prinz Eugen confused. Even though the Bismark was much bigger, the two ships had very similar shapes, with two two-gun turrets forward and two more aft.
+<P>Also, Battlecruisers are almost as big as Battleships (the Hood was bigger than many battleships). The big difference between them is that BCs have much lighter armor, and usually greater speed, than BBs.
+<P>It was surprisingly easy to get BBs, BCs, CAs, and CLs confused, but CVs, DDs, submarines, and cargo ships were never confused. Perhaps the class "capital ship" could cover BBs, BCs, CAs, and CLs while CVs, DDs, submarines, and cargo ships get their own classes?
+<P>&gt; Weapon fire/Damage
+<P>Before we do this we need to expand the ship database. At the very minimum, we need to capture the same data that Battlewagon used:
+<P>Maximum Speed, Flotation, Belt Armor, Deck Armor, Turret Face Armor, Turret Top Armor, Main Gun Type, Main Turret Arrangement (incl firing arcs), Secondary Gun Type, Secondary Gun Arrangement, and torpedoes.
+<P>It might be a good idea to keep more detailed data on main guns than Battlewagon did. The most main turrets any capital ship ever had was America's Cleveland Class Light cruiser with six 2-gun turrets. Each ship could have six sets of Main Turret Variables:
+<P>Turret#1 - FaceArmor - TopArmor - GunType - #ofGuns - FiringArc - FireRate
+<P>Turret#2 - FaceArmor - TopArmor - GunType - #ofGuns - FiringArc - FireRate
+<P>Turret#3 - FaceArmor - TopArmor - GunType - #ofGuns - FiringArc - FireRate
+<P>Turret#4 - FaceArmor - TopArmor - GunType - #ofGuns - FiringArc - FireRate
+<P>Turret#5 - FaceArmor - TopArmor - GunType - #ofGuns - FiringArc - FireRate
+<P>Turret#6 - FaceArmor - TopArmor - GunType - #ofGuns - FiringArc - FireRate
+<P>What do you think? Sooner or later we will need a very complex ship database anyway, hopefully much more detailed than Battlewagon.
+<P>BTW we need to discuss firing rate in the future. Right now my research hints that the same gun could fire more shots per minute if it has the right loading equipment in a more spacious turret. The Bismark's turrets were much bigger than the Hood's, even though their guns were almost exactly the same size, because the Bismark had better loading equipment for a much faster rate of fire.
+<P>&gt; Standing Orders
+<BR>&gt; - even braindead ai - right now all ships go in straight lines
+<P>This part will be a lot of fun.
+<P>Two more important variables each ship may need are Squadron Number (Task Force Number?) and Squadron Position. In both WWI and WWII ships were assigned to designated groups and maneuvered in formation. The players will need to decide which ships go in which groups and what positions they should occupy. This will be realistic AND make the AI for movement much easier.
+<P>Usually the entire Squadron would have the same standing orders.
+<P>&gt; Submarines
+<BR>&gt; - this should be fairly simple - but requires ship classes
+<P>Moving subs around and having them fire torpedoes should be pretty easy. However I don't know very much about ASW. Time to do some more research!
+<P>&gt; Way Points
+<BR>&gt; and/or general plotting - this requires the map
+<P>Yes, the map will make a big difference here. As I said yesterday you have already come very close to creating a waypoint system, but without a map they are fairly boring.
+<P>I think the easiest way to decide when a ship reaches its waypoint is by impulse number. When the player sets a waypoint & speed, calculate how many impulses it will take to reach the waypoint. Ask the player what to do when the waypoint is reached (stop? proceed to another waypoint?) and push this information into a queue. If the ship pauses or changes course or speed (by player orders or the AI spending a few impulses sinking a wayward freighter) dump the old information and make new calculations. When that impulse number comes up, pop the istructions out of the queue and follow them.

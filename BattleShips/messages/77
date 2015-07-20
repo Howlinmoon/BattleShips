@@ -1,0 +1,12 @@
+SUBJECT>Course Changes now Work
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Tuesday, 11 May 1999, at 8:59 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>71
+NEXT> 78 79
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Course changes are now operational - somewhat. At this moment the ships are only turning LEFT - no matter that a right turn would be quicker... I will fix this later - for now it IS working - refresh the ship status page every 20 seconds to watch...<p> <B>NOTE AT THIS TIME ONLY SPECIFY DESIRED COURSE IN DEGREES</b><p> Later I will implement a target X,Y and a target Ship_ID as parameters.

@@ -1,0 +1,20 @@
+SUBJECT>Ok...
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 23 June 1999, at 7:48 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>181
+NEXT> 184
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> Yes, the number of volleys is different from the number of ships,
+<BR>&gt; and very different from number of hits. Each volley can represent
+<BR>&gt; multiple hits. <br> Ok - I deal with static definitions in the impulser - and "each volley can represent multiple hits." is'nt quite firm enough a definition of what you want a volley to be - to me at least. Now - Instead of one volley per ship - how about volleys = number of discrete gun platforms/ship.<br> This would mean a ship with 5 turrets (main guns) and 8 smaller turrets (secondary guns) would have a total of 13 volleys - even tho there will be more than 13 shots fired since the large turrets have at least 2 guns and sometimes 3 apiece - and the small turrets may have 2 apiece. (more?) DO we want to allow different guns in the same turret to fire at different targets? If not - then what I propose as my understanding of the term "volley" should fit your intent - otherwise if you feel that the guns should be able to individually target - then volleys may as well be equeal to shots - and it makes no sense to refer to the same quantity using two different names.<br> Personally - I'm not sure why we are even going the extra step and including volleys - why not simply at the start of the combat routine - initialize shots_hit to 0, and then increment it by one for every shot from every ship that hits - and for every hit - save this information:<br>
+<P>&gt; Exactly, but instead of saving how many hits a certain ship got,<br>
+<BR>&gt; you save how many hits the volley got, plus the target, range, bearing<br>
+<BR>&gt; (from target to firer) and gun type. Once the shells have hit the<br>
+<BR>&gt; ID of the firing ship does not matter, so you don't really need to<br>
+<BR>&gt; save the firing ship's ID.<br>
+<P>I really dont see a need for keeping track of the volleys - if all we are really concerned about are the shots themselves - not that they were part of a 6 shot "volley"... Unless you propose on allocating damage on a per volley basis where all the shots from a particular volley hit the same location on a ship - but then that seems hardly probable - unless ships guns like guns in fighter planes (the ones on the wings) are canted slightly to have their shots intersect at the same point in space x distance away.<br> So - why do we need volleys? I fail to see the purpose...

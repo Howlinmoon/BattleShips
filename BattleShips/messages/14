@@ -1,0 +1,13 @@
+SUBJECT>Re: WWW based SQL maintenance
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Thursday, 25 February 1999, at 10:10 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: biff; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>11
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Oh - one thing I forgot to mention - I continue to use the command line front end "mysql" to create tables and other db maintenance - and as for easily creating tables - I do something like this<p> <p> mysql < <a href="/game_design/make_planet_chart">make_planet_chart</a><br> And it creates the db in a split second. I just edit the text file if I need to rebuild the db in some fashion after dropping it...<br> I have another one for the star table also...
+<P>

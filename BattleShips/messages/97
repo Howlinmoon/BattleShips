@@ -1,0 +1,16 @@
+SUBJECT>One Minor Problem . . .
+POSTER>Mike Substelny
+EMAIL>
+DATE>Wednesday, 19 May 1999, at 3:17 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>95
+NEXT> 100
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> Instead of "ship_status.html" - use "ship_status2.html".
+<BR>&gt; There are no convenient links to it - but It's up right now and being
+<BR>&gt; updated - take a look and see if the numbers appear reasonable. I
+<BR>&gt; have no idea...
+<P>One of the Column headings is missing; the "See other ship" multiplier. As a consequence all of the columns after that are mislabeled. But it looks like all the numbers are believable, including longitude & latitude.

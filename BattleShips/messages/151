@@ -1,0 +1,29 @@
+SUBJECT>First Combat Formula: Basic Hit Probability
+POSTER>Mike
+EMAIL>
+DATE>Monday, 7 June 1999, at 2:38 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>131
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>This is a very simplified procedure for determining if a shot has hit its target or not. It includes some pretty good formulas that approximate Normal Distribution in statistics.
+<P>When a firing ship fires at a target ship, make the following determinations:
+<P>Calculate the basic area of the target (accounting for its size and facing relative to the firing ship). In this case BEARING is from the target ship to the firing ship:
+<P><B>HitArea = (COS(BEARING/180*PI)+ProfileConstant)*$L$1+(SIN(BEARING/180*PI)+ProfileConstant)*$L$2</B>
+<P>Then calculate the probability of hitting that area at the current range:
+<P><B>HitProb = (HitArea / PercentileConstant / Range) + ((Optics + CrewSkill + Sighting) / ScaleFactor)</B>
+<P>Now we are ready to fire. For each gun that bears and is within range, generate an ordinary random number. If the number is =< HitProb the shot is a hit, otherwise it is a miss.
+<P>Constants:
+<P>ProfileConstant = 0.1 <I>This accounts for the fact that while the distance to the target is the major factor of hit probability, arc length of a target has some effect on accuracy.</I>
+<P>PercentileConstant = 120 <I>Converts our scale of pixels to % hit probability for random number generator.</i>
+<P>ScaleFactor = 30,000 <I>Converts CrewSkill, Optics, and visibility factors into useful numbers, with a scale of 1-10 or so (can go higher or lower).</I>
+<P>Variables:
+<P>Optics <I>Reflects quality of optical aiming and range-finding technology, usually a number between 1 and 10. In WWI British Optics would be about a 3 and German Optics would be about a 6.</I>
+<P>CrewSkill <I>Reflects artillery skill and practice of gun crews, usually a number between 1 and 10. In WWI, British CrewSkill would be about a 3 and German CrewSkill would be about a 6.</I>
+<P>Range <I>In pixels.</I>
+<P>Sighting <I>The greater of either visibility conditions like time of day and weather, or the quality of radar system (ignored in WWI). A sunny day would be a +10 and a foggy night would be a -10. Sighting at the Batle of Jutland would vary randomly from about 0 to 5.</I>
+<P>If we want to generate real-time visibility it would not be too difficult. We simply convert impulse # into time of day (is a REMAINDER function available?) giving us a number from about +10 (noon) to -2 (midnight). Then we subtract a random weather factor like 0 (clear), -2 (drizzle), -4 (haze/rain), -6 (light fog) -8 (heavy fog), -10 (storm).
+<P>Coming soon: Hit Location, followed by Armor Penetration.

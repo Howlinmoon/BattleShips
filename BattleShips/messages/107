@@ -1,0 +1,12 @@
+SUBJECT>Task Forces... Starting simple
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Thursday, 20 May 1999, at 9:38 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>106
+NEXT> 108
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Well - before I try and get Task Forces to do synchronized swimming - all I am shooting for now is being able to order the TF to do the same things we are now ordering individual ships to do. I'm not worrying about formations or anything at this time - nor collision avoidance - that will come later. Must start small... Also for now - submarines wont be allowed in a TF with non-subs - since that would raise the possibility of BB's joining the subs in a dive - and I dont think we want that happening... Plus later today I am planning on implementing rudimentary speedlimits based on ship class - and further based on whether or not a sub is running submerged. I will also consider adjusting the visibility of subs down to 0 when submerged and a very small number when at periscope depth. I'm setting P to be 50' for now. After today - we wont have CV's hydroplaning across the oceans... If anyone would like to suggest speed limits feel free... (individual ship limits are still quite aways off)

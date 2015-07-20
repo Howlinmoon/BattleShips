@@ -1,0 +1,12 @@
+SUBJECT>Very rudimentary status page
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Monday, 19 April 1999, at 10:17 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: biff; REMOTE_ADDR: 192.168.1.2
+PREVIOUS>
+NEXT> 58 60
+IMAGE>
+LINKNAME>Ship Status Page
+LINKURL>http://beholder.home.dhs.org/game_design/ship_status.html
+<P>Ok - there is now a very rudimentary ship status page - it's far from finished but I stopped working on it once it started displaying legible output. It will be tableized and those long nasty co-ords will be truncated somewhat for display purposes later. For now tho - you can see the ships you add and the relative ranges to/from each other.

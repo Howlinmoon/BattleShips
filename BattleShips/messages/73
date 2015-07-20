@@ -1,0 +1,17 @@
+SUBJECT>Re: Working on ship status page
+POSTER>Mike Substelny
+EMAIL>
+DATE>Monday, 3 May 1999, at 1:48 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>72
+NEXT> 74
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>I like the looks of it. Obviously the standing orders will take a little bit of AI, but for now they can be super simple. That is, "fight" means turn in the direction where Bearing = 0 and open fire, Flee means turn in the direction where Bearing = 180 and go full speed, Shadow means assume exact same Heading as target, etc..
+<P>In the long run we will need something much more intelligent. These simple rules are like the Star Control I computer controlled ships. You could easily trick them into running aground, spinning in circles, or colliding with each other. But for now they are adequate.
+<P>It would probably be good to maintain a table of the ID's of all ships that are currently in sight, not just a tally of how many there are. That would be handy for players as well as for the Host program.
+<P>It could be tricky to determine where "enemy territorial warters" are. Most of the Earth's surface is in International Waters; territorial waters are limited to within a few miles of the shore, as I recall.
+<P>IMO a ship observing radio silence can't report its position, or what ships it can see, or any other current data. All it can do is listen for instructions until it gets the order to break silence and report (or some condition in its standing orders tells it to break silence). Until then its status page can only give last known position, standing orders, last know course & speed, and a THEORETICAL position as a stickpin on a map in the Admiral's office.
+<P>The same goes for submerged submarines. The whole thing would be a lot like the scenes in the movie "Sink the Bismark!" when the British Admirals were pushing model ships around on a big map of the North Atlantic, wating for their ships to report their positions and whether or not they had found the Bismark.

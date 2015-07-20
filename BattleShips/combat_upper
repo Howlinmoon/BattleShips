@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Expires" content="Saturday, 12-Nov-94 14:05:51 GMT">
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>Ship Combat Simulator Mark I</TITLE>
+</HEAD>
+<BODY BACKGROUND="duel.jpg">
+
+<FORM ACTION="/old/cgi-bin/game_design/combat_sim.pl" ENCTYPE="x-www-form-urlencoded" METHOD="POST">
+<P><CENTER>Ship Combat Simulator Mark I</CENTER></P>
+
+<P><CENTER><TABLE WIDTH="450" BORDER="1" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TD WIDTH="20%">
+    &nbsp;Ship_Class</TD> 
+    <TD WIDTH="20%">
+    Bearing</TD> 
+    <TD WIDTH="20%">
+    Optics</TD> 
+    <TD WIDTH="20%">
+    CrewSkill</TD> 
+    <TD WIDTH="20%">
+    Sighting</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="20%">
+    <P><CENTER>&nbsp;<SELECT name="ship1">

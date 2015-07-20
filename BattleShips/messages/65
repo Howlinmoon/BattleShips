@@ -1,0 +1,31 @@
+SUBJECT>The Wait is Over!
+POSTER>Mike Substelny
+EMAIL>
+DATE>Wednesday, 28 April 1999, at 4:30 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: mike_work; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>63
+NEXT> 66
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Here is the Direction Formula, which gives the absolute direction of a target relative to your position in positive degrees between 0 and 360:
+<P>Xdiff = TargetX - MyX
+<P>Ydiff = TargetY - MyY
+<P>Range = SQRT(Xdiff^2 + Ydiff^2)
+<P>If (Ydiff >=0) Then DIRECTION = (arccos(Xdiff/range) * 180 / pi)
+<P>Else DIRECTION = 360 - (arcos(Xdiff/range) * 180 / pi)
+<P>Want to know what guns bear on that target? Then you need to calculate a BEARING, taking your own facing (HEADING) into account. This formula gives it, again in positive degrees from 0 to 360:
+<P>If (MyHeading >= DIRECTION) Then BEARING = DIRECTION - MyHeading
+<P>Else BEARING = MyHeading - Direction
+<P>If you want to execute a turn, instead of an instantaneous course change, it is simplicity itself. All we need to calculate is a DELTA_ANGLE for the ship and apply it each impulse until the turn is completed.
+<P>We can use detailed data later. For now, let's assume a generic turning ability of Battleships as 20 degrees per impulse (at this rate, a Battleship can make a complete circle in 18 minutes).
+<P>From the player, obtain DESIRED_HEADING.
+<P>If DESIRED_HEADING - Heading <180 Then DELTA_ANGLE = 20
+<P>Else DELTA_ANGLE = -20
+<P>-----------------
+<P>Every Impulse:
+<P>If (DESIRED_HEADING - Heading < DELTA_ANGLE) Then Heading = DESIRED HEADING
+<P>Else Heading = Heading + DELTA_ANGLE
+<P>EndIf
+<P>If (Heading < 0) Then Heading = Heading + 360

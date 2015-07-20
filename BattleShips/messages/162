@@ -1,0 +1,12 @@
+SUBJECT>Whats New?
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Monday, 14 June 1999, at 11:25 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>
+NEXT> 164 166
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>#1 You must now create new ships by selecting from a Valid Ship Class. The comma seperated naming scheme is now operational, the names are auto-counted so there is no further need to specify a quantity. Input on the ship creation form has been majorly reduced due to most of the information being preloaded from the tables in the db. <p> #2 You can now once again delete a ship and the odds are good that the impulser wont crash when you do it. <p> #3 Germans and British ships still have default starting co-ords - I hope to come up with a method of choosing among the appropriate ports for each country soon. <p> #4 The combat odds simulator has been fixed once more - hopefully it is now totally accurate. <p> What exactly does the number after the gunsize mean in the gun tables? (main guns). An example is the 45 in this description: 'British 13.5"/45' <p> Also - "2,0,150,210,360" means this gun has 2 arcs - one from 0-150 degrees and the other from 210-360 degrees? I need this information so in the combat simulator I can determine which guns bear per side - and roll accordingly...

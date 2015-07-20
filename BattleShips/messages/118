@@ -1,0 +1,12 @@
+SUBJECT>WWI Would be fine by me...
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Monday, 24 May 1999, at 1:33 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: ; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>117
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>WWI would be fine by me - and like you say it would keep with our keep it simple philosophy.<p> The Impulser is back up and running - you can tell now at a glance whether it died or not by the timestamp on the bottom line. We are basically at the same point in the evolution as we were last Friday - with a couple of minor changes. I now have the hooks in place in the db files for waypoint tracking (the impulser still ignores them) and I implemented individual max speeds for ships and removed the class specific limit. While doing that - I think I also fixed the bug that allowed ships to cruise 5knots greater than their speed limit. One thing I have not re-implemented tho - is submerged speed limits - currently the depth is not checked and submerged speed max is the same as surface. I'll fix that tonight probably.<p> Until the History channel special I was always under the impression that the Bismark fired first at the Hood - and from a much greater distance. I was also impressed that the Bismark AA had lead computing gunsights - thats something our modern day jet fighters have!

@@ -1,0 +1,16 @@
+SUBJECT>Re: Simulator Working Well! How to Pick a Target?
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Wednesday, 16 June 1999, at 11:18 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>171
+NEXT> 174
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> For now, could the target be selected manually by the player,
+<BR>&gt; possibly on the same screen where course changes are made? We don't
+<BR>&gt; even need to worry about complex stuff like splitting fire between
+<BR>&gt; two targets at this time. Just a field that says Enter target ship
+<BR>&gt; number:____ or something like that.<p> Ok - I have started work on implementing combat reporting in the main impulser. Right now you can specify a target, from the ship modification page, as either a number or "none". This will be expanded later to allow a country name so your ship will attack ANY ships belonging to it's target country... For now - only the particular ship specified will be attacked when it is in range.<br> When this IS implemented sometime tomorrow - there will be yet another field added to the already overburdened general ship status page - a field called "log". Clicking on this will bring up a ships log with pertinent events on it - every impulse the ships are within range - the results of the combat to-hit probability will be posted. As the ships move apart -the logging will cease until they near each other again.<br> What this means is that until we get damage up and running - two ships at war with each other in the same spot NOT MOVING or never openning range will have a humungous log file full of rubbish mainly. Remember - there will be a new entry every 20 seconds real time as long as those two ships are in range. Also I hope to begin implementing varying "sighting" tomorrow based on the game time, weather will be trickier - I'll possibly have a control panel for now allowing you to select what kind of weather is over the ocean, later the weather maybe regionalized.<p> I did notice Mike has populated the ports db - but unfortunately I can really only concentrate on one aspect at a time - so the ability to choose your port of origin will take a back seat for now to the beginnings of combat.

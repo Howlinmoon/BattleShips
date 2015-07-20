@@ -1,0 +1,27 @@
+SUBJECT>Plan for Simple Combat
+POSTER>Mike
+EMAIL>
+DATE>Thursday, 3 June 1999, at 11:51 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: mike_work; REMOTE_ADDR: 192.232.30.33
+PREVIOUS>137
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> Status of Taskforces: The Task Force management page is now being
+<BR>&gt; dynamically generated every impulse - just like the ship status page.
+<P>Cool. I checked it out and I like it. Right now the host is not updating though.
+<P>&gt; As soon as everything except formations is done -
+<BR>&gt; it will be time to focus on a rough java map AND combat.
+<BR>&gt; Personally I want to implement rudimentary combat first
+<BR>&gt; - since it will be quicker to have something to show for
+<BR>&gt; my efforts - and I want to sink the Hood :-)
+<P>Okay, that sounds like a deal. There is no reason we could not do a text only, mapless combat to start. That means I need to get cracking on a lot more combat research!
+<P>How about for now we use little or no AI in combat? Ships only follow courses and waypoints selected manually. Also the player must select one target ship for each of his ships, and if its target is in range a ship fires until the target is deselected. If no target is selected the ship just cruises along and takes whatever punishment enemy ships dish out.
+<P>I will provide detailed firing arc data for each gun (in the same angles we use for target bearing). If a ship is in range to its selected target it will loop through all its turrets to see which turrets bear. Shots fired = sum(turret bearing? * num guns in turret) * (shots / impulse).
+<P>I will create a formula for number of hits based on range, size of target, and bearing of firing ship from target.
+<P>For shells that hit, I will also create a formula for determining what part of the ship was struck.
+<P>For now we could either assume every shell penetrates, or we could use a very rudimentary formula for armor penetration. It would be something like (shell weight) * (velocity) * (universal penetration constant). We'll use something simple like the Battlewagon die roll to decide if the shell hits horizontal or vertical armor. Eventually we will actually calculate the angle of each incoming shell and precise armor penetration.
+<P>Once the armor is penetrated we will apply damage simply, again like Battlewagon.
+<P>This will allow Jim to sink the Hood. :-)

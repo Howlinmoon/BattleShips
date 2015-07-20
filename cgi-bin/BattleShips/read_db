@@ -1,0 +1,25 @@
+	$command = "";
+        $command = "select how_many from how_many_ships";
+        $sth=$dbh-> query($command);
+        die "Error with command $command\n" unless (defined $sth);
+        @arr=();
+        while (@arr = $sth->fetchrow)
+        {
+        ($number_test_ships) = @arr;
+	}
+
+for ($current_ship = 1; $current_ship <= $number_test_ships; $current_ship++) {
+
+	$command = "select ship_id, ship_name, ship_owner, ship_heading, ship_x, ship_y, ship_speed, ship_sighting_range, ship_sight_factor from master_ship_chart where ship_id = $current_ship";
+
+$sth = $dbh -> query($command);
+die "Error with command: $command\n" unless (defined $sth);
+
+# iterate thru the returned rows
+
+@arr = ($sth->fetchrow);
+	{
+($ship_id[$current_ship],$ship_name[$current_ship],$ship_owner[$current_ship],$ship_course[$current_ship],$ship_x[$current_ship],$ship_y[$current_ship],$ship_speed[$current_ship],$ship_sighting_range[$current_ship],$ship_sight_factor[$current_ship]) = @arr;
+	}
+} # end of ship for loop	
+

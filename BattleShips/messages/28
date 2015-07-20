@@ -1,0 +1,26 @@
+SUBJECT>Re: Looks Good! Map Scaling Formulae . . .
+POSTER>Jim Veneskey
+EMAIL>orcus@neo.rr.com
+DATE>Monday, 15 March 1999, at 10:33 a.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: jimv.telxon.com; REMOTE_ADDR: 149.23.131.71
+PREVIOUS>25
+NEXT>
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>> I like the map and how it shows stars and planets. This is much
+<BR>&gt; better than VGAP! <p> Well - if I recall VGAP has no stars ;-) so it's an unfair comparison<br>
+<P>&gt; Suppose the user viewing area were 1,000 x 1,000 pixels (with
+<BR>&gt; 0,0 in the lower left corner and 500,500 in the center) and the Galaxy
+<BR>&gt; were 1,000,000 x 1,000,000 grains (with 0,0 in its center). <br> Just so I understand your example - is this assuming that XY co-ords range from +-1,000,000 OR +-500,000 which with all quadrants together would add up to a range of 1,000,000 x 1,000,000 grains.<br>
+<P>&gt; with no scaling factor needed, since the scale is 1:1. You calculate
+<BR>&gt; "view coordinates" for every entity in the galaxy and display
+<BR>&gt; them. Some languages are smart enough to ignore commands to display
+<BR>&gt; ponts that are off the screen. If this one isn't, then you will need
+<BR>&gt; to error trap. <p> Ah - so you are suggesting what I believe is commonly called "clipping". I shall have to experiment and see what Java does when an illegal co-ordinate is specified. Unfortunately - even with this idea - I am still running thru 99.99% of the data needlessly just to display 1-2 planets and their star. This is probably unavoidable tho unless someone can think up a more efficient algorithm. <p>
+<P>&gt; The general case is:
+<P>&gt; viewX = (entityX - Xoffset)/scalefactor + VIEWcenterX viewY =
+<BR>&gt; (entityY - Yoffset)/scalefactor + VIEWcenterY
+<P>&gt; This strategy should work for any sized 2D map, centered on any
+<BR>&gt; arbitrary point, with any sized user viewing area. <p> Ok - this is basically what I am doing right now - I have scaled the map large enough to display the entire universe. Unfortunately at this resolution I suspect more than have of the pixels are stacked on top of each other.<br> Also - another factor must be determined - the relative size factor of each planet/star when displayed on the map. last year - everything was uniform size but I could change their colors. Now - I can on the fly change the size of the plotted elements independantly. At the moment for simplicity the actual diameter of the planets/stars is being ignored and a hardcoded scaling factor is being set in my html page. View the source of the starmap page to see it. Quite frankly at this time I forget what my planetary offset means - I'll have to review the java source to find out myself. <p> A fun thing to try might be to downshift screen resolution to something like 640x480 and see what happens when you try to view my current 1000x1000 pixel java applet...

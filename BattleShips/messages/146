@@ -1,0 +1,12 @@
+SUBJECT>Server Re-Arrangement
+POSTER>Jim
+EMAIL>orcus@neo.rr.com
+DATE>Sunday, 6 June 1999, at 2:54 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>
+NEXT> 147 148
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>Ever since the breakin last November of my primary Linux machine, I have been working on building a second machine to act as the firewall machine - and placing beholder behind the firewall machine - "cerberus". This past weekend I finally got all of my networking configuration straight and cerberus is now the point machine for the internet. Beholder is now one a private network reachable only via cerberus. Cerberus is considered expendable - and if taken down - will totally isolate the important machines behind it.<p> This is causing some problems - for now until I figure out a better way - beholder will continue to serve www pages - but proxied via cerberus. URLs prefaced with "old" will be proxied thru cerberus to beholder. I'll try to update all of the links I can find - but if you find some - please post them here and I'll fix them asap.

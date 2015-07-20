@@ -1,0 +1,22 @@
+SUBJECT>Oh Say, Can You See? (first visual range formula)
+POSTER>Mike
+EMAIL>
+DATE>Monday, 28 June 1999, at 3:59 p.m.
+EMAILNOTICES>no
+IP_ADDRESS> REMOTE_HOST: cerberus; REMOTE_ADDR: 192.168.1.10
+PREVIOUS>
+NEXT> 192 194
+IMAGE>
+LINKNAME>
+LINKURL>
+<P>The big problem with calculating "visual range" for ships is that there is no perfect way to account for the shape of the superstructure. Here I present a general mathmatical model that should handle it pretty well for most ship classes.
+<P>There is also a minor problem in that I cannot get good data about how high the observation platform of a ship class is above the waterline, a critical factor in how far a ship can see. For now I circumvent this problem by assuming the distance from the waterline to the observation platform is the same as the width of the hull. When I measure the line drawings of the ships, this actually works for a lot of WWI ship classes! It won't work for submarines, however.
+<P>Here is the real world formula for how far away your horizon is:
+<P>1.17 * SQRT(your height) = distance in nautical miles.
+<P>You can see targets that are beyond the horizon if they are tall enough to protrude above the horizon:
+<P>1.17 * SQRT(your height) + 1.17 * SQRT(target height) = distance in nautical miles.
+<P>This is all under perfect conditions, of course, and it assumes you look right at the target and it is big enough to see at that distance. We want to account for conditions, size, and bearing. For now, let's try this formula for maximum distance that SHIP_A can see SHIP_B. Bearing is always from target SHIP_B to observer SHIP_A. Visibility is Lighting conditions + Weather Conditions.
+<P>Profile = SQRT(cos(Bearing*pi/180) * SHIP_B length + sin(Bearing*pi/180) * SHIP_B beam)
+<P>Max_Sight_Distance = (1.17 * SQRT(SHIP_A beam) + 1.17 * SQRT(SHIP_B beam) * Profile / 50 + Visibility) * 10
+<P>This will be the maximum distance at which SHIP_A can see SHIP_B in our map pixels. If the actual distance is greater than this number then SHIP_A cannot see SHIP_B, but SHIP_B might still be able to see SHIP_A.
+<P>With this formula it is possible to get a negative number if you have a severe storm at night. These conditions would effectively be "Visibility Zero."

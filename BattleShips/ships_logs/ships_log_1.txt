@@ -1,0 +1,4 @@
+<option><<< Ships Log Purged >>></option>
+
+<option>Impulser Restarted Old Target is 0</option>
+<option>07:19 On January 1, 1931 Have sighted Seydlitz.</option>
