@@ -11,18 +11,18 @@
 
 ## (1) Define the location of your files:
 
-require "/home/www/cgi-bin/webbbs.pl";
+require "/var/www/cgi-bin/webbbs.pl";
 
-$dir = "/home/www/game/messages";
-$cgiurl = "http://www.bigorc.com/cgi-bin/bbs.pl";
+$dir = "/var/www/html/BattleShips/BattleShips/messages";
+$cgiurl = "http://54.152.248.125/cgi-bin/oldBoard/bbs.pl";
 
 ## (2) Tailor the appearance and functionality of your BBS:
 
 $bodyspec = "BGCOLOR=\"#000000\" TEXT=\"ffffff\"";
 #$bodyspec = "BGCOLOR=\"#ffffff\" TEXT=\"00ff00\" BACKGROUND=\"/game_design/bigmo_bw.jpg\"";
 $HeadLinesFile = "";
-$HeaderFile = "/home/www/game/footer.html";
-$FooterFile = "/home/www/game/footer.html";
+$HeaderFile = "/var/www/html/BattleShips/BattleShips/footer.html";
+$FooterFile = "/var/www/html/BattleShips/BattleShips/footer.html";
 $MessageHeaderFile = "";
 $MessageFooterFile = "";
 
@@ -42,7 +42,7 @@ $AutoQuote = 1;
 $SingleLineBreaks = 0;
 
 $UseCookies = 1;
-require "/home/www/cgi-bin/cookie.lib";
+require "/var/www/cgi-bin/oldBoard/cookie.lib";
 
 $UseAdmin = 1;
 
