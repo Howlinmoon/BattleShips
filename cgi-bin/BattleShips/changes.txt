@@ -1,3 +1,0 @@
-2171d2170
-<                         $Yintersect = $m1 * $Xintersect + $b1;
-

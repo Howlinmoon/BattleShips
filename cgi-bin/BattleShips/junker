@@ -1,1 +1,0 @@
-CREATE TABLE employees (  id tinyint(4) DEFAULT '0' NOT NULL AUTO_INCREMENT,  first varchar(20),  last varchar(20),  address varchar(255),  position varchar(50),  PRIMARY KEY (id),  UNIQUE id (id));

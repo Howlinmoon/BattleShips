@@ -1,7 +1,0 @@
-#!/usr/bin/perl
-$x = cos(180);
-print "cos of 180 = $x\n";
-$pi = 3.14159;
-$x = cos($pi);
-print "cos of pi = $x\n";
-
