@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Ship 1",
+        "shipX": 100,
+        "shipY": 120
+    },
+    {
+        "name": "Ship 2",
+        "shipX": 130,
+        "shipY": 120
+    }
+]
+    
