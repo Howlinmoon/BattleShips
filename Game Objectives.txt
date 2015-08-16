@@ -1,0 +1,11 @@
+Game Objectives:
+
+Deisign a framework that will allow the player to place a ship along a coast line, and give the ship
+a course and a speed.
+
+The ship will then continue along the course defined, automatically avoiding any obstacles such as a small island.
+
+If the ship encounters another ship from the same country - it will report it - and continue sailing.
+
+If the ship encounters another ship from a different country - if they are at war - the ship will report the encounter,
+and stop for further instructions.
