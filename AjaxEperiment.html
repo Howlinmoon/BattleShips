@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title> AJAX Polling Experiment</title>
+        <meta charset="UTF-8" />
+    </head>
+    
+    <body>
+        <p >This is where the data will appear: <span class="targetClass"> Right Here</span></p>
+        <script src="jquery.js"></script>
+        
+        <script>
+        (function ()  {
+            setInterval(function() {
+                // define the Ajax poll function
+                var poll = function() {
+                    console.log('Polling via Ajax');
+                    $.ajax({
+                     url: 'http://54.152.248.125/game_design/json_example.php',
+                        dataType: 'json',
+                        type: 'get',
+                        success: function () {
+                            console.log('Success Was Called!');
+                        },
+                        error: function () {
+                            // error handling goes here
+                            console.log("Whoops - Error was called...");
+                        }
+                    });
+                };
+                // call the Ajax poll function
+                poll()
+            }, 5000);
+            
+        })();
+        
+        
+        
+        </script>
+    </body>
+</html>
