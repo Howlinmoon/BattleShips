@@ -16,8 +16,8 @@ $item3 = "12 knots";
 
 //return in JSON format
 echo "{";
-echo "item1: ", json_encode($item1), "n";
-echo "item2: ", json_encode($item2), "n";
-echo "item3: ", json_encode($item3), "n";
+echo "item1: ", json_encode($item1);
+echo "item2: ", json_encode($item2);
+echo "item3: ", json_encode($item3);
 echo "}";
 ?>

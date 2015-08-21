@@ -16,11 +16,17 @@
                 var poll = function() {
                     console.log('Polling via Ajax');
                     $.ajax({
-                     url: 'test.json',
+                        url: 'test.json',
                         dataType: 'json',
                         type: 'get',
-                        success: function () {
+                        success: function (data) {
                             console.log('Success Was Called!');
+                            $.each(data, function(key, val) {
+
+                                // specify the targetClass defined in the HTML
+                                //"." is the class selector
+                                $('.targetClass').text(val.shipX);
+                            }
                         },
                         error: function () {
                             // error handling goes here
